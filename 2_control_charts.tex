@@ -43,7 +43,7 @@ Reverse it and determine acceptance and rejection limits of the test!
 \end{equation}
 
 \textbf{Statistical conclusion:}\\
-If $LSL \leq \bar{x} \leq UCL \rightarrow$ process is not disturbed.\\
+If $LCL \leq \bar{x} \leq UCL \rightarrow$ process is not disturbed.\\
 If $\bar{x} < LCL or UCL < \bar{x} \rightarrow$ process is disturbed.\\
 
 Problem: In general, process standard deviation is unknown.\\
@@ -97,7 +97,7 @@ for all $i \in \left \{1,...,k\right \}$
 \textbf{Control limits}
 \begin{equation}
   \begin{split}
-    UCL = \mu + 3 \frac{\sigma}{\sqrt{n}}; \;\;\;\;\;  LCL = \mu - 3 \frac{\sigma}{\sqrt{n}}
+    UCL = \mu + 3 \frac{\sigma}{\sqrt{n}}; \;\;\;\;\; LCL = \mu - 3 \frac{\sigma}{\sqrt{n}}
   \end{split}
 \end{equation}
 Problem: $\mu$ and $\sigma$ are in general unknown and must be estimated from the process data.\\
@@ -155,7 +155,7 @@ The centreline of the s chart is denoted by $\bar{s}$ and is calculated from the
 
 \textbf{Control limits}
 \begin{equation}
-    UCL = B_4 \bar{s}; \;\;\;\;\;  LCL = B_3 \bar{s}
+    UCL = B_4 \bar{s}; \;\;\;\;\; LCL = B_3 \bar{s}
 \end{equation}
 
 \paragraph{$\bar{x}$ Chart based on s chart}\mbox{}\\
@@ -208,7 +208,7 @@ The centerline for the individuals control chart is the arithmetic mean of the m
 
 \textbf{Control limits}
 \begin{equation}
-    UCL = \bar{x} + 3 \frac{\overline{MR}}{1.128}; \;\;\;\;\;  LCL = \overline{x} - 3 \frac{\overline{MR}}{1.128}
+    UCL = \bar{x} + 3 \frac{\overline{MR}}{1.128}; \;\;\;\;\; LCL = \overline{x} - 3 \frac{\overline{MR}}{1.128}
 \end{equation}
 
 \subsection{Control Charts for Attributes Data – p Chart}
@@ -234,7 +234,7 @@ We know: The number of defective D under n examined parts follows a binomial dis
 
 \textbf{k relative frequencies}
 \begin{equation}
-  p_1 = \frac{d_1}{n_1},...,p_k = \frac{d_k}{n_k}
+  p_1 = \frac{d_1}{n_1},...\;,p_k = \frac{d_k}{n_k}
 \end{equation}
 
 \textbf{Centerline}\\
