@@ -14,5 +14,8 @@
 \BOOKMARK [2][-]{section*.22}{Power Function and Operating Characteristic}{section*.18}% 14
 \BOOKMARK [2][-]{section*.23}{Average Run Length}{section*.18}% 15
 \BOOKMARK [2][-]{section*.24}{Process Capability}{section*.18}% 16
-\BOOKMARK [0][-]{part.2}{II Multiple Regression}{}% 17
-\BOOKMARK [0][-]{part.3}{III Design of Experiment}{}% 18
+\BOOKMARK [1][-]{section*.25}{Control Charts with Memory}{part.1}% 17
+\BOOKMARK [2][-]{section*.26}{CUSUM - Cumulative Sum Control Chart}{section*.25}% 18
+\BOOKMARK [2][-]{section*.28}{EWMA - Exponentially Weighted Moving Average}{section*.25}% 19
+\BOOKMARK [0][-]{part.2}{II Multiple Regression}{}% 20
+\BOOKMARK [0][-]{part.3}{III Design of Experiment}{}% 21

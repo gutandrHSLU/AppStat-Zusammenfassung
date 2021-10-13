@@ -1,8 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1633527731 "main.tex" "main.pdf" "main" 1633527734
+["pdflatex"] 1634118325 "main.tex" "main.pdf" "main" 1634118328
   "1_introduction.tex" 1632297307 726 105197f59335a3ef4c307bdb51ac34d8 ""
-  "2_control_charts.tex" 1633527288 9751 882b0d790c196e3a0b5b10b4b53bc7cb ""
+  "2_control_charts.tex" 1634117520 9741 4daf0655d4c0e068dc725522cde7bbef ""
   "3_statistical_properties_of_control_charts.tex" 1633527728 7677 47a76c2b94a53ef6ac51102238122f13 ""
+  "4_control_charts_with_memory.tex" 1634118323 4770 d588bac1dc9f1b26e26a43da5179016d ""
   "Pics/2.1.png" 1632907598 49820 9488423c7d9de17e7c4c89a8639cbdcf ""
   "Pics/3.1.1.png" 1633511498 22439 92a27af2b1d8798df7c02ff018ace57d ""
   "Pics/3.1.2.png" 1633520840 35634 e57aca1a9aacca531372928453025e99 ""
@@ -12,6 +13,8 @@
   "Pics/3.2.2.png" 1633515322 37167 4def70323e005cb252df0df800307ab2 ""
   "Pics/3.2.3.png" 1633515340 47415 d54797296682819273f346b4a94ce177 ""
   "Pics/3.2.4.png" 1633515355 47706 c9dbb27bef12b8f08c75f67bc67f3739 ""
+  "Pics/4.1.png" 1634117572 49428 177f2fe37cdfc295a20ad7997a8507ae ""
+  "Pics/4.2.png" 1634117594 41173 8219ddaee54f741dfcf5b461dd09fc3a ""
   "c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1600243827 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1600243827 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1600244619 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -164,12 +167,12 @@
   "c:/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1600247889 2444767 bc6ebe522825b804048e65ebb71f0a13 ""
   "c:/texlive/2020/texmf.cnf" 1600247715 673 4ae7b2f49cee444c5343a45b5d0f169c ""
   "config.tex" 1633511704 3692 a9f9f5ed4c59703b79253ec6247da12b ""
-  "main.aux" 1633527733 4049 d7b8c7ccf5beeffeb39bb0b6be132d32 "pdflatex"
-  "main.out" 1633527733 1279 72986434e62f7ada43d6106b580936b5 "pdflatex"
-  "main.tex" 1633511525 686 060181ab140b36c0cfe099db8273be6c ""
+  "main.aux" 1634118328 4818 68e7102f1f1e3ab2b4665fc983436179 "pdflatex"
+  "main.out" 1634118328 1527 7fb4f40887f6dd31e6d66eddca0edc73 "pdflatex"
+  "main.tex" 1634110152 728 a116817cdfd90f8945541fcc2471cfda ""
   (generated)
-  "main.pdf"
   "main.nlo"
+  "main.pdf"
+  "main.out"
   "main.aux"
   "main.log"
-  "main.out"

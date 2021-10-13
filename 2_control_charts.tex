@@ -11,7 +11,7 @@ is $\left|\bar{x} - \mu_0\right|$ significant?\\
  - $\bar{x}$ Arithmetic mean of the measurements
 
 
-\textbf{Hypothesis:}\\
+\textbf{Hypothesis}\\
 Two-sided statistical test to check the two alternative hypotheses:
 \begin{equation}
   \begin{split}
@@ -21,28 +21,28 @@ Two-sided statistical test to check the two alternative hypotheses:
 \end{equation}
 
 \paragraph{Statistical test:}\mbox{}\\
-\textbf{Test statistic:} (z-test, since $\sigma$ is known)
+\textbf{Test statistic} (z-test, since $\sigma$ is known)
 \begin{equation}
   z = \frac{\bar{x}-\mu_0}{\sigma}\sqrt{n}
 \end{equation}
-\textbf{Critical value:} i.e. q-quantile of the normal distribution
+\textbf{Critical value} i.e. q-quantile of the normal distribution
 \begin{equation}
   P(|z| \leq z_q) = q
 \end{equation}
 with $q = 1- \frac{\alpha}{2}$, where $\alpha = 0.0027 \rightarrow z_q \approx 3$\\
 
-\textbf{Statistical conclusion:}\\
+\textbf{Statistical conclusion}\\
 If $\leq |z| \ z_q \rightarrow$ accept null hypothesis, i.e. process is not disturbed.\\
 If $< |z| \ z_q \rightarrow$ reject null hypothesis, i.e. process is disturbed.\\
 
 Reverse it and determine acceptance and rejection limits of the test!
 
-\textbf{Control limits:}
+\textbf{Control limits}
 \begin{equation}
   UCL = \mu_0 + z_q \frac{\sigma}{\sqrt{n}} \;\;\;\;\; LCL = \mu_0 - z_q \frac{\sigma}{\sqrt{n}}
 \end{equation}
 
-\textbf{Statistical conclusion:}\\
+\textbf{Statistical conclusion}\\
 If $LCL \leq \bar{x} \leq UCL \rightarrow$ process is not disturbed.\\
 If $\bar{x} < LCL or UCL < \bar{x} \rightarrow$ process is disturbed.\\
 
@@ -51,8 +51,6 @@ Problem: In general, process standard deviation is unknown.\\
  - First, monitoring the variation, then (if variation under control) monitoring the mean.\\
 
 Solution: Control charts! :)
-
-
 
 
 \subsection{The Control Chart}

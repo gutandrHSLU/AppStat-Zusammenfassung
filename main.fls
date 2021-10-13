@@ -281,6 +281,14 @@ INPUT Pics/3.2.4.png
 INPUT ./Pics/3.2.4.png
 INPUT ./Pics/3.2.4.png
 INPUT c:/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/tcrm0800.tfm
+INPUT 4_control_charts_with_memory.tex
+INPUT 4_control_charts_with_memory.tex
+INPUT Pics/4.1.png
+INPUT ./Pics/4.1.png
+INPUT ./Pics/4.1.png
+INPUT Pics/4.2.png
+INPUT ./Pics/4.2.png
+INPUT ./Pics/4.2.png
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
