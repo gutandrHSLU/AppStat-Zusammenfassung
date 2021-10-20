@@ -17,5 +17,10 @@
 \BOOKMARK [1][-]{section*.25}{Control Charts with Memory}{part.1}% 17
 \BOOKMARK [2][-]{section*.26}{CUSUM - Cumulative Sum Control Chart}{section*.25}% 18
 \BOOKMARK [2][-]{section*.28}{EWMA - Exponentially Weighted Moving Average}{section*.25}% 19
-\BOOKMARK [0][-]{part.2}{II Multiple Regression}{}% 20
-\BOOKMARK [0][-]{part.3}{III Design of Experiment}{}% 21
+\BOOKMARK [1][-]{section*.30}{Acceptance Sampling}{part.1}% 20
+\BOOKMARK [2][-]{section*.31}{Plans for Attributes}{section*.30}% 21
+\BOOKMARK [2][-]{section*.32}{Operating Characteristic}{section*.30}% 22
+\BOOKMARK [2][-]{section*.36}{Parameters of an Acceptance Sampling Plan}{section*.30}% 23
+\BOOKMARK [2][-]{section*.38}{Acceptance Sampling Plans for Variables}{section*.30}% 24
+\BOOKMARK [0][-]{part.2}{II Multiple Regression}{}% 25
+\BOOKMARK [0][-]{part.3}{III Design of Experiment}{}% 26
