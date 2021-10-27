@@ -303,6 +303,16 @@ INPUT ./Pics/5.1.3.png
 INPUT Pics/5.1.4.png
 INPUT ./Pics/5.1.4.png
 INPUT ./Pics/5.1.4.png
+INPUT 7_simple_linear_regression.tex
+INPUT 7_simple_linear_regression.tex
+INPUT 8_residual_analysis.tex
+INPUT 8_residual_analysis.tex
+INPUT 9_multiple_linear_regression.tex
+INPUT 9_multiple_linear_regression.tex
+INPUT 10_sensitivity_and_robustness.tex
+INPUT 10_sensitivity_and_robustness.tex
+INPUT 11_variable_selection_and_modeling.tex
+INPUT 11_variable_selection_and_modeling.tex
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

@@ -23,4 +23,8 @@
 \BOOKMARK [2][-]{section*.36}{Parameters of an Acceptance Sampling Plan}{section*.30}% 23
 \BOOKMARK [2][-]{section*.38}{Acceptance Sampling Plans for Variables}{section*.30}% 24
 \BOOKMARK [0][-]{part.2}{II Multiple Regression}{}% 25
-\BOOKMARK [0][-]{part.3}{III Design of Experiment}{}% 26
+\BOOKMARK [1][-]{section*.39}{Simple Linear Regression}{part.2}% 26
+\BOOKMARK [2][-]{section*.40}{Simple Linear Regression Model}{section*.39}% 27
+\BOOKMARK [2][-]{section*.41}{Estimation of the Parameters}{section*.39}% 28
+\BOOKMARK [2][-]{section*.42}{Tests and Confidence Intervals}{section*.39}% 29
+\BOOKMARK [0][-]{part.3}{III Design of Experiment}{}% 30
