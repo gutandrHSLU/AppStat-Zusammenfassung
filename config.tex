@@ -1,10 +1,9 @@
 % ========== Packages ==========
 \usepackage[a4paper,
-  left=25mm,
-  right=25mm,
-  top=30mm,
-  bottom=35mm,
-  headheight=35mm
+  left=10mm,
+  right=10mm,
+  top=10mm,
+  bottom=17mm,
 ]{geometry}
 
 % \usepackage[ngerman]{babel} %Ändert die Sprache
@@ -32,11 +31,6 @@
 \usepackage{siunitx}%Für einheiten im Symbolverzeichnis
 % \usepackage[symbols,nogroupskip,sort=none]{glossaries-extra}%Für Symbolverzeichnis
 % % \input{symbolverzeichnis}
-\usepackage{nomencl}
-\renewcommand{\nomname}{List of Symbols}
-\newcommand{\nomunit}[1]{%
-\renewcommand{\nomentryend}{\hspace*{\fill}#1}}
-\makenomenclature
 \usepackage{lipsum}%Für pseudo text
 
 
@@ -63,9 +57,11 @@
 % ========== Header and Footer ==========
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[RE,LO]{Seite \thepage}
-\fancyhead[LE,RO]{\nouppercase{\leftmark}}
-\fancyfoot[RE,LO]{KOHEB FS21}
+% \fancyhead[RE,LO]{Seite \thepage}
+% \fancyhead[LE,RO]{\nouppercase{\leftmark}}
+\fancyfoot[RE,LO]{Page \thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{.5pt}
 
 %Eigens erstellte Variablen
 \newcommand{\plotWidth}{0.7}
@@ -75,19 +71,15 @@
 \newcommand{\linienDickeDick}{1.5pt}
 
 
-
-\usepackage{calc}
-\usepackage{ifthen}
-
-% \usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
-
-\ifthenelse{\lengthtest { \paperwidth = 11in}}
-    { \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
-	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
-		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
-		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
-	}
-\pagestyle{empty}
+% \usepackage{calc}
+% \usepackage{ifthen}
+% \ifthenelse{\lengthtest { \paperwidth = 11in}}
+%     { \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+% 	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
+% 		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+% 		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+% 	}
+% \pagestyle{empty}
 \makeatletter
 \renewcommand{\section}{\@startsection{section}{1}{0mm}%
                                 {-1ex plus -.5ex minus -.2ex}%

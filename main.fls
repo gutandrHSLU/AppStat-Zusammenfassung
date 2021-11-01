@@ -152,19 +152,6 @@ INPUT c:/texlive/2020/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 INPUT c:/texlive/2020/texmf-dist/tex/latex/translator/translator.sty
 INPUT c:/texlive/2020/texmf-dist/tex/latex/translator/translator.sty
 INPUT c:/texlive/2020/texmf-dist/tex/latex/translator/translator.sty
-INPUT c:/texlive/2020/texmf-dist/tex/latex/nomencl/nomencl.sty
-INPUT c:/texlive/2020/texmf-dist/tex/latex/nomencl/nomencl.sty
-INPUT c:/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-INPUT c:/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-INPUT c:/texlive/2020/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-INPUT c:/texlive/2020/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-INPUT c:/texlive/2020/texmf-dist/tex/latex/koma-script/tocbasic.sty
-INPUT c:/texlive/2020/texmf-dist/tex/latex/koma-script/tocbasic.sty
-INPUT c:/texlive/2020/texmf-dist/tex/latex/koma-script/scrbase.sty
-INPUT c:/texlive/2020/texmf-dist/tex/latex/koma-script/scrbase.sty
-INPUT c:/texlive/2020/texmf-dist/tex/latex/koma-script/scrlfile.sty
-INPUT c:/texlive/2020/texmf-dist/tex/latex/koma-script/scrlfile.sty
-OUTPUT main.nlo
 INPUT c:/texlive/2020/texmf-dist/tex/latex/lipsum/lipsum.sty
 INPUT c:/texlive/2020/texmf-dist/tex/latex/lipsum/lipsum.sty
 INPUT c:/texlive/2020/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
@@ -336,5 +323,6 @@ INPUT c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb
 INPUT c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb
 INPUT c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb
 INPUT c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb
+INPUT c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb
 INPUT c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb
 INPUT c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb
