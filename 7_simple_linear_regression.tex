@@ -88,8 +88,8 @@ and
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 In many cases we are not only interested in estimating the model parameters but also in testing hypothesis and constructing confidence intervals.\\
 
-\paragraph{Statistical Test on the Slope}\mbox{}\\
-\textbf{Hypothesis}
+\textbf{Test of a Slope}\\
+We use the following hypothesis
 \begin{equation}
   \begin{split}
     H_0:& \beta_1 = \beta_{1,0}\\
@@ -98,80 +98,104 @@ In many cases we are not only interested in estimating the model parameters but 
 \end{equation}
 The null hypothesis states that the observations follow the model of simple linear regression with $\beta_{1} = \beta_{1.0}$ and arbitrary $\beta_0$ and $\sigma$. Where $\beta_{1.0}$ is the slope we want to test.\\
 
-\textbf{Estimated standard error}\\
 We can estimate the standard error with the error sum of squares.
 \begin{equation}
-  se(\hat{\beta}_1) = \sqrt{\frac{\hat{\sigma}^2}{S_{xx}}} \text{    with    } S_{xx} =  \sum^n_{i=1}(x_i - \bar{x})^2
+  \textup{se}(\hat{\beta}_1) = \sqrt{\frac{\hat{\sigma}^2}{S_{xx}}} \text{    with    } S_{xx} =  \sum^n_{i=1}(x_i - \bar{x})^2
 \end{equation}
 
-\textbf{Test statistic}
+The test statistic is the following
 \begin{equation}
-  T = \frac{\hat{\beta}_1 - \beta_{1,0}}{se(\hat{\beta}_1)}
+  T = \frac{\hat{\beta}_1 - \beta_{1,0}}{\textup{se}(\hat{\beta}_1)}
+  \label{eq:7.3.b}
 \end{equation}
 Under the null hypothesis the test statistic $T$ follows a Student’s t-distribution with $n - 2$ degrees of freedom. Values of t are usually found in a table.\\
-If T is smaller than t (from the table), we accept the null hypothesis and conclude that the data agrees also with a model with the slope $\beta_{1,0}$.
+If T is smaller than t (from the table), we accept the null hypothesis and conclude that the data agrees also with a model with the slope $\beta_{1,0}$.\\
 
 
-\textbf{P-Value}\\
-The probability, under the null hypothesis, of obtaining a result equal to or more extreme than what was actually estimated. If the value T of the test statistic is larger than the critival value t (from the table) the null hypothesis is not rejected i.e. it is plausible to assume that the data fits the model.
+The \textbf{P-Value} is the probability, under the null hypothesis, of obtaining a result equal to or more extreme than what was actually estimated. If the value T of the test statistic is larger than the critival value t (from the table) the null hypothesis is not rejected i.e. it is plausible to assume that the data fits the model.\\
 
-\paragraph{Confidence Test}\mbox{}\\
-The test statistic
+The test statistic \ref{eq:7.3.b} is accepted on the significance level $\alpha$ if
 \begin{equation}
-  T = \frac{\hat{\beta}_1 - \beta_{1,0}}{se(\beta_1)}
+  t_{\frac{\alpha}{2}, n-2} \leq T \leq t_{-\frac{\alpha}{2}, n-2},
 \end{equation}
-is accepted on the significance level $\alpha$ if
+which leads us to the following \textbf{confidence interval on the slope}
 \begin{equation}
-  t_{\frac{\alpha}{2}, n-2} \leq T \leq t_{-\frac{\alpha}{2}, n-2}
-\end{equation}
-
-
-
-\textbf{Confidence interval on the slope}
-\begin{equation}
-  \hat{\beta}_1 - t_{\frac{\alpha}{2}, n-2} \cdot se(\beta_1) \leq \beta_1 \leq  \hat{\beta}_1 + t_{-\frac{\alpha}{2}, n-2} \cdot se(\beta_1)
+  \hat{\beta}_1 - t_{\frac{\alpha}{2}, n-2} \cdot \textup{se}(\beta_1)
+  \leq \beta_1 \leq
+  \hat{\beta}_1 + t_{-\frac{\alpha}{2}, n-2} \cdot \textup{se}(\beta_1)
 \end{equation}
 \begin{equation}
-  \left[\hat{\beta}_1 - t_{\frac{\alpha}{2}, n-2} \cdot se(\beta_1), \hat{\beta}_1 - t_{-\frac{\alpha}{2}, n-2} \cdot se(\beta_1)\right]
+  \left[
+  \hat{\beta}_1 - t_{\frac{\alpha}{2}, n-2} \cdot \textup{se}(\beta_1),
+  \hat{\beta}_1 - t_{-\frac{\alpha}{2}, n-2} \cdot \textup{se}(\beta_1)\right].
 \end{equation}
+Interpretation: The true value of $\beta_1$ lies in the confidence interval with high probability.
 
-Interpretation:
-The true value lies in the confidence interval with high probability.
-
-\subsection{Confidence Interval on Response and Prediction Intervals}
+\subsection{Confidence Interval of the Response}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
-\textbf{Confidence Interval of the Response}\\
-Estimated response
+The estimated response of a regression model is as follows:
 \begin{equation}
   \hat{y}_0 = \hat{\beta}_0 +  \hat{\beta}_1 x_0
 \end{equation}
+
+Now we want to find a confidence interval on the response. Such a confidence interval corresponds to the null hypothesis
 \begin{equation}
-  \textup{Var}(\hat{y}_0) = \sigma^2\left(\frac{1}{n}) + \frac{(x_0 - \bar{x})^2}{S_{xx}}\right)
+  H_0: \hat{y}_0 = \mu_0
 \end{equation}
 
+The estimator $\hat{y}_0$ is normally distributed, unbiased and has the variance
 \begin{equation}
-  T = \frac{\hat{y}_0 - \mu_0}{se(\hat{y}_0)}
+  \textup{Var}(\hat{y}_0) = \sigma^2\left(\frac{1}{n} + \frac{(x_0 - \bar{x})^2}{S_{xx}}\right)
 \end{equation}
 
+As usual $\sigma^2$ is in general unknown and has to be estimated from the data. The test statistic about the response is
 \begin{equation}
-  se(\hat{y}_0)=\hat{\sigma}\sqrt{\frac{1}{n} + \frac{(x_0 - \bar{x})^2}{S_{xx}}}
+  T = \frac{\hat{y}_0 - \mu_0}{\textup{se}(\hat{y}_0)}.
+\end{equation}
+with the standard error
+\begin{equation}
+  \textup{se}(\hat{y}_0)=\hat{\sigma}\sqrt{\frac{1}{n} + \frac{(x_0 - \bar{x})^2}{S_{xx}}}
+\end{equation}
+Under the null hypothesis the test statistic $T$ follows a Student’s $t$-distribution with $n - 2$ degrees of freedom.\\
+The \textbf{confidence interval} on the response at the point $x_0$ is
+\begin{equation}
+  \hat{y}_0 - t_{\frac{\alpha}{2},n-2} \cdot \textup{se}(\hat{y}_0)
+  \leq \mu_0 \leq
+  \hat{y}_0 + t_{1 - \frac{\alpha}{2},n-2} \cdot \textup{se}(\hat{y}_0)
 \end{equation}
 
-se = standard error
-\textbf{confidence interval on the response}
+\subsection{Prediction Interval}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+The point estimate of a new value of the response $y_0$ is
 \begin{equation}
-  \hat{y}_0 - t \leq \hat{\beta}_0 +  \hat{\beta}_1 x_0 \leq \hat{y}_0 + t
+  \hat{y}_0 = \hat{\beta}_0 +  \hat{\beta}_1 x_0.
 \end{equation}
-where
+Now our aim is to find a prediction interval for a future observation. It is very important to understand that in this situation the randomness of the future observation $y_0$ has to be considered too. Therefore the random variable $y_0 - \hat{y}_0$ has to be considered.\\
+To calculate its variance we use the formula for the difference of two uncorrelated random variables
 \begin{equation}
-  t = \frac{\alpha}{2},n-2 \cdot se(\hat{y}_0)
+  \textup{Var}(X - Y) = \textup{Var}(X) + \textup{Var}(Y)
 \end{equation}
-
-\textbf{Prediction Interval}\\
-
+Therefore
 \begin{equation}
-  \begin{align}
+  \begin{split}
       \textup{Var}(y_0 - \hat{y}_0) &= \textup{Var}(y_0) + \textup{Var}(\hat{y}_0)\\
-      &= \sigma^2\left(\frac{1}{n}) + \frac{(x_0 - \bar{x})^2}{S_{xx}}\right)
-  \end{align}
+      &= \sigma^2\left(1 + \frac{1}{n} + \frac{(x_0 - \bar{x})^2}{S_{xx}}\right)
+  \end{split}
 \end{equation}
+The prediction interval is wider than the confidence interval on the response, since the variance of the future observation has to be considered too. As usual $\sigma^2$ is in general unknown and has to be estimated from the data.
+
+The \textbf{prediction interval} at the point $x_0$ is
+\begin{equation}
+  \hat{y}_0 - t_{\frac{\alpha}{2},n-2} \cdot \textup{se}(y_0 - \hat{y}_0)
+  \leq \hat{y}_0 \leq
+  \hat{y}_0 + t_{1 - \frac{\alpha}{2},n-2} \cdot \textup{se}(y_0 - \hat{y}_0)
+\end{equation}
+with
+\begin{equation}
+  \textup{se}(y_0 - \hat{y}_0) = \hat{\sigma}\sqrt{1 + \frac{1}{n} + \frac{(x_0 - \bar{x})^2}{S_{xx}}}
+\end{equation}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{Pics/7.4.png}
+\end{figure}

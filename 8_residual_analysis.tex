@@ -1,0 +1,43 @@
+\section{Residual Analysis}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDickeDick}
+
+
+\subsection{Introduction}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+In our simple linear regression models we made the following assumptions:
+\begin{enumerate}
+  \item The relationship between response and the regressors is linear.
+  \item The error $\varepsilon$ has mean zero.
+  \item The error $\varepsilon$ has constant variance $\sigma^2$
+  \item The errors are uncorrelated.
+  \item The errors are normally distributed
+\end{enumerate}
+If some assumptions are violated we should be able to see them in the errors $\varepsilon_i$. On the other hand, the errors are unknown to us, so we have to deal with the residuals
+\begin{equation}
+  e_i = y_i - \hat{y}_i \text{  for all  } i \in {1,...,n}
+\end{equation}
+instead. The residuals are estimators of the random errors.\\
+If the errors are normally distributed, so are the residuals of a least-squares estimate. Since the variance of the residuals depends on $x_0$ it is not equal to the variance of the errors. Therefore we use scaled residuals
+\begin{equation}
+  \tilde{e}_i = \frac{e_i}{\sqrt{1 - \left(\frac{1}{n} + \frac{(x_0 - \bar{x})^2}{S_{xx}\right)}}}
+\end{equation}
+
+\textbf{Standardised residuals}
+\textbf{Scaled residuals}
+
+\textbf{Quantify goodness of fit}\\
+\begin{equation}
+  R^2 = \frac{SS_{fit}}{S_{yy}} = \textup{Cor}(x, y)^2
+\end{equation}
+where
+\begin{equation}
+  \begin{split}
+    SS_{fit} &= \sum_{i=1}^n(\hat{y}_i - \bar{\hat{y}}_i) = \hat{\beta}_1^2 S_{xx}\\
+    SS_{yy} &= \sum_{i=1}^n(y_i - \bar{y}_i)
+  \end{split}
+\end{equation}
+
+\subsection{Diagnostic Tools}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+
+\textbf{Tukey-Anscombe Plot}
