@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.16)  1 NOV 2021 10:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.16)  3 NOV 2021 09:56
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -669,11 +669,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--52
 
  []
 
-<Pics/2.1.png, id=124, 810.77907pt x 311.66437pt>
-File: Pics/2.1.png Graphic file (type png)
-<use Pics/2.1.png>
-Package pdftex.def Info: Pics/2.1.png  used on input line 60.
-(pdftex.def)             Requested size: 212.24176pt x 81.58247pt.
+
+LaTeX Warning: File `Pics/2.1.png' not found on input line 60.
+
+
+./2_control_charts.tex:60: Package pdftex.def Error: File `Pics/2.1.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 ...phics[width = 0.8\linewidth]{Pics/2.1.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 60.
+(c:/texlive/2020/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 81.
@@ -687,6 +701,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--106
 
  []
 
+[1
+
+{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 144.
@@ -700,9 +717,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--150
 
  []
 
-[1
 
-{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Pics/2.1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 180--184
 
  []
@@ -733,51 +748,111 @@ Underfull \hbox (badness 10000) in paragraph at lines 229--232
  []
 
 ) (./3_statistical_properties_of_control_charts.tex
-<Pics/3.1.1.png, id=170, 443.40656pt x 264.99pt>
-File: Pics/3.1.1.png Graphic file (type png)
-<use Pics/3.1.1.png>
-Package pdftex.def Info: Pics/3.1.1.png  used on input line 21.
-(pdftex.def)             Requested size: 128.40163pt x 76.73595pt.
-<Pics/3.1.2.png, id=171, 630.10406pt x 376.40625pt>
-File: Pics/3.1.2.png Graphic file (type png)
-<use Pics/3.1.2.png>
-Package pdftex.def Info: Pics/3.1.2.png  used on input line 21.
-(pdftex.def)             Requested size: 128.40163pt x 76.7043pt.
-<Pics/3.1.3.png, id=172, 633.86812pt x 371.88937pt>
-File: Pics/3.1.3.png Graphic file (type png)
-<use Pics/3.1.3.png>
-Package pdftex.def Info: Pics/3.1.3.png  used on input line 24.
-(pdftex.def)             Requested size: 128.40163pt x 75.32988pt.
-<Pics/3.1.4.png, id=173, 635.37375pt x 375.65344pt>
-File: Pics/3.1.4.png Graphic file (type png)
-<use Pics/3.1.4.png>
-Package pdftex.def Info: Pics/3.1.4.png  used on input line 24.
-(pdftex.def)             Requested size: 128.40163pt x 75.91463pt.
+
+LaTeX Warning: File `Pics/3.1.1.png' not found on input line 21.
+
+
+./3_statistical_properties_of_control_charts.tex:21: Package pdftex.def Error: File `Pics/3.1.1.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...graphics[width=\linewidth]{Pics/3.1.1.png}
+                                                  & \includegraphics[width=\...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Pics/3.1.2.png' not found on input line 21.
+
+
+./3_statistical_properties_of_control_charts.tex:21: Package pdftex.def Error: File `Pics/3.1.2.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...graphics[width=\linewidth]{Pics/3.1.2.png}
+                                                   \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Pics/3.1.3.png' not found on input line 24.
+
+
+./3_statistical_properties_of_control_charts.tex:24: Package pdftex.def Error: File `Pics/3.1.3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 ...graphics[width=\linewidth]{Pics/3.1.3.png}
+                                                  & \includegraphics[width=\...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Pics/3.1.4.png' not found on input line 24.
+
+
+./3_statistical_properties_of_control_charts.tex:24: Package pdftex.def Error: File `Pics/3.1.4.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 ...graphics[width=\linewidth]{Pics/3.1.4.png}
+                                                   \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 
 Overfull \hbox (3.99895pt too wide) in paragraph at lines 20--28
 [][] 
  []
 
-
+[2]
 Underfull \hbox (badness 10000) in paragraph at lines 38--43
 
  []
 
-[2 <./Pics/3.1.1.png> <./Pics/3.1.2.png> <./Pics/3.1.3.png> <./Pics/3.1.4.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 44--47
 
  []
 
-<Pics/3.2.1.png, id=210, 661.72218pt x 396.7322pt>
-File: Pics/3.2.1.png Graphic file (type png)
-<use Pics/3.2.1.png>
-Package pdftex.def Info: Pics/3.2.1.png  used on input line 53.
-(pdftex.def)             Requested size: 128.40163pt x 76.97806pt.
-<Pics/3.2.2.png, id=211, 663.98062pt x 392.21532pt>
-File: Pics/3.2.2.png Graphic file (type png)
-<use Pics/3.2.2.png>
-Package pdftex.def Info: Pics/3.2.2.png  used on input line 53.
-(pdftex.def)             Requested size: 128.40163pt x 75.8443pt.
+
+LaTeX Warning: File `Pics/3.2.1.png' not found on input line 53.
+
+
+./3_statistical_properties_of_control_charts.tex:53: Package pdftex.def Error: File `Pics/3.2.1.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 ...graphics[width=\linewidth]{Pics/3.2.1.png}
+                                                  & \includegraphics[width=\...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Pics/3.2.2.png' not found on input line 53.
+
+
+./3_statistical_properties_of_control_charts.tex:53: Package pdftex.def Error: File `Pics/3.2.2.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 ...graphics[width=\linewidth]{Pics/3.2.2.png}
+                                                   \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 
 Overfull \hbox (3.99895pt too wide) in paragraph at lines 52--57
 [][] 
@@ -788,16 +863,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--57
 
  []
 
-<Pics/3.2.3.png, id=212, 648.17157pt x 389.20406pt>
-File: Pics/3.2.3.png Graphic file (type png)
-<use Pics/3.2.3.png>
-Package pdftex.def Info: Pics/3.2.3.png  used on input line 64.
-(pdftex.def)             Requested size: 128.40163pt x 77.09708pt.
-<Pics/3.2.4.png, id=213, 656.4525pt x 394.47375pt>
-File: Pics/3.2.4.png Graphic file (type png)
-<use Pics/3.2.4.png>
-Package pdftex.def Info: Pics/3.2.4.png  used on input line 64.
-(pdftex.def)             Requested size: 128.40163pt x 77.15982pt.
+
+LaTeX Warning: File `Pics/3.2.3.png' not found on input line 64.
+
+
+./3_statistical_properties_of_control_charts.tex:64: Package pdftex.def Error: File `Pics/3.2.3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.64 ...graphics[width=\linewidth]{Pics/3.2.3.png}
+                                                  & \includegraphics[width=\...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Pics/3.2.4.png' not found on input line 64.
+
+
+./3_statistical_properties_of_control_charts.tex:64: Package pdftex.def Error: File `Pics/3.2.4.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.64 ...graphics[width=\linewidth]{Pics/3.2.4.png}
+                                                   \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 59--68
 
@@ -813,7 +908,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--89
 
  []
 
-) (./4_control_charts_with_memory.tex
+[3]) (./4_control_charts_with_memory.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--7
 
  []
@@ -833,16 +928,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--39
 
  []
 
-[3 <./Pics/3.2.1.png> <./Pics/3.2.2.png> <./Pics/3.2.3.png> <./Pics/3.2.4.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
  []
 
-<Pics/4.1.png, id=239, 674.52pt x 614.295pt>
-File: Pics/4.1.png Graphic file (type png)
-<use Pics/4.1.png>
-Package pdftex.def Info: Pics/4.1.png  used on input line 50.
-(pdftex.def)             Requested size: 212.24176pt x 193.28836pt.
+
+LaTeX Warning: File `Pics/4.1.png' not found on input line 50.
+
+
+./4_control_charts_with_memory.tex:50: Package pdftex.def Error: File `Pics/4.1.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 ...raphics[width=0.8\linewidth]{Pics/4.1.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 57--61
 
@@ -878,11 +983,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-<Pics/4.2.png, id=240, 677.53125pt x 614.295pt>
-File: Pics/4.2.png Graphic file (type png)
-<use Pics/4.2.png>
-Package pdftex.def Info: Pics/4.2.png  used on input line 115.
-(pdftex.def)             Requested size: 212.24176pt x 192.43538pt.
+[4]
+
+LaTeX Warning: File `Pics/4.2.png' not found on input line 115.
+
+
+./4_control_charts_with_memory.tex:115: Package pdftex.def Error: File `Pics/4.2.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 ...aphics[width=0.8\linewidth]{Pics/4.2.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 ) (./5_acceptance_sampling.tex
 Underfull \hbox (badness 10000) in paragraph at lines 16--21
 
@@ -898,7 +1014,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--37
 
  []
 
-[4 <./Pics/4.1.png> <./Pics/4.2.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 38--42
 
  []
@@ -908,22 +1024,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--58
 
  []
 
-<Pics/5.1.1.png, id=259, 748.29562pt x 679.78969pt>
+<Pics/5.1.1.png, id=238, 748.29562pt x 679.78969pt>
 File: Pics/5.1.1.png Graphic file (type png)
 <use Pics/5.1.1.png>
 Package pdftex.def Info: Pics/5.1.1.png  used on input line 63.
 (pdftex.def)             Requested size: 212.24176pt x 192.80852pt.
-<Pics/5.1.2.png, id=260, 794.2172pt x 718.18312pt>
+<Pics/5.1.2.png, id=240, 794.2172pt x 718.18312pt>
 File: Pics/5.1.2.png Graphic file (type png)
 <use Pics/5.1.2.png>
 Package pdftex.def Info: Pics/5.1.2.png  used on input line 71.
 (pdftex.def)             Requested size: 212.24176pt x 191.91757pt.
-<Pics/5.1.3.png, id=261, 788.19469pt x 717.43031pt>
+<Pics/5.1.3.png, id=241, 788.19469pt x 717.43031pt>
 File: Pics/5.1.3.png Graphic file (type png)
 <use Pics/5.1.3.png>
 Package pdftex.def Info: Pics/5.1.3.png  used on input line 77.
 (pdftex.def)             Requested size: 212.24176pt x 193.1833pt.
-
+[5 <./Pics/5.1.1.png> <./Pics/5.1.2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 82--87
 
  []
@@ -933,7 +1049,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--90
 
  []
 
-<Pics/5.1.4.png, id=262, 760.34062pt x 692.5875pt>
+<Pics/5.1.4.png, id=256, 760.34062pt x 692.5875pt>
 File: Pics/5.1.4.png Graphic file (type png)
 <use Pics/5.1.4.png>
 Package pdftex.def Info: Pics/5.1.4.png  used on input line 94.
@@ -943,7 +1059,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--102
 
  []
 
-[5 <./Pics/5.1.1.png> <./Pics/5.1.2.png> <./Pics/5.1.3.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 103--105
 
  []
@@ -978,12 +1094,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--90
 
  []
 
-
+[6 <./Pics/5.1.3.png> <./Pics/5.1.4.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 98--100
 
  []
 
-[6 <./Pics/5.1.4.png>]) (./8_residual_analysis.tex) (./9_multiple_linear_regression.tex) (./10_sensitivity_and_robustness.tex) (./11_variable_selection_and_modeling.tex)
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
+
+ []
+
+
+./7_simple_linear_regression.tex:176: Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.176   \end{align}
+                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) (./8_residual_analysis.tex) (./9_multiple_linear_regression.tex) (./10_sensitivity_and_robustness.tex) (./11_variable_selection_and_modeling.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
  [7]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
@@ -991,23 +1125,23 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 47.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 47.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B207AA367AA7245F99B94E183BE0E3FA;2213.
+(rerunfilecheck)             Checksum: ADD26296138DA9CB5EF3DC02C29E4551;2318.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
  ) 
 Here is how much of TeX's memory you used:
- 13840 strings out of 480876
- 245299 string characters out of 5911487
- 695973 words of memory out of 5000000
- 29034 multiletter control sequences out of 15000+600000
- 552413 words of font info for 73 fonts, out of 8000000 for 9000
+ 14003 strings out of 480876
+ 248085 string characters out of 5911487
+ 706972 words of memory out of 5000000
+ 29161 multiletter control sequences out of 15000+600000
+ 553039 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,19n,48p,980b,902s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,19n,48p,980b,904s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dist/
-fonts/type1/public/cm-super/sfbx0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on main.pdf (7 pages, 844463 bytes).
+fonts/type1/public/cm-super/sfbx0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on main.pdf (7 pages, 561384 bytes).
 PDF statistics:
- 409 PDF objects out of 1000 (max. 8388607)
- 345 compressed objects within 4 object streams
- 136 named destinations out of 1000 (max. 500000)
- 316 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 407 PDF objects out of 1000 (max. 8388607)
+ 363 compressed objects within 4 object streams
+ 144 named destinations out of 1000 (max. 500000)
+ 269 words of extra memory for PDF output out of 10000 (max. 10000000)
 

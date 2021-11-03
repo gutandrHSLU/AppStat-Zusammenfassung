@@ -21,7 +21,7 @@ where $\beta_0$ and $\beta_1$ are unknown and fixed parameters.\\
 \end{equation}
 and unknown variance
 \begin{equation}
-  Var(\varepsilon ) = \sigma^2
+  \textup{Var}(\varepsilon ) = \sigma^2
 \end{equation}
 Since the error is a random value, y is also a random value.\\
 
@@ -137,3 +137,41 @@ is accepted on the significance level $\alpha$ if
 
 Interpretation:
 The true value lies in the confidence interval with high probability.
+
+\subsection{Confidence Interval on Response and Prediction Intervals}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+\textbf{Confidence Interval of the Response}\\
+Estimated response
+\begin{equation}
+  \hat{y}_0 = \hat{\beta}_0 +  \hat{\beta}_1 x_0
+\end{equation}
+\begin{equation}
+  \textup{Var}(\hat{y}_0) = \sigma^2\left(\frac{1}{n}) + \frac{(x_0 - \bar{x})^2}{S_{xx}}\right)
+\end{equation}
+
+\begin{equation}
+  T = \frac{\hat{y}_0 - \mu_0}{se(\hat{y}_0)}
+\end{equation}
+
+\begin{equation}
+  se(\hat{y}_0)=\hat{\sigma}\sqrt{\frac{1}{n} + \frac{(x_0 - \bar{x})^2}{S_{xx}}}
+\end{equation}
+
+se = standard error
+\textbf{confidence interval on the response}
+\begin{equation}
+  \hat{y}_0 - t \leq \hat{\beta}_0 +  \hat{\beta}_1 x_0 \leq \hat{y}_0 + t
+\end{equation}
+where
+\begin{equation}
+  t = \frac{\alpha}{2},n-2 \cdot se(\hat{y}_0)
+\end{equation}
+
+\textbf{Prediction Interval}\\
+
+\begin{equation}
+  \begin{align}
+      \textup{Var}(y_0 - \hat{y}_0) &= \textup{Var}(y_0) + \textup{Var}(\hat{y}_0)\\
+      &= \sigma^2\left(\frac{1}{n}) + \frac{(x_0 - \bar{x})^2}{S_{xx}}\right)
+  \end{align}
+\end{equation}
