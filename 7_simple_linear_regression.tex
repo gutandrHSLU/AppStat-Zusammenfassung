@@ -6,45 +6,40 @@ One of the most important and widely used statistical technique is regression an
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 A simple linear regression model is a model with a single predictor variable that has a relationship with a response that is a straight line.\\
 
-\textbf{Model}
+The model for a simple linear regression is
 \begin{equation}
-  y = \beta_0 + \beta_1x \cdot \varepsilon
+  y = \beta_0 + \beta_1x + \varepsilon,
 \end{equation}
 where $\beta_0$ and $\beta_1$ are unknown and fixed parameters.\\
 
-\textbf{Variables and error}\\
-- Perdictor / input / explanatory variable x (deterministic)\\
-- Response / output variable y (random variable)\\
-- Uncorrelated random error $\varepsilon $ with
+The perdictor/input/explanatory variable $x$ is deterministic\\
+The response/output variable $y$ is a random variable\\
+$\varepsilon $ is the uncorrelated random error with
 \begin{equation}
   E(\varepsilon ) = 0
 \end{equation}
 and unknown variance
 \begin{equation}
-  \textup{Var}(\varepsilon ) = \sigma^2
+  \textup{Var}(\varepsilon ) = \sigma^2.
 \end{equation}
-Since the error is a random value, y is also a random value.\\
+Since the error $\varepsilon$ is a random value, the response $y$ is also a random value.\\
 
-\textbf{Aim}\\
-Find Parameters $\hat{\beta}_0, \hat{\beta}_1$ and $\hat{\sigma}^2$ such that model fits data as well as possible.
+The aim is to find the parameters $\hat{\beta}_0, \hat{\beta}_1$ and $\hat{\sigma}^2$ such that model fits the data as well as possible.\\
 
-\textbf{Assumptions}\\
-The error $\varepsilon $ is normaly distributed:
+It is assumend, that the error $\varepsilon$ is normaly distributed.
 \begin{equation}
   E \approx \mathcal{N}(0, \sigma^2) \Rightarrow E(y) = \beta_0 + \beta_1 x
 \end{equation}
 
 \subsection{Estimation of the Parameters}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
-\textbf{Method of least square}\\
-Minimise:
+The parameters $\beta_0$ and $\beta_1$ are estimated using the method of least square, i.e. by minimising:
 \begin{equation}
-  S(\beta_0, \beta_1) = \sum_{i=1}^n(y_i-(\beta_0 + \beta_1x_i))^2
+  S(\beta_0, \beta_1) = \sum_{i=1}^n(y_i-(\beta_0 + \beta_1x_i))^2,
 \end{equation}
-
-Calculating:
+with
 \begin{equation}
-  \hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x} \;\;\text{with}\;\; \hat{\beta}_1 = \frac{S_{xy}}{S_{xx}}
+  \hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x} \;\;\text{with}\;\; \hat{\beta}_1 = \frac{S_{xy}}{S_{xx}},
 \end{equation}
 where
 \begin{equation}
@@ -52,7 +47,7 @@ where
 \end{equation}
 with
 \begin{equation}
-  \bar{x} = \frac{1}{n}\sum_{i=1}^n x_i  \;\;\text{and}\;\; \bar{y} = \frac{1}{n}\sum_{i=1}^n y_i
+  \bar{x} = \frac{1}{n}\sum_{i=1}^n x_i  \;\;\text{and}\;\; \bar{y} = \frac{1}{n}\sum_{i=1}^n y_i.
 \end{equation}
 
 \textbf{Residual}\\
@@ -60,16 +55,16 @@ The difference between the $i$th observed value $y_i$ and its fitted value $\hat
 \begin{equation}
   e_i = y_i - \hat{y}_i = y_i - (\beta_0 + \beta_1x_i)
 \end{equation}
-
-\textbf{Mean of residuals}\\
+where the mean of the residual is given by
 \begin{equation}
   \bar{e} = \frac{1}{n} \sum_{i=1}^n e_i = 0
 \end{equation}
 
 \textbf{Unbiased estimator}\\
-An unbiased estimator $\hat{\sigma}^2$  is obtained from the error sum of squares
+The unbiased estimator $\hat{\sigma}^2$  is obtained from the error sum of squares
 \begin{equation}
   \hat{\sigma}^2 = \frac{1}{n - 2} \sum_{i=1}^n (e_i - \bar{e})^2 = \frac{1}{n - 2} \sum_{i=1}^n e_i^2
+  \label{eq:7.2.h}
 \end{equation}
 Notice that we have to divide by the degrees of freedom $n - 2$ to make the estimator unbiased. (2 because we have two parameters to find).\\
 
@@ -111,14 +106,16 @@ The test statistic is the following
 Under the null hypothesis the test statistic $T$ follows a Student’s t-distribution with $n - 2$ degrees of freedom. Values of t are usually found in a table.\\
 If T is smaller than t (from the table), we accept the null hypothesis and conclude that the data agrees also with a model with the slope $\beta_{1,0}$.\\
 
-
-The \textbf{P-Value} is the probability, under the null hypothesis, of obtaining a result equal to or more extreme than what was actually estimated. If the value T of the test statistic is larger than the critival value t (from the table) the null hypothesis is not rejected i.e. it is plausible to assume that the data fits the model.\\
+\textbf{P-Value}\\
+The P-Value is the probability, under the null hypothesis, of obtaining a result equal to or more extreme than what was actually estimated. If the value T of the test statistic is larger than the critival value t (from the table) the null hypothesis is not rejected i.e. it is plausible to assume that the data fits the model.\\
 
 The test statistic \ref{eq:7.3.b} is accepted on the significance level $\alpha$ if
 \begin{equation}
   t_{\frac{\alpha}{2}, n-2} \leq T \leq t_{-\frac{\alpha}{2}, n-2},
 \end{equation}
-which leads us to the following \textbf{confidence interval on the slope}
+
+\textbf{Confidence Interval}\\
+which leads us to the following confidence interval on the slope
 \begin{equation}
   \hat{\beta}_1 - t_{\frac{\alpha}{2}, n-2} \cdot \textup{se}(\beta_1)
   \leq \beta_1 \leq
@@ -127,7 +124,7 @@ which leads us to the following \textbf{confidence interval on the slope}
 \begin{equation}
   \left[
   \hat{\beta}_1 - t_{\frac{\alpha}{2}, n-2} \cdot \textup{se}(\beta_1),
-  \hat{\beta}_1 - t_{-\frac{\alpha}{2}, n-2} \cdot \textup{se}(\beta_1)\right].
+  \hat{\beta}_1 - t_{-\frac{\alpha}{2}, n-2} \cdot \textup{se}(\beta_1)\right]
 \end{equation}
 Interpretation: The true value of $\beta_1$ lies in the confidence interval with high probability.
 
@@ -148,16 +145,18 @@ The estimator $\hat{y}_0$ is normally distributed, unbiased and has the variance
   \textup{Var}(\hat{y}_0) = \sigma^2\left(\frac{1}{n} + \frac{(x_0 - \bar{x})^2}{S_{xx}}\right)
 \end{equation}
 
-As usual $\sigma^2$ is in general unknown and has to be estimated from the data. The test statistic about the response is
+As usual $\sigma^2$ is in general unknown and has to be estimated from the data (equation \ref{eq:7.2.h}). The test statistic about the response is
 \begin{equation}
-  T = \frac{\hat{y}_0 - \mu_0}{\textup{se}(\hat{y}_0)}.
+  T = \frac{\hat{y}_0 - \mu_0}{\textup{se}(\hat{y}_0)},
 \end{equation}
 with the standard error
 \begin{equation}
-  \textup{se}(\hat{y}_0)=\hat{\sigma}\sqrt{\frac{1}{n} + \frac{(x_0 - \bar{x})^2}{S_{xx}}}
+  \textup{se}(\hat{y}_0)=\hat{\sigma}\sqrt{\frac{1}{n} + \frac{(x_0 - \bar{x})^2}{S_{xx}}}.
 \end{equation}
 Under the null hypothesis the test statistic $T$ follows a Student’s $t$-distribution with $n - 2$ degrees of freedom.\\
-The \textbf{confidence interval} on the response at the point $x_0$ is
+
+\textbf{Confidence Interval of the Response}\\
+The confidence interval on the response at the point $x_0$ is
 \begin{equation}
   \hat{y}_0 - t_{\frac{\alpha}{2},n-2} \cdot \textup{se}(\hat{y}_0)
   \leq \mu_0 \leq
@@ -182,9 +181,10 @@ Therefore
       &= \sigma^2\left(1 + \frac{1}{n} + \frac{(x_0 - \bar{x})^2}{S_{xx}}\right)
   \end{split}
 \end{equation}
-The prediction interval is wider than the confidence interval on the response, since the variance of the future observation has to be considered too. As usual $\sigma^2$ is in general unknown and has to be estimated from the data.
+The prediction interval is wider than the confidence interval on the response, since the variance of the future observation has to be considered too. As usual $\sigma^2$ is in general unknown and has to be estimated from the data.\\
 
-The \textbf{prediction interval} at the point $x_0$ is
+\textbf{Prediction Interval}\\
+The prediction interval at the point $x_0$ is
 \begin{equation}
   \hat{y}_0 - t_{\frac{\alpha}{2},n-2} \cdot \textup{se}(y_0 - \hat{y}_0)
   \leq \hat{y}_0 \leq

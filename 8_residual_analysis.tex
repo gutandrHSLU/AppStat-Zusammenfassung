@@ -14,28 +14,42 @@ In our simple linear regression models we made the following assumptions:
 \end{enumerate}
 If some assumptions are violated we should be able to see them in the errors $\varepsilon_i$. On the other hand, the errors are unknown to us, so we have to deal with the residuals
 \begin{equation}
-  e_i = y_i - \hat{y}_i \text{  for all  } i \in {1,...,n}
+  e_i = y_i - \hat{y}_i \;\;\;\text{for all}\;\;\; i \in {1,...,n}
 \end{equation}
 instead. The residuals are estimators of the random errors.\\
+
+\textbf{Scaled Residuals}\\
 If the errors are normally distributed, so are the residuals of a least-squares estimate. Since the variance of the residuals depends on $x_0$ it is not equal to the variance of the errors. Therefore we use scaled residuals
 \begin{equation}
-  \tilde{e}_i = \frac{e_i}{\sqrt{1 - \left(\frac{1}{n} + \frac{(x_0 - \bar{x})^2}{S_{xx}\right)}}}
+  \tilde{e}_i = \frac{e_i}{\sqrt{1 - \left(\frac{1}{n} + \frac{(x_i - \bar{x})^2}{S_{xx}}\right)}} \;\;\;\text{for all}\;\;\; i \in {1,...,n}
 \end{equation}
 
-\textbf{Standardised residuals}
-\textbf{Scaled residuals}
 
-\textbf{Quantify goodness of fit}\\
+\textbf{Coefficient of Determination}\\
+The coefficient of determination is a measure of the linear relationship between the response variable and the fit.\\
+
+In simple linear regression with only one explanatory variable the coefficient of determination is defined by
 \begin{equation}
-  R^2 = \frac{SS_{fit}}{S_{yy}} = \textup{Cor}(x, y)^2
+  R^2 = \frac{SS_{\textup{fit}}}{S_{yy}}
 \end{equation}
 where
 \begin{equation}
   \begin{split}
-    SS_{fit} &= \sum_{i=1}^n(\hat{y}_i - \bar{\hat{y}}_i) = \hat{\beta}_1^2 S_{xx}\\
-    SS_{yy} &= \sum_{i=1}^n(y_i - \bar{y}_i)
+    SS_{\textup{fit}} &= \sum_{i=1}^n(\hat{y}_i - \bar{\hat{y}}_i)^2 = \hat{\beta}_1^2 S_{xx}\\
+    SS_{yy} &= \sum_{i=1}^n(y_i - \bar{y}_i)^2
   \end{split}
 \end{equation}
+Therefore the coefficient of determination is
+\begin{equation}
+  R^2 = \hat{\beta}_1^2 \frac{S_{xx}}{S_{yy}} = \frac{S_{xy}^2}{S_{xx} S_{yy}} = \textup{Cor}(x, y)^2
+\end{equation}
+
+In multiple regression and simple linear regression with at least one explanatory variable the coefficient of determination is identical to the squared correlation between the response variable $y$ and the fitted values $\hat{y}$
+\begin{equation}
+  R^2 = \textup{Cor}(y, \hat{y})^2 = \frac{S_{y\hat{y}}^2}{S_{yy} S_{\hat{y}\hat{y}}}
+\end{equation}
+
+The coefficient of determination is a global measure for the goodness of fit and it says nothing about the suitability of the regression model.
 
 \subsection{Diagnostic Tools}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
