@@ -116,3 +116,57 @@ If the data is from a normal distribution, the points in the q-q plot scatter ar
     q-q plot with 19 simulated standardised residuals (gray). The simulation shows us that this discrepancy might be due to random fluctuations\\
   \end{tabular}
 \end{table}
+
+Todo: Understand left and right-skewed plots
+
+\subsection{Treatment of Model Violations}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+
+\textbf{Non-Constant Variance of Random Errors}\\
+Often the assumption is violated that the variance of random errors is constant.\\
+This model violation can be changed by a transformation of the response variable. If the standard deviation of the residuals is more or less proportional to the response variable, then a logarithmic transformation of the response variable might help. If this is a too strong transformation then a square-root transformation might be more adequate.
+\begin{itemize}
+  \item \textbf{Logarithmic} for continuous positive variables:
+  \begin{equation}
+    z \mapsto \textup{log}(z)
+  \end{equation}
+  \item \textbf{Square-root} for continuous and discrete positive variables:
+  \begin{equation}
+    z \mapsto \sqrt{z}
+  \end{equation}
+  \item \textbf{Arcsine} for proportions:
+  \begin{equation}
+    z \mapsto \textup{arcsin}(\sqrt{z})
+  \end{equation}
+  \item \textbf{Logit} for proportions:
+  \begin{equation}
+    z \mapsto \textup{log}\left(\frac{z + \varepsilon_1}{1 + \varepsilon_2 - z} \right)
+  \end{equation}
+\end{itemize}
+
+\textbf{Outliers}\\
+The term outlier is not clearly defined. It is an observation that fits badly with a model that is suitable for most data. In the case of an univariate sample, an outlier is an observation that is, compared to the scattering of the data, far away from the median.\\
+
+\textbf{Heavy-Tailed Distributions}\\
+If the q-q plot shows a symmetric distribution but with heavy tails, then transformations are useless. One possibility is to omit the most extreme observations such that the heavy tails disappear. In statistics this is often called trimming. Results obtained with a trimmed data set should be treated with care: the error probability of statistical tests will be wrong.
+
+\subsection{Independence}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+If the observations are ordered chronologically, then it can happen that errors are correlated, i.e. neighbor residuals $e_i$ are more similar than residuals far apart. In such a situation we say that the errors are autocorrelated and the model assumption are violated. If the errors are correlated then we can see a certain pattern if we plot the residuals versus the subsequent residuals in a scatter plot.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{Pics/8.4.1.png}
+\end{figure}
+
+\begin{itemize}
+  \item \textbf{Negative correlation}\\
+  After a positive (negative) residual the chance of observing a negative (positive) residual is high, i.e. very strong alternation of the sign of the residuals.\\
+  In the scatter plot the points lie in an ellipse with negative slope of the first principal axis.
+  \item \textbf{No correlation}\\
+  The residuals are completely random, no obvious pattern present.\\
+  In the scatter plot the points show no pattern.
+  \item \textbf{Positive correlation}
+  After a positive (negative) residual the chance of observing a positive (negative) residual is high, i.e. the residuals show the same sign over certain periods.\\
+  In the scatter plot the points lie in an ellipse with positive slope of the first principal axis.
+\end{itemize}
