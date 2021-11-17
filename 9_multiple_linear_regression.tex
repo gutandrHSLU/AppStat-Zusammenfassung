@@ -20,3 +20,90 @@ The general idea and philosophy of teh multiple linear regression modle are the 
 \end{equation}
 
 Aufg. 8.5.1 is important!!
+
+\subsection{Diversity of Modelling Possibilities}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+
+\textbf{Polynomial Regression}\\
+If we want to use a polynomial of degree two to describe a relationship, then the model has the following form
+\begin{equation}
+  y = \beta_0 + \beta_1x + \beta_2 x^2 + \varepsilon
+\end{equation}
+If we define the new variables $\texttt{lin} = x$ and $\texttt{quad} = x^2$, then we obtain mathematically the same model
+\begin{equation}
+  y = \beta_0 + \beta_1 \cdot \texttt{lin} + \beta_2 \cdot \texttt{quad} + \varepsilon
+\end{equation}
+which is now a multiple linear regression model.
+
+\textbf{Nonlinear Functions and Linear Regression}\\
+Experience shows that in most real-world regression problems, the variables must be transformed to get the best results. Four examples:
+\begin{itemize}
+  \item Inverting the nonlinear equations
+  \begin{equation}
+    \begin{split}
+      y =& \frac{1}{a+be^{-x}}\\
+      y =& \frac{ax}{b+x}
+    \end{split}
+    \;\;\;\;\;\;
+    \begin{split}
+      \text{gives}\\
+      \text{gives}
+    \end{split}
+    \;\;\;\;\;\;
+    \begin{split}
+      \frac{1}{y} =& a + be^{-x}\\
+      \frac{1}{y} =& \frac{1}{a} + \frac{a}{b} \frac{1}{x}
+    \end{split}
+  \end{equation}
+  \item Taking logarithms of the nonlinear equations
+  \begin{equation}
+    \begin{split}
+        y &= ax^b\\
+        y &= ax^{bg(x)}
+    \end{split}
+    \;\;\;\;\;\;
+    \begin{split}
+      \text{gives}\\
+      \text{gives}
+    \end{split}
+    \;\;\;\;\;\;
+    \begin{split}
+      \textup{ln}(y) &= \textup{ln}(a) + b\textup{ln}(x)\\
+      \textup{ln}(y) &= \textup{ln}(a) + bg(x)
+    \end{split}
+  \end{equation}
+\end{itemize}
+It is important to realise that also such transformations change the form of the error term. If we are not allowed to alter the original additive error term, then we need to use nonlinear least-squares regression.
+
+\textbf{Binary Explanatory Variables}\\
+In all our examples, the explanatory variables have been continuous so far. This is not necessary.\\
+If the binary variable $x_b$ is the only variable in the model
+\begin{equation}
+  y = \beta_0 + \beta_1 x_b + \varepsilon
+\end{equation}
+then
+\begin{equation}
+  \begin{split}
+    y =& \beta_0 + \varepsilon\\
+    y =& \beta_0 + \beta_1 + \varepsilon
+  \end{split}
+  \;\;\;
+  \begin{split}
+    \textup{if}\; x_b = 0\\
+    \textup{if}\; x_b = 1
+  \end{split}
+\end{equation}
+
+\textbf{Factor Variables}\\
+Explanatory variables can be strongly (linearly) correlated.
+$\Rightarrow$difficult to interpret the results of the regression analysis and
+should be avoided.
+
+
+
+
+
+\textbf{Binary Explanatory Variables}\\
+Variable is discrete with values 0 and 1.\\
+
+Factor Variables

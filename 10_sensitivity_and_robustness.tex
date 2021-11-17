@@ -1,0 +1,64 @@
+\section{Sensitivity and Robustness}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDickeDick}
+
+\subsection{Residual Analysis}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+The graphical tools Tukey-Anscombe plot, scale-location plot and q-q plot which check goodness of fit for the simple linear regression model can also be used for multiple linear regression models.\\
+In addition to the Tukey-Anscombe plots mentioned above the \emph{Residuals vs. Leverage plot} is introduced which will be discussed in the next section.\\
+
+In multiple regression, it is no longer clear which explanatory variable might cause a deficit. To find out graphically, the residuals $e = y - \hat{y}$ are plotted versus an explanatory variable $x_k$ used as the horizontal axis instead of the fitted values $\hat{y}$.\\
+
+\subsection{Influential Observations}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+The answer to the question whether an observation is an outlier depends on the model. If outliers remain in the data, the question arises of how strongly they influence the analysis.\\
+Influence diagnostics is based on the idea to remove one observation, repeat the analysis and measure the change. \textbf{Cook’s distance measure} is a very popular influence diagnostic tool which measures the change of the fitted values if one observation $i$ is omitted.
+\begin{equation}
+  d_i = \frac{(\hat{\textbf{y}}_{(-1)} - \hat{\textbf{y}})^t(\hat{\textbf{y}}_{(-1)}-\hat{\textbf{y}})}{p \hat{\sigma}^2}
+\end{equation}
+where $p = m + 1$ is the number of estimated parameters in the case of a model with intercept and $p = m$ in the case without intercept.\\
+Fortunately it is not necessary to repeat the analysis $n$ times. A mathematical simplification leads to the equivalent form
+\begin{equation}
+  d_i = \frac{\tilde{e}_{std,i}^2}{p}\frac{h_{ii}}{1-h_{ii}}
+\end{equation}
+Cook’s distance measure is a function of the $i$th standardised residual $\tilde{e}_{std,i}$ and the so-called leverages $h_{ii}$ of the $i$th observation. The leverages
+\begin{equation}
+  h_{ii} = \textbf{H}_{ii} = (\textbf{X}(\textbf{X}^t\textbf{X})^{-1}\textbf{X}^t)_{ii}
+\end{equation}
+are the diagonal entries of the hat matrix $\textbf{H}$. Leverages $h_{ii}$ satisfy $0 \geq h_{ii} \geq 1$ and the mean of all leverages is always $\frac{p}{n}$.\\
+
+Interpretation of leverages:
+\begin{itemize}
+  \item A large leverage $h_{ii}$ has a big influence on the fitted values.
+  \item A large leverage $h_{ii}$ reduces the variance of the $i$th residual, and therefore the $i$th observation is close to regression line (hyper-plane).
+  \item Leverage is a measure of how far away the explanatory values of an observation are from those of the other observations.
+\end{itemize}
+
+When is an observation a leverage point?\\
+\textbf{Rule of thumb:} Observations are dangerous if\\
+\begin{equation}
+  h_{ii} > 2 \frac{p}{n}
+\end{equation}
+
+\textbf{Huber's classification:}\\ Observations with
+\begin{itemize}
+  \item $h_{ii} \leq 0.2$ are harmless.
+  \item $ 0.2 < h_{ii} < 0.5$ are potentially dangerous.
+  \item $0.5 < h_{ii}$ should be avoided.
+\end{itemize}
+
+\textbf{Rule of thumb for Cook's distance measure:}\\
+\begin{itemize}
+  \item If $d_i > 1$ then the ith observation is dangerous.
+  \item If $d_i \leq 1$ then the ith observation is harmless.
+\end{itemize}
+
+
+\begin{table}[H]
+  \setlength{\tabcolsep}{0.2em}
+  \scriptsize
+  \begin{tabular}{p{\linewidth / 2 - 0.5em}@{\hskip 1em}p{\linewidth / 2 - 0.5em}}
+    \includegraphics[width=\linewidth]{Pics/10.2.3.png}& \includegraphics[width=\linewidth]{Pics/10.2.4.png} \\
+    Artificial data with two outliers. Original model (black) and estimated best fit (red). &
+    Standardised residuals versus leverages with two outliers. Contours of Cook’s distance measure (red).\\
+  \end{tabular}
+\end{table}
