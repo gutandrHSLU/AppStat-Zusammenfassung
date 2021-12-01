@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1638353172 "main.tex" "main.pdf" "main" 1638353179
+["pdflatex"] 1638365792 "main.tex" "main.pdf" "main" 1638365799
   "10_sensitivity_and_robustness.tex" 1638352756 7345 de0e406e00e3981f6c0aaaf6570a19ae ""
-  "11_variable_selection_and_modeling.tex" 1638353152 5856 cc219217886eb5db557d10b4e72dd810 ""
+  "11_variable_selection_and_modeling.tex" 1638359402 5861 e869ba942a50d4f36d15a37eeb757b59 ""
   "12_design_of_experiments.tex" 1638352874 6415 73b4ac69c3aa5aa58ac7a70eb1eeeb52 ""
   "13_factorial_design_and_analysis_of_variance.tex" 1638348719 543 f49e096f1dc9bf48fdd34e0a6f4e94bc ""
   "14_screening_experiments.tex" 1638348781 294 34b4c2b25283ea1ac482d94792c1251a ""
@@ -13,7 +13,7 @@
   "5_acceptance_sampling.tex" 1635761639 5265 d02a407a6ac2829bfd2af7dc3864e6ad ""
   "7_simple_linear_regression.tex" 1635958197 9482 334f50e23ea7547e4f8e782d75771f83 ""
   "8_residual_analysis.tex" 1636540597 10557 84377e9292ec5d5054498f8cd85ea9e7 ""
-  "9_multiple_linear_regression.tex" 1637403048 4067 fc978f714bfcc3cc82e64aa68c57e0c8 ""
+  "9_multiple_linear_regression.tex" 1638365790 10171 481e19c70914633ea75c50cd62f93a55 ""
   "Pics/10.2.3.png" 1637147840 99657 91764ecf1dac7ed20ca09781859a9c22 ""
   "Pics/10.2.4.png" 1637147863 110667 e45c731eedf666e0a5fa2afd7fb3c260 ""
   "Pics/10.4.1.png" 1637745433 17019 fe7e4e34478226bbdd2e022afd3acdff ""
@@ -87,6 +87,7 @@
   "c:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1600240217 1120 8b7d695260f3cff42e636090a8002094 ""
   "c:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1600240217 768 1321e9409b4137d6fb428ac9dc956269 ""
   "c:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm" 1600240217 768 d7b9a2629a0c353102ad947dc9221d49 ""
+  "c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb" 1600239625 32378 2b20eba6bb36c716382b6d96240eaa69 ""
   "c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb" 1600239625 32166 b0c356b15f19587482a9217ce1d8fa67 ""
   "c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1600239625 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1600239625 37912 07513ec114ac737ab54cea0152f4424b ""
@@ -205,11 +206,11 @@
   "c:/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1600244289 2444767 bc6ebe522825b804048e65ebb71f0a13 ""
   "c:/texlive/2020/texmf.cnf" 1600244115 673 4ae7b2f49cee444c5343a45b5d0f169c ""
   "config.tex" 1637749805 3604 fdd49dbb0bf2d26583384c8fc103dcd0 ""
-  "main.aux" 1638353178 11313 b876fcf661241446afa81e0c434df260 "pdflatex"
-  "main.out" 1638353178 4767 7c4de5f0f56f93178585defa55ee78d2 "pdflatex"
+  "main.aux" 1638365798 11323 1c2cd4ebc70f6fe30fadb42de6398ab7 "pdflatex"
+  "main.out" 1638365798 4772 05620df9e0881e256e0ff2f29983f6c8 "pdflatex"
   "main.tex" 1638348576 1161 edea699c205af9f0b6932e862db5fb19 ""
   (generated)
+  "main.out"
   "main.log"
   "main.aux"
   "main.pdf"
-  "main.out"

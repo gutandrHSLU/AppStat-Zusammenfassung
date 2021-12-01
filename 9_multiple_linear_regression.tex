@@ -10,16 +10,119 @@ We generalise the concept of a simple linear regression model with only one expl
 \end{equation}
 
 $\beta_0$ is the intercept\\
-$\beta_k$ is the slope in the $x_k$ direction for all $k \in {1, 2, ..., m}$.
-
+$\beta_k$ is the slope in the $x_k$ direction for all $k \in {1, 2, ..., m}$.\\
 
 \textbf{Least-Squares Estimation of the Regression Coefficient}\\
-The general idea and philosophy of teh multiple linear regression modle are the same as in the simple linear regression model. To calculate the according factors the matrix notation is used.
+The general idea and philosophy of the multiple linear regression model are the same as in the simple linear regression model. We will again estimate the coefficients $\beta_0$ and $\beta_1, \beta_2, . . . , \beta_m$ with the method of least-squares. To do this we will use matrix notation.
 \begin{equation}
-  \mathbf{y} = \mathbf{X} \mathbf{\beta} + \varepsilon
+  \mathbf{y} = \mathbf{X} \pmb{\beta} + \varepsilon
+\end{equation}
+Now we want to find the vector of least-squares estimators $\pmb{\beta}$, which minimise
+\begin{equation}
+  S(\pmb{\beta}) = \sum^n_{i=1} \varepsilon^2_i = \pmb{\varepsilon}^t\pmb{\varepsilon} = (\mathbf{y} - \mathbf{X}\pmb{\beta})^t (\mathbf{y} - \mathbf{X}\pmb{\beta})
+\end{equation}
+The solution of the normal equations is the least-squares estimator
+\begin{equation}
+  \hat{\pmb{\beta}} = (\mathbf{X}^t\mathbf{X})^{-1}\mathbf{X}^t \mathbf{y}
 \end{equation}
 
-Aufg. 8.5.1 is important!!
+It is now straight forward to calculate the fitted values
+\begin{equation}
+  \hat{\mathbf{y}} = \mathbf{X}\hat{\pmb{\beta}} = \mathbf{X}(\mathbf{X}^t\mathbf{X})^{-1}\mathbf{X}^t \mathbf{y} = \mathbf{H}\mathbf{y}
+\end{equation}
+
+The matrix $\mathbf{H} = \mathbf{X}(\mathbf{X}^t\mathbf{X})^{-1}\mathbf{X}^t$ is usually called the \textbf{hat matrix}. It maps the vector of observed values $\mathbf{y}$ into a vector of fitted values $\hat{\mathbf{y}}$. It puts $\mathbf{y}$ the hat on!\\
+The $n \times 1$ vector of residuals e can be written as
+\begin{equation}
+  \mathbf{e} = \mathbf{y} - \hat{\mathbf{y}} = \mathbf{y} - \mathbf{H}\mathbf{y} = (\mathbf{I} - \mathbf{H}) \mathbf{y}
+\end{equation}
+where $\mathbf{I}$ is the $n \times n$ identity matrix.\\
+Aufg. 8.5.1 is important!!\\
+
+\textbf{Tests on the Significance of any Individual Regression Coefficient}\\
+It is possible to show that $\hat{\pmb{\beta}}$ follows an $(m+1)$-dimensional multivariate normal distribution with expected value
+\begin{equation}
+  \textup{E}(\hat{\pmb{\beta}}) = \pmb{\beta}
+\end{equation}
+and $(m + 1) \times (m + 1)$ covariance matrix
+\begin{equation}
+  \textup{Cov}(\hat{\pmb{\beta}}) = \sigma^2 (\mathbf{X}^t \mathbf{X})^{-1}
+\end{equation}
+Using the above we can derive a test procedure and corresponding confidence intervals for
+each coefficient $\beta_0$ and $\beta_k$ for $k \in \{1, 2, . . . , m\}$. The hypothesis for testing the significance of any individual regression coefficient, such as $\beta_k$, are
+\begin{equation}
+  \begin{split}
+    H_0 &: \beta_k = \beta_{k,0}\\
+    H_1 &: \beta_k \neq \beta_{k,0}.
+  \end{split}
+\end{equation}
+The test statistic for this hypothesis is
+\begin{equation}
+  T_k = \frac{\hat{\beta}_k - \beta_{k, 0}}{\textup{se}(\hat{\beta}_k)}
+  \;\;\;\; \text{with} \;\;\;\;
+  \textup{se}(\hat{\beta}_k) = \hat{\sigma}\sqrt{\left(\left(\mathbf{X}^t\mathbf{X}\right)^{-1}\right)_{kk}}
+\end{equation}
+where $((\mathbf{X}^t\mathbf{X})^{-1})_{kk}$ is the kth diagonal element of the matrix $(\mathbf{X}^t\mathbf{X})^{-1})$. Under the null hypothesis the test statistic $T_k$ follows a Student’s $t$-distribution with $n - (m + 1)$ degrees of freedom. The degrees of freedom equals the denominator of
+\begin{equation}
+  \hat{\sigma}^2 = \frac{1}{n-(m+1)}\sum^n_{i=1} e^2_i =\frac{\mathbf{e}^t \mathbf{e}}{n-(m+1)}
+\end{equation}
+where $\mathbf{e} = \mathbf{y} - \hat{\mathbf{y}}$ is the $n \times 1$ vector of residuals. If $H_0 : \beta_k = 0$ is not rejected, then this indicates that the regressor $x_k$ can be omitted from the model.\\
+
+\textbf{Confidence Intervals on the Regression Coefficients}\\
+The corresponding $100(1 - \alpha)$ percent confidence interval on $\beta_k$ is
+\begin{equation}
+  \hat{\beta}_k - t_{\frac{\alpha}{2},n-(m+1)} \cdot \textup{se}(\hat{\beta}_k)
+  \leq \beta_k \leq
+  \hat{\beta}_k + t_{1-{\frac{\alpha}{2},n-(m+1)}} \cdot \textup{se}(\hat{\beta}_k),
+\end{equation}
+where $\textup{se}(\hat{\beta}_k)$ can be found in above and $t_{p,n-(m+1)}$ denotes the critical value of Student’s $t$-distribution to the probability $p$ and with $n - (m + 1)$ degrees of freedom\\
+
+\textbf{Confidence Interval of the Response}\\
+We want to construct a confidence interval on the response at a particular point. Define the $(m+1) \times 1$ vector
+\begin{equation}
+  \mathbf{x}_0 = \begin{pmatrix} 1 \\ x_{01} \\ x_{02}\\ \vdots \\ x_{0m}\end{pmatrix}
+\end{equation}
+and calculate the estimated value
+\begin{equation}
+  \hat{y}_0 = \mathbf{x}^t_0 \hat{\pmb{\beta}}
+\end{equation}
+This is an unbiased, normally distributed estimator with variance
+\begin{equation}
+  \textup{Var}(\hat{y}_0) = \sigma^2  \mathbf{x}^t_0 (\mathbf{X}^t \mathbf{X})^{-1}  \mathbf{x}_0
+\end{equation}
+Therefore a $100(1 - \alpha)$ percent confidence interval on the response at the point $(x_{01}, x_{02}, . . . , x_{0m})$ is
+\begin{equation}
+  \hat{y}_0 - t_{\frac{\alpha}{2},n-(m+1)} \cdot \textup{se}(\hat{y}_0)
+  \leq \mathbf{x}^t_0 \hat{\pmb{\beta}} \leq
+  \hat{y}_0 + t_{1-{\frac{\alpha}{2},n-(m+1)}} \cdot \textup{se}(\hat{y}_0),
+\end{equation}
+with
+\begin{equation}
+ \textup{se}(\hat{y}_0) = \hat{\sigma}\sqrt{ \mathbf{x}^t_0 \left(\mathbf{X}^t_0\mathbf{X}\right)^{-1} \mathbf{x}_0}
+\end{equation}
+and where  $t_{p,n-(m+1)}$ denotes the critical value of Student’s $t$-distribution to the probability $p$ and with $n - (m + 1)$ degrees of freedom.\\
+
+\textbf{Prediction Interval}\\
+The regression model can be used to predict future observations on $y$ corresponding to particular values of regressor variables, for example, $(x_{01}, x_{02}, . . . , x_{0m})$. A point estimate of the future observation is
+\begin{equation}
+  \hat{y}_0 = \mathbf{x}^t_0 \hat{\pmb{\beta}}
+\end{equation}
+where $\mathbf{x}_0$ was defined above.\\
+A $100(1 - \alpha)$ percent prediction interval for the future observation $(x_{01}, x_{02}, . . . , x_{0m})$ is
+\begin{equation} \scriptstyle
+  \hat{y}_0 - t_{\frac{\alpha}{2},n-(m+1)} \cdot \sqrt{\sigma^2 + \textup{se}(\hat{y}_0)^2}
+  \;\; \leq \;\; \mathbf{x}^t_0 \hat{\pmb{\beta}} \;\; \leq \;\;
+  \hat{y}_0 + t_{1-{\frac{\alpha}{2},n-(m+1)}} \cdot \sqrt{\sigma^2 + \textup{se}(\hat{y}_0)^2},
+\end{equation}
+where $\textup{se}(\hat{y}_0)$ was defined above and $t_{p,n-(m+1)}$ denotes the critical value of Student’s $t$-distribution to the probability $p$ and with $n - (m + 1)$ degrees of freedom.\\
+
+\textbf{Coefficient of Determination - Multiple R-Squared}\\
+In multiple regression the coefficient of determination, often called multiple $R^2$, is identical to the squared correlation between the response variable $y$ and the fitted values $\hat{y}$
+\begin{equation}
+  R^2 = \textup{Cor}(y, \hat{y})^2.
+\end{equation}
+The coefficient of determination is a measure of the linear relationship between the response variable and the fit.
+
 
 \subsection{Diversity of Modelling Possibilities}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
@@ -40,39 +143,15 @@ which is now a multiple linear regression model.\\
 Experience shows that in most real-world regression problems, the variables must be transformed to get the best results. Four examples:
 \begin{itemize}
   \item Inverting the nonlinear equations
-  \begin{equation}
-    \begin{split}
-      y =& \frac{1}{a+be^{-x}}\\
-      y =& \frac{ax}{b+x}
-    \end{split}
-    \;\;\;\;\;\;
-    \begin{split}
-      \text{gives}\\
-      \text{gives}
-    \end{split}
-    \;\;\;\;\;\;
-    \begin{split}
-      \frac{1}{y} =& a + be^{-x}\\
-      \frac{1}{y} =& \frac{1}{a} + \frac{a}{b} \frac{1}{x}
-    \end{split}
-  \end{equation}
+  \begin{align*}
+    y =& \frac{1}{a+be^{-x}}  &  \;&\text{gives} & \frac{1}{y} =& a + be^{-x}\\
+    y =& \frac{ax}{b+x}       &  \;&\text{gives} & \frac{1}{y} =& \frac{1}{a} + \frac{a}{b} \frac{1}{x}
+  \end{align*}
   \item Taking logarithms of the nonlinear equations
-  \begin{equation}
-    \begin{split}
-        y &= ax^b\\
-        y &= ax^{bg(x)}
-    \end{split}
-    \;\;\;\;\;\;
-    \begin{split}
-      \text{gives}\\
-      \text{gives}
-    \end{split}
-    \;\;\;\;\;\;
-    \begin{split}
-      \textup{ln}(y) &= \textup{ln}(a) + b\textup{ln}(x)\\
-      \textup{ln}(y) &= \textup{ln}(a) + bg(x)
-    \end{split}
-  \end{equation}
+  \begin{align*}
+    y &= ax^b       & \;&\text{gives} & \textup{ln}(y) &= \textup{ln}(a) + b\textup{ln}(x)\\
+    y &= ax^{bg(x)} & \;&\text{gives} & \textup{ln}(y) &= \textup{ln}(a) + bg(x)
+  \end{align*}
 \end{itemize}
 It is important to realise that also such transformations change the form of the error term. If we are not allowed to alter the original additive error term, then we need to use nonlinear least-squares regression.\\
 
