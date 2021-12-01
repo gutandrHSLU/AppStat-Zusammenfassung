@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.16)  1 DEC 2021 14:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.16)  1 DEC 2021 22:05
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1136,7 +1136,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--118
  []
 
 [9 <./Pics/8.4.1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 128--130
+Underfull \hbox (badness 10000) in paragraph at lines 127--130
 
  []
 
@@ -1154,12 +1154,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--157
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 181.
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
+
+ []
+
+
+Overfull \hbox (12.94037pt too wide) detected at line 188
+[]
+ []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 181.
+(hyperref)                removing `math shift' on input line 190.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 190.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--195
+
+ []
 
 ) (./10_sensitivity_and_robustness.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--8
@@ -1176,17 +1191,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--28
 
  []
 
-
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 36--38
 
  []
 
-<Pics/10.2.3.png, id=527, 714.87074pt x 648.62325pt>
+<Pics/10.2.3.png, id=543, 714.87074pt x 648.62325pt>
 File: Pics/10.2.3.png Graphic file (type png)
 <use Pics/10.2.3.png>
 Package pdftex.def Info: Pics/10.2.3.png  used on input line 60.
 (pdftex.def)             Requested size: 128.66545pt x 116.73724pt.
-<Pics/10.2.4.png, id=528, 722.7pt x 649.2255pt>
+<Pics/10.2.4.png, id=544, 722.7pt x 649.2255pt>
 File: Pics/10.2.4.png Graphic file (type png)
 <use Pics/10.2.4.png>
 Package pdftex.def Info: Pics/10.2.4.png  used on input line 60.
@@ -1196,17 +1211,17 @@ Overfull \hbox (3.99895pt too wide) in paragraph at lines 59--64
 [][] 
  []
 
-[10]
+
 Underfull \hbox (badness 10000) in paragraph at lines 78--80
 
  []
 
-<Pics/10.4.1.png, id=546, 582.37575pt x 163.812pt>
+<Pics/10.4.1.png, id=545, 582.37575pt x 163.812pt>
 File: Pics/10.4.1.png Graphic file (type png)
 <use Pics/10.4.1.png>
 Package pdftex.def Info: Pics/10.4.1.png  used on input line 96.
 (pdftex.def)             Requested size: 265.3012pt x 74.62704pt.
-<Pics/10.4.2.png, id=547, 579.3645pt x 163.20975pt>
+<Pics/10.4.2.png, id=546, 579.3645pt x 163.20975pt>
 File: Pics/10.4.2.png Graphic file (type png)
 <use Pics/10.4.2.png>
 Package pdftex.def Info: Pics/10.4.2.png  used on input line 101.
@@ -1216,7 +1231,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--110
 
  []
 
-<Pics/10.4.5.png, id=548, 540.8205pt x 154.176pt>
+<Pics/10.4.5.png, id=547, 540.8205pt x 154.176pt>
 File: Pics/10.4.5.png Graphic file (type png)
 <use Pics/10.4.5.png>
 Package pdftex.def Info: Pics/10.4.5.png  used on input line 114.
@@ -1231,12 +1246,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
  []
 
-
+[11 <./Pics/10.2.3.png> <./Pics/10.2.4.png> <./Pics/10.4.1.png> <./Pics/10.4.2.png> <./Pics/10.4.5.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 19--21
 
  []
 
-[11 <./Pics/10.2.3.png> <./Pics/10.2.4.png> <./Pics/10.4.1.png> <./Pics/10.4.2.png> <./Pics/10.4.5.png>]) (./12_design_of_experiments.tex
+) (./12_design_of_experiments.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
  []
@@ -1261,12 +1276,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
-
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-[12]) (./13_factorial_design_and_analysis_of_variance.tex) (./14_screening_experiments.tex
+) (./13_factorial_design_and_analysis_of_variance.tex) (./14_screening_experiments.tex
 Underfull \hbox (badness 10000) in paragraph at lines 14--1
 
  []
@@ -1292,20 +1307,20 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 43.
  ) 
 Here is how much of TeX's memory you used:
- 14138 strings out of 480876
- 249967 string characters out of 5911487
- 698003 words of memory out of 5000000
- 29175 multiletter control sequences out of 15000+600000
+ 14141 strings out of 480876
+ 250010 string characters out of 5911487
+ 710003 words of memory out of 5000000
+ 29176 multiletter control sequences out of 15000+600000
  556542 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,19n,48p,980b,954s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,19n,48p,980b,962s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2020/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti080
 0.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on main.pdf (13 pages, 1834896 bytes).
+Output written on main.pdf (13 pages, 1848249 bytes).
 PDF statistics:
- 741 PDF objects out of 1000 (max. 8388607)
- 631 compressed objects within 7 object streams
- 255 named destinations out of 1000 (max. 500000)
+ 743 PDF objects out of 1000 (max. 8388607)
+ 633 compressed objects within 7 object streams
+ 257 named destinations out of 1000 (max. 500000)
  671 words of extra memory for PDF output out of 10000 (max. 10000000)
 

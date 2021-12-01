@@ -123,10 +123,10 @@ In multiple regression the coefficient of determination, often called multiple $
 \end{equation}
 The coefficient of determination is a measure of the linear relationship between the response variable and the fit.
 
-
 \subsection{Diversity of Modelling Possibilities}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
-Explanatory variables can be strongly (linearly) correlated. It is however difficult to interpret the results of the regression analysis and should be avoided.\\
+In the model of multiple regression, no assumptions are made about the explanatory variables. In all our examples, they were always continuous variables, but that is not necessary.\\
+Explanatory variables can also be strongly (linearly) correlated. It is however difficult to interpret the results of the regression analysis and should be avoided.\\
 
 \textbf{Polynomial Regression}\\
 If we want to use a polynomial of degree two to describe a relationship, then the model has the following form
@@ -157,27 +157,53 @@ It is important to realise that also such transformations change the form of the
 
 \textbf{Binary Explanatory Variables}\\
 In all our examples, the explanatory variables have been continuous so far. This is not necessary.\\
-If the binary variable $x_b$ is the only variable in the model
-\begin{equation}
-  y = \beta_0 + \beta_1 x_b + \varepsilon
-\end{equation}
-then
-\begin{equation}
-  \begin{split}
-    y =& \beta_0 + \varepsilon\\
-    y =& \beta_0 + \beta_1 + \varepsilon
-  \end{split}
-  \;\;\;
-  \begin{split}
-    \textup{if}\; x_b = 0\\
-    \textup{if}\; x_b = 1
-  \end{split}
-\end{equation}
+If the binary variable $x_b$ is the only variable in the model $y = \beta_0 + \beta_1 x_b + \varepsilon$ then
+\begin{align*}
+  y =& \beta_0 + \varepsilon           & \;&\textup{if}\; & x_b =& 0\\
+  y =& \beta_0 + \beta_1 + \varepsilon & \;&\textup{if}\; & x_b =& 1
+\end{align*}
+
+This regression model is equivalent to the model of two independent random samples of which we are interested in the difference of their means. This is the unpaired Student’s t test.\\
 
 \textbf{Factor Variables}\\
 If a discrete variable has more than two levels it is called a factor.\\
-But I don't get this chapter, sorry.
+To be able to use such a factor in a regression model we have to introduce for every level a so-called dummy-variable
+\begin{equation}
+  x_k^{(j)} = \left(x_{k,1}^{(j)}, \dots ,x_{k,i}^{(j)}, \dots, x_{k,n}^{(j)}\right).
+\end{equation}
+Now we can add these $s - 1$ dummy variables to the multiple linear regression model
+\begin{equation}
+  y = \beta_0 + \beta_1 x_1 + \dots + (\beta_{k,2}x^{(2)}_k + \dots + \beta_{k,s}x^{(s)}_k) + \dots + \beta_m x_m + \varepsilon.
+\end{equation}
+Realise that for a factor with $s$ levels we only added $s - 1$ dummy-variables. This is done to make the estimation unique by setting artificially $\beta_{k,1} = 0$.
+Example:
+\begin{align*}
+  \scriptstyle
+  &\texttt{Position}:      & &\texttt{int}  &\texttt{1 1 1 2 2 1 \dots\; 1 3 3 3 4 \dots\; 4 3 \dots\; 3}\\
+  &\dots\\
+  &\texttt{Position1.dum}: & &\texttt{num}  &\texttt{1 1 1 0 0 1 \dots\; 1 0 0 0 0 \dots\; 0 0 \dots\; 0}\\
+  &\texttt{Position2.dum}: & &\texttt{num}  &\texttt{0 0 0 1 1 0 \dots\; 0 0 0 0 0 \dots\; 0 0 \dots\; 0}\\
+  &\texttt{Position3.dum}: & &\texttt{num}  &\texttt{0 0 0 0 0 0 \dots\; 0 1 1 1 0 \dots\; 0 1 \dots\; 1}\\
+  &\texttt{Position4.dum}: & &\texttt{num}  &\texttt{0 0 0 0 0 0 \dots\; 0 0 0 0 1 \dots\; 1 0 \dots\; 0}
+\end{align*}
 
 \subsection{Comparison of Regression Models with $F$-Test}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
-The $F$-test compares two models and tests whether any of the explanatory variables in a multiple linear regression model are significant.
+We need at test which allows us to ask the question if a certain factor has a significant influence. We cannot simply look at the $t$-statistics and P-values of individual levels in the R-output. We need to be able to test not only one coefficient but a whole set of coefficients simultaneously.\\
+In general we want to compare two multiple linear regression models. To do that we fit a big
+model with $p = m + 1$ coefficients and a smaller model with $q$ coefficients $\beta_{j1} , . . . , \beta_{jq}$ put to zero, i.e. with only $p - q$ coefficients.\\
+
+The question is, if the smaller regression model can fit the data as well as the big one? The alternative hypothesis to that question are
+\begin{equation}
+  \begin{split}
+    H_0:& \beta_{j1} = \beta_{j2} = \dots \beta_{j_q} = 0\\
+    H_1:& \beta_{j_k} \neq \text{for at least one} k \in \{1,\dots,q\}
+  \end{split}
+\end{equation}
+
+The F-test to compare two models tests whether any of the explanatory variables in a multiple linear regression model are significant.\\
+To answer this question we calculate the F-statistic
+\begin{equation}
+  F = \frac{n-p}{q}\frac{\textup{SS}^*_E - \textup{SS}_E}{\textup{SS}_E}
+\end{equation}
+where $\textup{SS}^*_E$ is the sum of squares of the errors of the small model and $\textup{SS}_E$ is the sum of squares of the errors of the big model. Under the null hypothesis the F-statistic follows an F-distribution with $(q, n - p)$ degrees of freedom.
