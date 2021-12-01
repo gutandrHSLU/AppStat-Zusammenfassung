@@ -62,3 +62,56 @@ When is an observation a leverage point?\\
     Standardised residuals versus leverages with two outliers. Contours of Cook’s distance measure (red).\\
   \end{tabular}
 \end{table}
+
+\subsection{Weighted linear regression}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+It certainly makes sense to give greater weight to the observations with smaller random error. That is, the more precise observations gain weight in the statistical analysis.\\
+Therefore we need to find the least-squares estimate for weighted multiple regression.\\
+we want to find the vector of least-squares estimators $\beta$, which minimise
+
+\begin{equation}
+  S(\mathbf{\beta}) = \sum^n_{i = 1}w_i\varepsilon^2_i) = \varepsilon^t \mathbf{W} \varepsilon =
+  (\mathbf{y}-\mathbf{X}\mathbf{\beta})^t \mathbf{W}(\mathbf{y}-\mathbf{X}\mathbf{\beta})
+\end{equation}
+
+\subsection{Robust Methods}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+The goal of robust statistics is to find parameter estimates as if the outliers did not exist\\
+
+The robustness of an estimator can be investigated by two measures: the influence function and the breakdown point. Both measures are based on the idea of studying the effect of an estimator under the influence of gross errors, i.e. arbitrary added data.
+
+\textbf{Breakdown Point}\\
+The breakdown point is the minimal proportion of incorrect observations which cause completely unrealistic estimates.
+\textbf{Gross Error Sensitivity}\\
+The gross error sensitivity is based on the influence function and measures the maximum effect of a single observation on the estimated value.
+
+\textbf{Robust Regression M-Estimator}\\
+The influence of an outlier in observation $i$ is manifested in a large residual $e_i$. Therefore, the main idea of robust regression is to introduce weights $w_i$ which weigh down this influence. If we want to limit the influence of large residuals the function
+\begin{equation}
+  \Psi(e) = w_i e_i
+\end{equation}
+must be limited. This can be achieved, for instance by the Hubert's $\psi$ -function.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{Pics/10.4.1.png}
+  \caption{Loss function $\rho$ of least-squares estimate (a), $\psi$-function (b) and corresponding weight function $w$ (c).}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{Pics/10.4.2.png}
+  \caption{Loss function $\rho$ (a) of Huber’s $\psi$-function (b) and corresponding weight function $w$ (c).}
+\end{figure}
+The corresponding weights are then simply
+\begin{equation}
+  w_i = \frac{\psi (e_i)}{e_i}
+\end{equation}
+The threshold $c$ in Huber’s $\psi$-function is set to be $c = 1.345$ which is based on theoretical efficiency considerations.\\
+The regression M-estimation limits only the influence of large residuals, but is still prone to leverage points and therefore has a break point of zero. To be able to handle bad leverage points we need a redescending $\psi$-function such that observations with large absolute residuals are gradually ignored.\\
+
+\textbf{Modified Robust Regression M-Estimator}\\
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{Pics/10.4.5.png}
+  \caption{Loss function $\rho$ (a) of Tukey's bisquare $\psi$-function (b) and corresponding weight function $w$ (c).}
+\end{figure}
+The threshold $b$ of Tukey’s bisquare is set to be $b = 4.685$ which is based on theoretical efficiency considerations. The regression MM-estimator has a breakdown point of $\frac{1}{2}$ and an efficiency and an asymptotic distribution like the regression M-estimator.

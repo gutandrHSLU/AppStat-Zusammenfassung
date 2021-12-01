@@ -37,7 +37,29 @@
 \BOOKMARK [1][-]{section*.52}{Multiple Linear Regression}{part.2}% 37
 \BOOKMARK [2][-]{section*.53}{Model and Estimation}{section*.52}% 38
 \BOOKMARK [2][-]{section*.54}{Diversity of Modelling Possibilities}{section*.52}% 39
-\BOOKMARK [1][-]{section*.55}{Sensitivity and Robustness}{part.2}% 40
-\BOOKMARK [2][-]{section*.56}{Residual Analysis}{section*.55}% 41
-\BOOKMARK [2][-]{section*.57}{Influential Observations}{section*.55}% 42
-\BOOKMARK [0][-]{part.3}{III Design of Experiment}{}% 43
+\BOOKMARK [2][-]{section*.55}{Comparison of Regression Models with F-Test}{section*.52}% 40
+\BOOKMARK [1][-]{section*.56}{Sensitivity and Robustness}{part.2}% 41
+\BOOKMARK [2][-]{section*.57}{Residual Analysis}{section*.56}% 42
+\BOOKMARK [2][-]{section*.58}{Influential Observations}{section*.56}% 43
+\BOOKMARK [2][-]{section*.59}{Weighted linear regression}{section*.56}% 44
+\BOOKMARK [2][-]{section*.60}{Robust Methods}{section*.56}% 45
+\BOOKMARK [1][-]{section*.64}{Sensitivity and Robustness}{part.2}% 46
+\BOOKMARK [2][-]{section*.65}{Model Selection Methods}{section*.64}% 47
+\BOOKMARK [2][-]{section*.66}{Collinearity}{section*.64}% 48
+\BOOKMARK [2][-]{section*.67}{Modelling Strategies}{section*.64}% 49
+\BOOKMARK [0][-]{part.3}{III Design of Experiment}{}% 50
+\BOOKMARK [1][-]{section*.68}{Design of Experiment}{part.3}% 51
+\BOOKMARK [2][-]{section*.69}{Terminology and Concepts}{section*.68}% 52
+\BOOKMARK [2][-]{section*.70}{Experimental Design}{section*.68}% 53
+\BOOKMARK [2][-]{section*.71}{Planning and Conducting a Study}{section*.68}% 54
+\BOOKMARK [1][-]{section*.72}{Factorial Designs and Analysis of Variance}{part.3}% 55
+\BOOKMARK [2][-]{section*.73}{One Factor Analysis of Variance}{section*.72}% 56
+\BOOKMARK [2][-]{section*.74}{Tho Factor Analysis of Variance}{section*.72}% 57
+\BOOKMARK [2][-]{section*.75}{Two Factor Analysis of Variance with Interaction}{section*.72}% 58
+\BOOKMARK [2][-]{section*.76}{Residual Analysis}{section*.72}% 59
+\BOOKMARK [1][-]{section*.77}{Screening Experiments}{part.3}% 60
+\BOOKMARK [2][-]{section*.78}{2k Factorial Designs}{section*.77}% 61
+\BOOKMARK [2][-]{section*.79}{2k Fractional Factorial Designs}{section*.77}% 62
+\BOOKMARK [1][-]{section*.80}{Response Surface Methodology}{part.3}% 63
+\BOOKMARK [2][-]{section*.81}{Response Surface}{section*.80}% 64
+\BOOKMARK [2][-]{section*.82}{Second-Order Response Surface with Interactions}{section*.80}% 65

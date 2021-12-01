@@ -1,0 +1,74 @@
+\section{Sensitivity and Robustness}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDickeDick}
+
+\subsection{Model Selection Methods}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+In practice, regression is used in many situations. The approach depends on the previous knowledge and subject-specific questions.\\
+\begin{itemize}
+  \item Ideally, the relationships between the response $y$ and the explanatory variables $x_1, ..., x_m$  is clear in advance. The functional relationships are often based on physical, chemical or other engineering or scientific theory. We call these \textbf{mechanistic models}. In this case we are most often interested in good estimates of the parameters, confidence and prediction intervals.
+  \item  In the other case, the study serves to investigate relationships between the response variable x and the explanatory variables. We do not know if and in what form the explanatory variables influence the response. The functional relationships are unknown and so we have to find \textbf{empirical models}.
+  \item Sometimes the approach is in between: If we are only interested in the influence of a single explanatory variable, but take into account the effects of other explanatory variables, or if a lot of previous studies and theoretical considerations is known and additional knowledge should be gained.
+\end{itemize}
+
+
+\subsection{Collinearity}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+Collinearity means that an explanatory variable $x_j$ can almost be represented by the others as a linear combination.
+\begin{equation}
+  x_k \approx \gamma_0 + \sum^m_{j, j\neq k}\gamma_j x_j
+\end{equation}
+If this relation is exakt then the least-squares estimator is not uniquely defined and software implementations may have problems.\\
+
+\textbf{Measure for Collinearity}\\
+If the equation above is only approximately satisfied we can consider it as a linear multiple regression model. For each explanatory variable $x_k$ define the coefficient of determination $R^2_k$ of the model. The \textbf{variance inflation factor} of variable $x_k$ is then defined by
+\begin{equation}
+  \textup{VIF}_k = \frac{1}{1-R^2_k}
+\end{equation}
+It is a good and easy to calculate measure of collinearity. A rule of thumb is that if this measure is greater than 5, there are problems with collinearity.\\
+High collinearity leads to large standard errors of the estimated coefficients. It is possible to show, that the standard error of the estimate of the coefficient $\beta_k$ is increased by a factor of
+\begin{equation}
+  \sqrt{\textup{VIF}_k}
+\end{equation}
+In an ideal situation with no collinearity we would have $R^2_k = 0$ and therefore $\textup{VIF}_k = 1$ and hence no increase in the standard error of the estimated coefficient $\hat{\beta}_k$.
+
+\subsection{Modelling Strategies}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+In statistical regression modelling we have dealt with three important elements:
+\begin{itemize}
+  \item • Residual analysis. In the residual analysis, we check as well as possible the assumptions of independence, constant variance, linearity and normal distribution. We also try to identify influential observations. Robust methods are suitable for carrying out this analysis very efficiently.
+  \item Transformations. Depending on the situation, it makes sense to transform the response as well as the explanatory variables, to add interactions or to expand the models with factor variables.
+  \item Variable selection. Nowadays, it is easy to automatically select explanatory variables. That this is not in any case advisable has been explained at the beginning of this section.
+\end{itemize}
+
+\textbf{Overall Strategy}\\
+\begin{enumerate}
+  \item Understand the problem. Are there already approaches for models available?
+  \item Collect and process data.
+  \begin{itemize}
+    \item Clarify the coding of missing values (sometimes coded with -99 or 0). Define the treatment of missing values in the analysis.
+    \item Unify the meaning of the number 0 in different variables.
+    \item Treat data according to first-aid transformations unless there are valid reasons against it (eg. existing model).
+    \item Keep track of the data quality when merging multiple data sets. The overall quality is never higher than the weakest link.
+  \end{itemize}
+  \item First model fit (preferably with robust methods).
+  \item Residual analysis. Does the data help to solve the question? If not, repeat the first,
+  second and third step.
+  \item Variable selection, treat collinearity if necessary.
+  \item Check goodness of fit.
+  \begin{itemize}
+    \item Residual analysis with selected models.
+    \item Match models with first principles.
+    \item Validate models with data not used in modelling.
+  \end{itemize}
+\end{enumerate}
+
+\textbf{Final Remarks}\\
+In this introduction, important elements of multiple linear regression analysis have been addressed. Lots of different generalisations exist and go in different directions.
+\begin{itemize}
+  \item \textbf{Nonlinear regression}. More complicated functions can be fitted.
+  \item \textbf{Nonparametric regression}. Less assumptions on the models are made (smoothing).
+  \item \textbf{Generalised linear model}. The response variable is allowed to have error distribution models other than the normal distribution (logistic, Poisson and gammaregression).
+  \item \textbf{Survival analysis}. Censored data (reliability theory, survival and hazard function).
+  \item \textbf{Time series analysis}. The errors can be correlated.
+  \item \textbf{Principal component} and \textbf{partial least squares regression}. (Many) more variables than observations are available: large $p$, small $n$ (chemometrics).
+\end{itemize}

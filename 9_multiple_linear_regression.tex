@@ -23,6 +23,7 @@ Aufg. 8.5.1 is important!!
 
 \subsection{Diversity of Modelling Possibilities}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+Explanatory variables can be strongly (linearly) correlated. It is however difficult to interpret the results of the regression analysis and should be avoided.\\
 
 \textbf{Polynomial Regression}\\
 If we want to use a polynomial of degree two to describe a relationship, then the model has the following form
@@ -33,7 +34,7 @@ If we define the new variables $\texttt{lin} = x$ and $\texttt{quad} = x^2$, the
 \begin{equation}
   y = \beta_0 + \beta_1 \cdot \texttt{lin} + \beta_2 \cdot \texttt{quad} + \varepsilon
 \end{equation}
-which is now a multiple linear regression model.
+which is now a multiple linear regression model.\\
 
 \textbf{Nonlinear Functions and Linear Regression}\\
 Experience shows that in most real-world regression problems, the variables must be transformed to get the best results. Four examples:
@@ -73,7 +74,7 @@ Experience shows that in most real-world regression problems, the variables must
     \end{split}
   \end{equation}
 \end{itemize}
-It is important to realise that also such transformations change the form of the error term. If we are not allowed to alter the original additive error term, then we need to use nonlinear least-squares regression.
+It is important to realise that also such transformations change the form of the error term. If we are not allowed to alter the original additive error term, then we need to use nonlinear least-squares regression.\\
 
 \textbf{Binary Explanatory Variables}\\
 In all our examples, the explanatory variables have been continuous so far. This is not necessary.\\
@@ -95,15 +96,9 @@ then
 \end{equation}
 
 \textbf{Factor Variables}\\
-Explanatory variables can be strongly (linearly) correlated.
-$\Rightarrow$difficult to interpret the results of the regression analysis and
-should be avoided.
+If a discrete variable has more than two levels it is called a factor.\\
+But I don't get this chapter, sorry.
 
-
-
-
-
-\textbf{Binary Explanatory Variables}\\
-Variable is discrete with values 0 and 1.\\
-
-Factor Variables
+\subsection{Comparison of Regression Models with $F$-Test}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+The $F$-test compares two models and tests whether any of the explanatory variables in a multiple linear regression model are significant.
