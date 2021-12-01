@@ -1,11 +1,107 @@
 \section{Design of Experiment}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDickeDick}
+Many scientific studies are concerned with the understanding of causal relationships. Statistical design of experiment (DoE) refers to the process of planning an experiment so that the data can be evaluated with statistical methods in a convenient way. However, the evaluation as well as the quality of the results essentially depends on the chosen test plan.\\
+
+In this third part we will be interested in the following aspects.
+\begin{itemize}
+  \item \textbf{Comparison of treatments}. The most common aim in an experiment is to compare several treatments and to choose the best one.
+  \item \textbf{Variable screening}. If there are lot of potentially influential factors in a process it is common to try to find the most important factors with a systematic screening experiment.
+  \item \textbf{Response surface methodology}. If once the most important factors of a process are determined the optimal setting of these factors is often searched.
+\end{itemize}
 
 \subsection{Terminology and Concepts}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+In general the response variable depends on many explanatory variables which can be separated in two groups.
+\begin{itemize}
+  \item \textbf{Primary variables} are directly connected with the study.
+  \item \textbf{Secondary variables} are also controllable with a reasonable effort.
+\end{itemize}
+\textbf{Basic idea of an experiment:} Primary and secondary variables can be varied in a prescribed controlled manner.\\
+
+\textbf{Random error:} Sum of all unknown influences.\\
+
+\textbf{Balanced design:} Design with factor variables\\
+
+\textbf{Orthigonal design:} Design with continuous variables.\\
+
+\textbf{Block designs:} Record additional variables, i.e. batches, production lot or origin of product.
+\begin{itemize}
+  \item Precision can be increased (if variable is significant).
+  \item Interpretability of the results can be simplified.
+\end{itemize}
+
+\textbf{Randomisation:} Perform experiments in random order
+\begin{itemize}
+  \item Chronological order as independent as possible from all recorded and unrecorded variables.
+  \item Prevent influences due to the system of the experimental conditions.
+  \item Avoid learning effects or aging of a device.
+\end{itemize}
+
+\textbf{Replicates:} Multiple measurements with same experimental conditions.
+\begin{itemize}
+  \item Improved accuracy of the statements.
+  \item Estimate of the variation of the random errors available.
+  \item Existence of interactions in analysis of variance can be tested.
+  \item Replicates are not allowed to be measured consecutively, otherwise they are not independent.
+  \item Randomise replicates despite the increased experimental effort.
+\end{itemize}
 
 \subsection{Experimental Design}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+\textbf{Design of Experiment - Basic Principles}
+\begin{itemize}
+  \item The main question defines the response variable and the primary explanatory variables   and their relevant value range.
+  \item Record as many variables which might have an influence on the response as possible.   These secondary variables should, if possible, be kept constant or used for blocking. If   this is not possible, they should still be considered in the model.
+  \item All explanatory variables should be orthogonal and the factors balanced.
+  \item The assignment of experimental conditions to study units should be randomised.
+  \item Independent replicates allow additional model validation
+\end{itemize}
+
+\textbf{Experimental design:} : List of experimental conditions that determine how each factor is to be varied and at which levels.\\
+
+\textbf{Completely randomised design:}
+\begin{itemize}
+  \item One multi-level primary factor variable.
+  \item One or more (but always the same number) measurements are made per level.
+  \item The design is processed in random order to avoid systematic effects.
+\end{itemize}
+
+\textbf{Complete block design:}
+\begin{itemize}
+  \item A secondary factor influences the target variable in addition to the primary factor.
+  \item Every level of the primary factor (eg. treatment) is used at least once in each block.
+\end{itemize}
+
+\textbf{Complete factorial design:}
+\begin{itemize}
+  \item Examine $k$ factors with $L$ levels each.
+  \item Design with $L^k$ measurements is needed.
+  \item Often too many measurements.
+\end{itemize}
+
+\textbf{$2^k$ factorial designs:}
+\begin{itemize}
+  \item In screening experiments, many factors are investigated for their influence on the response variable.
+  \item Examine only 2 levels (high and low) per factor.
+\end{itemize}
+
+\textbf{$2^k$ fractional factorial designs:}
+\begin{itemize}
+  \item To save even more resources.
+  \item Only a balanced part of the complete $2^k$ design is realised.
+\end{itemize}
 
 \subsection{Planning and Conducting a Study}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+\begin{enumerate}
+  \item \textbf{Scientific question:} Avoid situations without precise questions and hypotheses.
+  \item \textbf{Response and explanatory variables:} Find all influential factors, eg. with a cause-and-effect diagram.
+  \item \textbf{Preliminary experiments:} Experience with the topic and the measurement equipment is important.
+  \item \textbf{Planning:} It is worth going through the question, eg. with simulated data. The evaluation of the data in relation to the main questions is clear.
+  \item \textbf{Sample size:} The magnitude of the random fluctuations and the size of the expected effects has to be known. Often, the question must be downsized.
+  \item \textbf{Data:} It is important to keep a journal that documents the process of data acquisition and highlights any peculiarities and unforeseen circumstances that may later explain unexpected data discrepancies.
+  \item \textbf{Data cleanup:} Checking the plausibility of the data and visualising it saves a lot of effort.
+  \item \textbf{Evaluation, interpretation:} The methodology for evaluating the data in relation to the main question is clear.
+  \item \textbf{Report, presentation:} For whom is the report mainly intended?
+  \item \textbf{Completion:} It is worthwhile to collect and discuss the experiences made with all participants.
+\end{enumerate}
