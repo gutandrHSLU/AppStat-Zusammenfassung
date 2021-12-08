@@ -1,11 +1,148 @@
 \section{Factorial Designs and Analysis of Variance}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDickeDick}
+In regression and analysis of variance we are interested in situations with only one response variable which is directly measurable or observable. In general this response variable is influenced by several explanatory variables or factors. The knowledge of the explanatory variables and factors is essential to be able to interpret the response correctly.
 
 \subsection{One Factor Analysis of Variance}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+With the one factor analysis of variance we want to check whether a factor (for example the hardwood concentration in paper) has a significant effect.\\
+We check this by asking if there is a difference between one group and another group. The corresponding hypothesis are:
+\begin{equation}
+  \begin{split}
+    H_0 &= \mu_1 = \mu_2 = \dots = \mu_g \; \text{(i.e. all groups obey the same model)}\\
+    H_1 &= \mu_i \neq \mu_j \;\text{j for at least one pair}\; i, j \;\text{with}\; i \neq j.
+  \end{split}
+\end{equation}
+We describe the situation with a linear model. We want to compare $g$ groups with $m$ measurements each. The model where individual observations within the $i$th group scatter randomly around a common value $\mu_i$ is described by
+\begin{equation}
+  y_{ij} = \mu_i + \varepsilon_{ij} \;\text{with}\; i \in \{1, 2, ..., g\} \;\text{and}\; j \in \{1, 2, ...,m\}
+\end{equation}
+Notice that the model can also be written as
+\begin{equation}
+  y_{ij} = \mu + \tau_i + \varepsilon_{ij} \;\text{with}\; i \in \{1, 2, ..., g\} \;\text{and}\; j \in \{1, 2, ...,m\}
+\end{equation}
+with corresponding hypothesis
+\begin{equation}
+  \begin{split}
+    H_0 &: \; \tau_1 = \tau_2 = \dots = \tau_g = 0\; \text{(i.e. all groups obey the same model)}\\
+    H_1 &: \; \tau_i \neq 0 \;\text{for at least one i}.
+  \end{split}
+\end{equation}
+The parameter $\mu$ is common to all treatments called the overall mean, $\tau_i$ is a parameter associated with the ith treatment called the $i$th treatment effect.\\
+
+We are looking for a test statistic that takes extreme values if the means $(\bar{y}. \;\text{with the "."})$ of the $g$ groups differ. If the variance
+of the group means $S_b^2$ compared to the variance of the observations within the groups $S_w^2$ is large, then we reject the null hypothesis. Therefore the test statistics for the analysis of variance test (ANOVA) is
+\begin{equation}
+  \begin{split}
+    F &= \frac{\text{variance between groups}}{\text{variance within groups}} = \frac{S_b^2}{S_w^2}\\
+    &= \frac{\frac{1}{g-1} \sum_{i=1}^g m\left(\bar{y}_{i.} - \bar{y}_{i..}\right)^2}{\frac{1}{n-g} \sum_{i=1}^g \sum_{j=1}^m \left(\bar{y}_{ij} - \bar{y}_{i.}\right)^2}
+  \end{split}
+\end{equation}
+where $\bar{y}..$ is the estimated overall mean.\\
+The terms leading to the test statistic $F$ are summarised in the following analysis of variance table.
+\begin{table}[H]
+  \centering
+  \footnotesize
+  \begin{tabular}{ m{1.5cm} | m{1cm} ll}
+      Source of Variation  & Sum of Squares & Degrees of Freedom & Mean Squares \\ \hline
+      Tratments (groups)  & $\textup{SS}_G$ & $\textup{df}_G = g-1$ & $\textup{MS}_G = \frac{\textup{SS}_G}{\textup{df}_G}$\\
+      Error (residuals)   & $\textup{SS}_E$ & $\textup{df}_E = n-g$ & $\textup{MS}_E = \frac{\textup{SS}_E}{\textup{df}_E}$\\ \hline
+      Total               & $\textup{SS}_T$ & $\textup{df}_T = n-1$ &\\
+  \end{tabular}
+\end{table}
+
+The sums of squares are defined by
+\begin{equation*}
+  \begin{split}
+    \textup{SS}_G &= \sum_{i=1}^g m\left(\bar{y}_{i.} - \bar{y}_{..}\right)^2\\
+    \textup{SS}_E &= \sum_{i=1}^g \sum_{j=1}^m \left(y_{ij} - \bar{y}_{i.}\right)^2\\
+    \textup{SS}_T &= \sum_{i=1}^g \sum_{j=1}^m \left(y_{ij} - \bar{y}_{..}\right)^2
+  \end{split}
+\end{equation*}
+It is possible to show that
+\begin{equation}
+  SS_T = SS_G + SS_E
+\end{equation}
+
+The test statistic of the analysis of variance test can also be written as
+\begin{equation}
+  F = \frac{\textup{MS}_G}{\textup{MS}_E}
+\end{equation}
+Under the null hypothesis the $F$-statistic follows an $F$-distribution with $(\textup{df}_G, \textup{df}_E) = (g - 1, n - g)$ degrees of freedom. Critical values of the $F$-distribution can be found in tables.
 
 \subsection{Tho Factor Analysis of Variance}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+The one factor analysis of variance is the generalisation of the comparison of two independent samples. We can further generalise to the analysis of variance with several factors.\\
+Suppose that we have two factors $A$ and $B$ with $a$ and $b$ levels. A model which is capable to separate real effects from random fluctuations can be built as follows
+\begin{equation}
+  y_{ij} = \mu_{ij} + \varepsilon_{ij} \;\text{with}\; i \in \{1, 2, ..., a\} \;\text{and}\; j \in \{1, 2, ...,b\}
+\end{equation}
+In this model every observation $y_{ij}$ has a random deviation $\varepsilon_{ij}$ from an ideal value $\mu_{ij}$ which depends on the method $i$ and the batch $j$. More precisely the ideal value
+\begin{equation}
+  \mu_{ij} = \mu + \alpha_i + \beta_j
+\end{equation}
+is based on an overall value $\mu$, an effect $\alpha_i$ which describes the factor $A$ and an effect $\beta_j$ which describes the factor $B$.\\
+
+The parameters $\mu, \alpha_1, \alpha_2, . . . , \alpha_a$ and $\beta_1, \beta_2, . . . , \beta_b$ can be estimated from the model
+\begin{equation}
+  y_{ij} = \mu + \alpha_i + \beta_j \varepsilon_{ij} \;\text{with}\; i \in \{1, 2, ..., a\} \;\text{and}\; j \in \{1, 2, ...,b\}
+\end{equation}
+For every level $i$ and $j$ we obtain
+\begin{equation}
+  \begin{split}
+    \bar{y}_{i.} =& \; \mu + \alpha_i\\
+    \bar{y}_{.j} =& \; \mu + \beta_j\\
+    \bar{y}_{..} =& \; \mu
+      \end{split}
+\end{equation}
+
+All together we obtain the estimates
+\begin{equation}
+  \begin{split}
+    \hat{\mu} &= \bar{y}_{..}\\
+    \hat{\alpha}_i &= \bar{y}_{i.} - \bar{y}_{..} \;\text{for all}\; i \in \{1, 2, ..., a\}\\
+    \hat{\beta}_i &= \bar{y}_{.j} - \bar{y}_{..}  \;\text{for all}\; j \in \{1, 2, ..., b\}\\
+  \end{split}
+\end{equation}
+
+As a basis for statistical tests we set up a variance analysis table for two factors which is an extension
+of the one factor analysis of variance table.
+\begin{table}[H]
+  \footnotesize
+  \centering
+  \begin{tabular}{ m{1.5cm} | m{1cm} l m{0.8cm} m{1.2cm}}
+      Source of Variation  & Sum of Squares &  Degrees of Freedom & Mean Squares & Test Statistic \\ \hline
+      Factor A   & $\textup{SS}_A$ & $\textup{df}_A = a-1$     & $\textup{MS}_A$ & $\frac{\textup{MS}_A}{\textup{MS}_E}$\\
+      Factor B   & $\textup{SS}_B$ & $\textup{df}_B = b-1$     & $\textup{MS}_B$ & $\frac{\textup{MS}_B}{\textup{MS}_E}$\\
+      Error      & $\textup{SS}_E$ & $\textup{df}_E = n-a-b+1$ & $\textup{MS}_E$ & \\ \hline
+      Total      & $\textup{SS}_T$ & $\textup{df}_T = n-1$     &                 &\\
+  \end{tabular}
+\end{table}
+The sums of squares are defined by
+\begin{equation}
+  \begin{split}
+    \textup{SS}_A &= \sum_{i=1}^a \sum_{j=1}^b \hat{\alpha}_i^2 = b \sum_{i=1}^a \hat{\alpha}_i^2\\
+    \textup{SS}_B &= \sum_{i=1}^a \sum_{j=1}^b \hat{\beta}_j^2 = b \sum_{j=1}^a \hat{\beta}_j^2\\
+    \textup{SS}_E &= \sum_{i=1}^a \sum_{j=1}^b \hat{e}_{ij}^2\\
+    \textup{SS}_T &= \sum_{i=1}^a \sum_{j=1}^b \left(y_{ij} - \bar{y}_{..}\right)^2
+  \end{split}
+\end{equation}
+
+We test the alternative hypothesis
+\begin{equation}
+  \begin{split}
+    H_0 &: \alpha_1 = \alpha_2 = \dots = \alpha_a = 0\;\\
+    H_1 &: \alpha_i \neq 0 \;\text{for at least one i}.
+  \end{split}
+\end{equation}
+i.e. all effects of the factor $A$ are zero, with the test statistic
+\begin{equation}
+  F_A = \frac{\textup{MS}_A}{\textup{MS}_E} = \frac{\frac{\textup{SS}_A}{\textup{df}_A}}{\frac{\textup{SS}_E}{\textup{df}_E}}
+\end{equation}
+Under the null hypothesis the statistic follows an $F$-distribution with
+\begin{equation}
+  \left(\textup{df}_A, \textup{df}_E\right) = (a - 1, n - a - b + 1) = (a - 1,(a - 1)(b - 1))
+\end{equation}
+degrees of freedom. Critical values of the $F$-distribution can be found in tables. Analogously, we can test the factor $B$.
 
 \subsection{Two Factor Analysis of Variance with Interaction}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
