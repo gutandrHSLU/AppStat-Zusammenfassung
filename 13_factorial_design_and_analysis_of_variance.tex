@@ -23,11 +23,11 @@ Notice that the model can also be written as
 with corresponding hypothesis
 \begin{equation}
   \begin{split}
-    H_0 &: \; \tau_1 = \tau_2 = \dots = \tau_g = 0\; \text{(i.e. all groups obey the same model)}\\
+    H_0 &: \; \tau_1 = \tau_2 = \dots = \tau_g = 0\\
     H_1 &: \; \tau_i \neq 0 \;\text{for at least one i}.
   \end{split}
 \end{equation}
-The parameter $\mu$ is common to all treatments called the overall mean, $\tau_i$ is a parameter associated with the ith treatment called the $i$th treatment effect.\\
+The parameter $\mu$ is common to all treatments called the overall mean, $\tau_i$ is a parameter associated with the $i$th treatment called the $i$th treatment effect.\\
 
 We are looking for a test statistic that takes extreme values if the means $(\bar{y}. \;\text{with the "."})$ of the $g$ groups differ. If the variance
 of the group means $S_b^2$ compared to the variance of the observations within the groups $S_w^2$ is large, then we reject the null hypothesis. Therefore the test statistics for the analysis of variance test (ANOVA) is
@@ -69,7 +69,7 @@ The test statistic of the analysis of variance test can also be written as
 \end{equation}
 Under the null hypothesis the $F$-statistic follows an $F$-distribution with $(\textup{df}_G, \textup{df}_E) = (g - 1, n - g)$ degrees of freedom. Critical values of the $F$-distribution can be found in tables.
 
-\subsection{Tho Factor Analysis of Variance}
+\subsection{Two Factor Analysis of Variance}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 The one factor analysis of variance is the generalisation of the comparison of two independent samples. We can further generalise to the analysis of variance with several factors.\\
 Suppose that we have two factors $A$ and $B$ with $a$ and $b$ levels. A model which is capable to separate real effects from random fluctuations can be built as follows
@@ -81,10 +81,14 @@ In this model every observation $y_{ij}$ has a random deviation $\varepsilon_{ij
   \mu_{ij} = \mu + \alpha_i + \beta_j
 \end{equation}
 is based on an overall value $\mu$, an effect $\alpha_i$ which describes the factor $A$ and an effect $\beta_j$ which describes the factor $B$.\\
+To be able to estimate the parameters uniquely we need to assume two constraints
+\begin{equation}
+  \sum_{i=1}^{a} \alpha_i = 0 \;\;\; \text{and} \;\;\; \sum_{j=1}^b \beta_j = 0
+\end{equation}
 
 The parameters $\mu, \alpha_1, \alpha_2, . . . , \alpha_a$ and $\beta_1, \beta_2, . . . , \beta_b$ can be estimated from the model
 \begin{equation}
-  y_{ij} = \mu + \alpha_i + \beta_j \varepsilon_{ij} \;\text{with}\; i \in \{1, 2, ..., a\} \;\text{and}\; j \in \{1, 2, ...,b\}
+  y_{ij} = \mu + \alpha_i + \beta_j + \varepsilon_{ij} \;\text{with}\; i \in \{1, 2, ..., a\} \;\text{and}\; j \in \{1, 2, ...,b\}
 \end{equation}
 For every level $i$ and $j$ we obtain
 \begin{equation}
@@ -111,8 +115,8 @@ of the one factor analysis of variance table.
   \centering
   \begin{tabular}{ m{1.5cm} | m{1cm} l m{0.8cm} m{1.2cm}}
       Source of Variation  & Sum of Squares &  Degrees of Freedom & Mean Squares & Test Statistic \\ \hline
-      Factor A   & $\textup{SS}_A$ & $\textup{df}_A = a-1$     & $\textup{MS}_A$ & $\frac{\textup{MS}_A}{\textup{MS}_E}$\\
-      Factor B   & $\textup{SS}_B$ & $\textup{df}_B = b-1$     & $\textup{MS}_B$ & $\frac{\textup{MS}_B}{\textup{MS}_E}$\\
+      Factor A   & $\textup{SS}_A$ & $\textup{df}_A = a-1$     & $\textup{MS}_A$ & $\textup{MS}_A / {MS}_E$\\
+      Factor B   & $\textup{SS}_B$ & $\textup{df}_B = b-1$     & $\textup{MS}_B$ & $\textup{MS}_B / {MS}_E$\\
       Error      & $\textup{SS}_E$ & $\textup{df}_E = n-a-b+1$ & $\textup{MS}_E$ & \\ \hline
       Total      & $\textup{SS}_T$ & $\textup{df}_T = n-1$     &                 &\\
   \end{tabular}
@@ -121,7 +125,7 @@ The sums of squares are defined by
 \begin{equation}
   \begin{split}
     \textup{SS}_A &= \sum_{i=1}^a \sum_{j=1}^b \hat{\alpha}_i^2 = b \sum_{i=1}^a \hat{\alpha}_i^2\\
-    \textup{SS}_B &= \sum_{i=1}^a \sum_{j=1}^b \hat{\beta}_j^2 = b \sum_{j=1}^a \hat{\beta}_j^2\\
+    \textup{SS}_B &= \sum_{i=1}^a \sum_{j=1}^b \hat{\beta}_j^2 = b \sum_{j=1}^b \hat{\beta}_j^2\\
     \textup{SS}_E &= \sum_{i=1}^a \sum_{j=1}^b \hat{e}_{ij}^2\\
     \textup{SS}_T &= \sum_{i=1}^a \sum_{j=1}^b \left(y_{ij} - \bar{y}_{..}\right)^2
   \end{split}
@@ -146,6 +150,73 @@ degrees of freedom. Critical values of the $F$-distribution can be found in tabl
 
 \subsection{Two Factor Analysis of Variance with Interaction}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+So far, it has been assumed that for each combination $(i, j)$ of one level of factor $A$ with one level of factor $B$, only one observation $y_{ij}$ is recorded. In the simplest model with $c$ observations per combination $(i, j)$, one more index $k$ has to be added to the previous model.
+\begin{equation}
+  \mu_{ijk} = \mu + \alpha_i + \beta_j + \varepsilon_{ijk}
+\end{equation}
+with $i \in \{1, 2, . . . , a\}, j \in \{1, 2, . . . , b\}$ and $k \in \{1, 2, . . . , c\}$. The observations on the same combination $(i, j)$ are called \textbf{replicates}.\\
+
+If the polygonal lines in the interaction plot are not almost parallel, then the additive model has to be modified too. The model with two factors and an \textbf{interaction} is
+\begin{equation}
+  \mu_{ijk} = \mu + \alpha_i + \beta_j + \gamma_{ij} + \varepsilon_{ijk}
+\end{equation}
+with $i \in \{1, 2, . . . , a\}, j \in \{1, 2, . . . , b\}$ and $k \in \{1, 2, . . . , c\}$. To be able to properly estimate the coefficients we have to add further constraints on the interaction term $\gamma_{ij}$
+\begin{equation}
+  \sum_{i=1}^{a} \gamma_{ij} = 0 \;\;\; \text{and} \;\;\; \sum_{j=1}^b \gamma_{ij} = 0
+\end{equation}
+
+It is very important to know that the parameter estimate of the model with interaction, needs more than one observation per combination $(i, j)$. The estimates for the parameters can be found analogously as in the chapter above, for the model with two factors. We obtain the estimates
+\begin{equation}
+  \begin{split}
+    \hat{\mu}         &= \bar{y}_{...}\\
+    \hat{\alpha}_i    &= \bar{y}_{i..} - \bar{y}_{...} \;\text{for all}\; i \in \{1, 2, ..., a\}\\
+    \hat{\beta}_i     &= \bar{y}_{.j.} - \bar{y}_{...}  \;\text{for all}\; j \in \{1, 2, ..., b\}\\
+    \hat{\gamma}_{ij} &= \bar{y}_{ij.} - \bar{y}_{i..} - \bar{y}_{.j.} + \bar{y}_{...}  \;\text{for all}\; i \in \{1, 2, ..., a\},\;j \in \{1, 2, ..., b\}\\
+  \end{split}
+\end{equation}
+As a basis for statistical tests we set up a variance analysis table for two factors with an interaction:
+\begin{table}[H]
+  \footnotesize
+  \centering
+  \begin{tabular}{ m{1.6cm} | m{0.9cm} l m{0.8cm} m{1.2cm}}
+      Source of Variation  & Sum of Squares &  Degrees of Freedom & Mean Squares & Test Statistic \\ \hline
+      Factor A      & $\textup{SS}_A$ & $\textup{df}_A = a-1$        & $\textup{MS}_A$ & $\textup{MS}_A / {MS}_E$\\
+      Factor B      & $\textup{SS}_B$ & $\textup{df}_B = b-1$        & $\textup{MS}_B$ & $\textup{MS}_B / {MS}_E$\\
+      Interaction I & $\textup{SS}_I$ & $\textup{df}_I = (a-1)(b-1)$ & $\textup{MS}_I$ & $\textup{MS}_I / {MS}_E$\\
+      Error         & $\textup{SS}_E$ & $\textup{df}_E = ab(c-1)$    & $\textup{MS}_E$ & \\ \hline
+      Total         & $\textup{SS}_T$ & $\textup{df}_T = n-1$        &                 &\\
+  \end{tabular}
+\end{table}
+The sums of squares are defined by
+\begin{equation}
+  \begin{split}
+    \textup{SS}_A &= bc \sum_{i=1}^a \hat{\alpha}_i^2\\
+    \textup{SS}_B &= ac \sum_{i=1}^b \hat{\beta}_j^2\\
+    \textup{SS}_E &= \sum_{i=1}^a \sum_{j=1}^b \sum_{k=1}^c \hat{e}_{ijk}^2\\
+    \textup{SS}_T &= \sum_{i=1}^a \sum_{j=1}^b \sum_{k=1}^c \left(y_{ijk} - \bar{y}_{...}\right)^2
+  \end{split}
+\end{equation}
+and
+\begin{equation}
+  \textup{SS}_I = \textup{SS}_T - \textup{SS}_A - \textup{SS}_B - \textup{SS}_E
+\end{equation}
+We test the alternative hypothesis
+\begin{equation}
+  \begin{split}
+    H_0 &: \gamma_{11} = \gamma_{12} = \gamma_{13} \dots = \gamma_{ab} = 0\;\\
+    H_1 &: \gamma_{ij} \neq 0 \;\text{for at least one combinationi}\;(i,j).
+  \end{split}
+\end{equation}
+i.e. all effects of the interaction $I$ are zero, with the test statistic
+\begin{equation}
+  F_I = \frac{\textup{MS}_I}{\textup{MS}_E} = \frac{\frac{\textup{SS}_I}{\textup{df}_I}}{\frac{\textup{SS}_E}{\textup{df}_E}}
+\end{equation}
+Under the null hypothesis the statistic follows an $F$-distribution with
+\begin{equation}
+  (\textup{df}_I , \textup{df}_E) = (ab(c - 1),(a - 1)(b - 1))
+\end{equation}
+degrees of freedom.\\
+Since a block cannot interact with the treatment, no interactions with block designs are allowed.\\
 
 \subsection{Residual Analysis}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}

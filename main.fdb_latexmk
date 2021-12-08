@@ -1,9 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1638965966 "main.tex" "main.pdf" "main" 1638965973
+["pdflatex"] 1638990121 "main.tex" "main.pdf" "main" 1638990128
   "10_sensitivity_and_robustness.tex" 1638352756 7345 de0e406e00e3981f6c0aaaf6570a19ae ""
   "11_variable_selection_and_modeling.tex" 1638359402 5861 e869ba942a50d4f36d15a37eeb757b59 ""
   "12_design_of_experiments.tex" 1638352874 6415 73b4ac69c3aa5aa58ac7a70eb1eeeb52 ""
-  "13_factorial_design_and_analysis_of_variance.tex" 1638965962 8490 4c8456255b6cf1d7a80e5c7dcc6d2d0b ""
+  "13_factorial_design_and_analysis_of_variance.tex" 1638990119 12769 1cf5b2f4177bf4115ff02c3e8cf8e540 ""
   "14_screening_experiments.tex" 1638348781 294 34b4c2b25283ea1ac482d94792c1251a ""
   "15_response_surface_methodology.tex" 1638348954 315 33f0852749a1ebe7115ba752e09e1e61 ""
   "1_introduction.tex" 1638947198 2898 0568d1fc752525c125d075b63508535a ""
@@ -210,11 +210,11 @@
   "c:/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1600244289 2444767 bc6ebe522825b804048e65ebb71f0a13 ""
   "c:/texlive/2020/texmf.cnf" 1600244115 673 4ae7b2f49cee444c5343a45b5d0f169c ""
   "config.tex" 1638946814 3624 cd190ad497b089c0dcc5dc065cdb3f5e ""
-  "main.aux" 1638965973 11894 6fcd1256850a28c2cef9fdabc51b4452 "pdflatex"
-  "main.out" 1638965973 4793 088ad3b7344f5927b93798976ea1182f "pdflatex"
+  "main.aux" 1638990127 11894 f5e32c6ef8429500721926e38fdf89c2 "pdflatex"
+  "main.out" 1638990127 4793 6af5a48d187ed6d9f6dc77f3496bafa1 "pdflatex"
   "main.tex" 1638348576 1161 edea699c205af9f0b6932e862db5fb19 ""
   (generated)
+  "main.pdf"
   "main.aux"
   "main.out"
   "main.log"
-  "main.pdf"
