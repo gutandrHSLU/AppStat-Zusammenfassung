@@ -111,7 +111,7 @@ The P-Value is the probability, under the null hypothesis, of obtaining a result
 
 The test statistic \ref{eq:7.3.b} is accepted on the significance level $\alpha$ if
 \begin{equation}
-  t_{\frac{\alpha}{2}, n-2} \leq T \leq t_{-\frac{\alpha}{2}, n-2},
+  t_{\frac{\alpha}{2}, n-2} \leq T \leq t_{1-\frac{\alpha}{2}, n-2},
 \end{equation}
 
 \textbf{Confidence Interval}\\
@@ -119,12 +119,12 @@ which leads us to the following confidence interval on the slope
 \begin{equation}
   \hat{\beta}_1 - t_{\frac{\alpha}{2}, n-2} \cdot \textup{se}(\beta_1)
   \leq \beta_1 \leq
-  \hat{\beta}_1 + t_{-\frac{\alpha}{2}, n-2} \cdot \textup{se}(\beta_1)
+  \hat{\beta}_1 + t_{1-\frac{\alpha}{2}, n-2} \cdot \textup{se}(\beta_1)
 \end{equation}
 \begin{equation}
   \left[
   \hat{\beta}_1 - t_{\frac{\alpha}{2}, n-2} \cdot \textup{se}(\beta_1),
-  \hat{\beta}_1 - t_{-\frac{\alpha}{2}, n-2} \cdot \textup{se}(\beta_1)\right]
+  \hat{\beta}_1 - t_{1-\frac{\alpha}{2}, n-2} \cdot \textup{se}(\beta_1)\right]
 \end{equation}
 Interpretation: The true value of $\beta_1$ lies in the confidence interval with high probability.
 

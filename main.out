@@ -3,63 +3,63 @@
 \BOOKMARK [2][-]{section*.2}{What is Statistical Quality and Process Control}{section*.1}% 3
 \BOOKMARK [1][-]{section*.6}{Control Charts}{part.1}% 4
 \BOOKMARK [2][-]{section*.7}{Hypothesis test}{section*.6}% 5
-\BOOKMARK [2][-]{section*.9}{The Control Chart}{section*.6}% 6
-\BOOKMARK [2][-]{section*.11}{Control Chart for barx and R}{section*.6}% 7
-\BOOKMARK [2][-]{section*.14}{Control Chart with barx and s}{section*.6}% 8
-\BOOKMARK [2][-]{section*.17}{Individual Control Charts}{section*.6}% 9
-\BOOKMARK [2][-]{section*.18}{Control Charts for Attributes Data \205 p Chart}{section*.6}% 10
-\BOOKMARK [1][-]{section*.21}{Statistical Properties of Control Charts}{part.1}% 11
-\BOOKMARK [2][-]{section*.22}{Interpretation of Control Charts}{section*.21}% 12
-\BOOKMARK [2][-]{section*.24}{Type I Error and Type II Error}{section*.21}% 13
-\BOOKMARK [2][-]{section*.25}{Power Function and Operating Characteristic}{section*.21}% 14
-\BOOKMARK [2][-]{section*.26}{Average Run Length}{section*.21}% 15
-\BOOKMARK [2][-]{section*.27}{Process Capability}{section*.21}% 16
-\BOOKMARK [1][-]{section*.28}{Control Charts with Memory}{part.1}% 17
-\BOOKMARK [2][-]{section*.29}{CUSUM - Cumulative Sum Control Chart}{section*.28}% 18
-\BOOKMARK [2][-]{section*.31}{EWMA - Exponentially Weighted Moving Average}{section*.28}% 19
-\BOOKMARK [1][-]{section*.33}{Acceptance Sampling}{part.1}% 20
-\BOOKMARK [2][-]{section*.34}{Plans for Attributes}{section*.33}% 21
-\BOOKMARK [2][-]{section*.35}{Operating Characteristic}{section*.33}% 22
-\BOOKMARK [2][-]{section*.39}{Parameters of an Acceptance Sampling Plan}{section*.33}% 23
-\BOOKMARK [2][-]{section*.41}{Acceptance Sampling Plans for Variables}{section*.33}% 24
+\BOOKMARK [2][-]{section*.8}{The Control Chart}{section*.6}% 6
+\BOOKMARK [2][-]{section*.10}{Control Charts for barx and R}{section*.6}% 7
+\BOOKMARK [2][-]{section*.13}{Control Chart with barx and s}{section*.6}% 8
+\BOOKMARK [2][-]{section*.16}{Individual Control Charts}{section*.6}% 9
+\BOOKMARK [2][-]{section*.17}{Control Charts for Attributes Data \205 p Chart}{section*.6}% 10
+\BOOKMARK [1][-]{section*.18}{Statistical Properties of Control Charts}{part.1}% 11
+\BOOKMARK [2][-]{section*.19}{Interpretation of Control Charts}{section*.18}% 12
+\BOOKMARK [2][-]{section*.21}{Type I Error and Type II Error}{section*.18}% 13
+\BOOKMARK [2][-]{section*.22}{Power Function and Operating Characteristic}{section*.18}% 14
+\BOOKMARK [2][-]{section*.23}{Average Run Length}{section*.18}% 15
+\BOOKMARK [2][-]{section*.24}{Process Capability}{section*.18}% 16
+\BOOKMARK [1][-]{section*.25}{Control Charts with Memory}{part.1}% 17
+\BOOKMARK [2][-]{section*.26}{CUSUM - Cumulative Sum Control Chart}{section*.25}% 18
+\BOOKMARK [2][-]{section*.28}{EWMA - Exponentially Weighted Moving Average}{section*.25}% 19
+\BOOKMARK [1][-]{section*.30}{Acceptance Sampling}{part.1}% 20
+\BOOKMARK [2][-]{section*.31}{Plans for Attributes}{section*.30}% 21
+\BOOKMARK [2][-]{section*.32}{Operating Characteristic}{section*.30}% 22
+\BOOKMARK [2][-]{section*.36}{Parameters of an Acceptance Sampling Plan}{section*.30}% 23
+\BOOKMARK [2][-]{section*.38}{Acceptance Sampling Plans for Variables}{section*.30}% 24
 \BOOKMARK [0][-]{part.2}{II Multiple Regression}{}% 25
-\BOOKMARK [1][-]{section*.42}{Simple Linear Regression}{part.2}% 26
-\BOOKMARK [2][-]{section*.43}{Simple Linear Regression Model}{section*.42}% 27
-\BOOKMARK [2][-]{section*.44}{Estimation of the Parameters}{section*.42}% 28
-\BOOKMARK [2][-]{section*.45}{Tests and Confidence Intervals}{section*.42}% 29
-\BOOKMARK [2][-]{section*.46}{Confidence Interval of the Response}{section*.42}% 30
-\BOOKMARK [2][-]{section*.47}{Prediction Interval}{section*.42}% 31
-\BOOKMARK [1][-]{section*.49}{Residual Analysis}{part.2}% 32
-\BOOKMARK [2][-]{section*.50}{Introduction}{section*.49}% 33
-\BOOKMARK [2][-]{section*.51}{Diagnostic Tools}{section*.49}% 34
-\BOOKMARK [2][-]{section*.52}{Treatment of Model Violations}{section*.49}% 35
-\BOOKMARK [2][-]{section*.53}{Independence}{section*.49}% 36
-\BOOKMARK [1][-]{section*.55}{Multiple Linear Regression}{part.2}% 37
-\BOOKMARK [2][-]{section*.56}{Model and Estimation}{section*.55}% 38
-\BOOKMARK [2][-]{section*.57}{Diversity of Modelling Possibilities}{section*.55}% 39
-\BOOKMARK [2][-]{section*.58}{Comparison of Regression Models with F-Test}{section*.55}% 40
-\BOOKMARK [1][-]{section*.59}{Sensitivity and Robustness}{part.2}% 41
-\BOOKMARK [2][-]{section*.60}{Residual Analysis}{section*.59}% 42
-\BOOKMARK [2][-]{section*.61}{Influential Observations}{section*.59}% 43
-\BOOKMARK [2][-]{section*.62}{Weighted linear regression}{section*.59}% 44
-\BOOKMARK [2][-]{section*.63}{Robust Methods}{section*.59}% 45
-\BOOKMARK [1][-]{section*.67}{Variable Selection and Modeling}{part.2}% 46
-\BOOKMARK [2][-]{section*.68}{Model Selection Methods}{section*.67}% 47
-\BOOKMARK [2][-]{section*.69}{Collinearity}{section*.67}% 48
-\BOOKMARK [2][-]{section*.70}{Modelling Strategies}{section*.67}% 49
+\BOOKMARK [1][-]{section*.39}{Simple Linear Regression}{part.2}% 26
+\BOOKMARK [2][-]{section*.40}{Simple Linear Regression Model}{section*.39}% 27
+\BOOKMARK [2][-]{section*.41}{Estimation of the Parameters}{section*.39}% 28
+\BOOKMARK [2][-]{section*.42}{Tests and Confidence Intervals}{section*.39}% 29
+\BOOKMARK [2][-]{section*.43}{Confidence Interval of the Response}{section*.39}% 30
+\BOOKMARK [2][-]{section*.44}{Prediction Interval}{section*.39}% 31
+\BOOKMARK [1][-]{section*.46}{Residual Analysis}{part.2}% 32
+\BOOKMARK [2][-]{section*.47}{Introduction}{section*.46}% 33
+\BOOKMARK [2][-]{section*.48}{Diagnostic Tools}{section*.46}% 34
+\BOOKMARK [2][-]{section*.49}{Treatment of Model Violations}{section*.46}% 35
+\BOOKMARK [2][-]{section*.50}{Independence}{section*.46}% 36
+\BOOKMARK [1][-]{section*.52}{Multiple Linear Regression}{part.2}% 37
+\BOOKMARK [2][-]{section*.53}{Model and Estimation}{section*.52}% 38
+\BOOKMARK [2][-]{section*.54}{Diversity of Modelling Possibilities}{section*.52}% 39
+\BOOKMARK [2][-]{section*.55}{Comparison of Regression Models with F-Test}{section*.52}% 40
+\BOOKMARK [1][-]{section*.56}{Sensitivity and Robustness}{part.2}% 41
+\BOOKMARK [2][-]{section*.57}{Residual Analysis}{section*.56}% 42
+\BOOKMARK [2][-]{section*.58}{Influential Observations}{section*.56}% 43
+\BOOKMARK [2][-]{section*.59}{Weighted linear regression}{section*.56}% 44
+\BOOKMARK [2][-]{section*.60}{Robust Methods}{section*.56}% 45
+\BOOKMARK [1][-]{section*.64}{Variable Selection and Modeling}{part.2}% 46
+\BOOKMARK [2][-]{section*.65}{Model Selection Methods}{section*.64}% 47
+\BOOKMARK [2][-]{section*.66}{Collinearity}{section*.64}% 48
+\BOOKMARK [2][-]{section*.67}{Modelling Strategies}{section*.64}% 49
 \BOOKMARK [0][-]{part.3}{III Design of Experiment}{}% 50
-\BOOKMARK [1][-]{section*.71}{Design of Experiment}{part.3}% 51
-\BOOKMARK [2][-]{section*.72}{Terminology and Concepts}{section*.71}% 52
-\BOOKMARK [2][-]{section*.73}{Experimental Design}{section*.71}% 53
-\BOOKMARK [2][-]{section*.74}{Planning and Conducting a Study}{section*.71}% 54
-\BOOKMARK [1][-]{section*.75}{Factorial Designs and Analysis of Variance}{part.3}% 55
-\BOOKMARK [2][-]{section*.76}{One Factor Analysis of Variance}{section*.75}% 56
-\BOOKMARK [2][-]{section*.77}{Two Factor Analysis of Variance}{section*.75}% 57
-\BOOKMARK [2][-]{section*.78}{Two Factor Analysis of Variance with Interaction}{section*.75}% 58
-\BOOKMARK [2][-]{section*.79}{Residual Analysis}{section*.75}% 59
-\BOOKMARK [1][-]{section*.80}{Screening Experiments}{part.3}% 60
-\BOOKMARK [2][-]{section*.81}{2k Factorial Designs}{section*.80}% 61
-\BOOKMARK [2][-]{section*.82}{2k Fractional Factorial Designs}{section*.80}% 62
-\BOOKMARK [1][-]{section*.83}{Response Surface Methodology}{part.3}% 63
-\BOOKMARK [2][-]{section*.84}{Response Surface}{section*.83}% 64
-\BOOKMARK [2][-]{section*.85}{Second-Order Response Surface with Interactions}{section*.83}% 65
+\BOOKMARK [1][-]{section*.68}{Design of Experiment}{part.3}% 51
+\BOOKMARK [2][-]{section*.69}{Terminology and Concepts}{section*.68}% 52
+\BOOKMARK [2][-]{section*.70}{Experimental Design}{section*.68}% 53
+\BOOKMARK [2][-]{section*.71}{Planning and Conducting a Study}{section*.68}% 54
+\BOOKMARK [1][-]{section*.72}{Factorial Designs and Analysis of Variance}{part.3}% 55
+\BOOKMARK [2][-]{section*.73}{One Factor Analysis of Variance}{section*.72}% 56
+\BOOKMARK [2][-]{section*.74}{Two Factor Analysis of Variance}{section*.72}% 57
+\BOOKMARK [2][-]{section*.75}{Two Factor Analysis of Variance with Interaction}{section*.72}% 58
+\BOOKMARK [2][-]{section*.76}{Residual Analysis}{section*.72}% 59
+\BOOKMARK [1][-]{section*.77}{Screening Experiments}{part.3}% 60
+\BOOKMARK [2][-]{section*.78}{2k Factorial Designs}{section*.77}% 61
+\BOOKMARK [2][-]{section*.79}{2k Fractional Factorial Designs}{section*.77}% 62
+\BOOKMARK [1][-]{section*.80}{Response Surface Methodology}{part.3}% 63
+\BOOKMARK [2][-]{section*.81}{Response Surface}{section*.80}% 64
+\BOOKMARK [2][-]{section*.82}{Second-Order Response Surface with Interactions}{section*.80}% 65
