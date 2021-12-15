@@ -372,6 +372,12 @@ INPUT 13_factorial_design_and_analysis_of_variance.tex
 INPUT 13_factorial_design_and_analysis_of_variance.tex
 INPUT 14_screening_experiments.tex
 INPUT 14_screening_experiments.tex
+INPUT Pics/14.1.2.png
+INPUT ./Pics/14.1.2.png
+INPUT ./Pics/14.1.2.png
+INPUT Pics/14.1.3.png
+INPUT ./Pics/14.1.3.png
+INPUT ./Pics/14.1.3.png
 INPUT 15_response_surface_methodology.tex
 INPUT 15_response_surface_methodology.tex
 INPUT main.aux
@@ -379,7 +385,9 @@ INPUT ./main.out
 INPUT ./main.out
 INPUT c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+INPUT c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb
+INPUT c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb
 INPUT c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
 INPUT c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
 INPUT c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb

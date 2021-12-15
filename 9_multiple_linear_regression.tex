@@ -187,9 +187,9 @@ Example:
   &\texttt{Position4.dum}: & &\texttt{num}  &\texttt{0 0 0 0 0 0 \dots\; 0 0 0 0 1 \dots\; 1 0 \dots\; 0}
 \end{align*}
 
-\subsection{Comparison of Regression Models with $F$-Test}
+\subsection{Comparison of Regression Models with $\mathbf{F}$-Test}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
-We need at test which allows us to ask the question if a certain factor has a significant influence. We cannot simply look at the $t$-statistics and P-values of individual levels in the R-output. We need to be able to test not only one coefficient but a whole set of coefficients simultaneously.\\
+We need a test which allows us to ask the question if a certain factor has a significant influence. We cannot simply look at the $t$-statistics and P-values of individual levels in the R-output. We need to be able to test not only one coefficient but a whole set of coefficients simultaneously.\\
 In general we want to compare two multiple linear regression models. To do that we fit a big
 model with $p = m + 1$ coefficients and a smaller model with $q$ coefficients $\beta_{j1} , . . . , \beta_{jq}$ put to zero, i.e. with only $p - q$ coefficients.\\
 
@@ -201,9 +201,9 @@ The question is, if the smaller regression model can fit the data as well as the
   \end{split}
 \end{equation}
 
-The F-test to compare two models tests whether any of the explanatory variables in a multiple linear regression model are significant.\\
-To answer this question we calculate the F-statistic
+The $F$-test to compare two models tests whether any of the explanatory variables in a multiple linear regression model are significant.\\
+To answer this question we calculate the $F$-statistic
 \begin{equation}
   F = \frac{n-p}{q}\frac{\textup{SS}^*_E - \textup{SS}_E}{\textup{SS}_E}
 \end{equation}
-where $\textup{SS}^*_E$ is the sum of squares of the errors of the small model and $\textup{SS}_E$ is the sum of squares of the errors of the big model. Under the null hypothesis the F-statistic follows an F-distribution with $(q, n - p)$ degrees of freedom.
+where $\textup{SS}^*_E$ is the sum of squares of the errors of the small model and $\textup{SS}_E$ is the sum of squares of the errors of the big model. Under the null hypothesis the $F$-statistic follows an $F$-distribution with $(q, n - p)$ degrees of freedom.
