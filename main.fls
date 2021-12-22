@@ -380,6 +380,8 @@ INPUT ./Pics/14.1.3.png
 INPUT ./Pics/14.1.3.png
 INPUT 15_response_surface_methodology.tex
 INPUT 15_response_surface_methodology.tex
+INPUT c:/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/tcrm0700.tfm
+INPUT c:/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ectt0800.tfm
 INPUT Pics/15.1.2.png
 INPUT ./Pics/15.1.2.png
 INPUT ./Pics/15.1.2.png
@@ -413,8 +415,8 @@ INPUT ./Pics/T.15.png
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
-INPUT c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+INPUT c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb
