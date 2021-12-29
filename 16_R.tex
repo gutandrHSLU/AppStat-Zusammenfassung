@@ -1,7 +1,7 @@
 % \section{R}
 % \noindent\rule[\linienAbstand]{\linewidth}{\linienDickeDick}
 
-\subsection{Basics}
+\section{Basics}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 \textbf{Normal Distribution Function \texttt{pnorm}}\\
 Probability of $X$ being less than 8.10 with $\texttt{mean = 8.00}$ and $\texttt{sd = 0.05}$
@@ -18,7 +18,7 @@ Value of $x$ for which $P(X \leq x) = 0.97725$.
   \texttt{qnorm(p=0.97725, mean=8.00, sd=0.05)} = 8.10
 \end{equation*}
 
-\subsection{Utility function for finding sampling plans.}
+\section{Utility function for finding sampling plans}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 \textbf{Description}\\
 Find the sampling plan with smallest sample size (single sample only) such that specified Producer Risk Point (PRP) and Consumer Risk Point (CRP) are both met.
@@ -58,13 +58,14 @@ and the real consumers risk with\\
 Where \texttt{func.OC} is the function of the operating characteristic (eq. \ref{eq:OC}).
 
 
-\subsection{Fitting Linear Models}
+\section{Multiple Regression}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 \textbf{Description}\\
 \texttt{lm} is used to fit linear models. It can be used to carry out regression, single stratum analysis of variance and analysis of covariance (although \texttt{aov} may provide a more convenient interface for these).\\
 
 \textbf{Usage}\\
 \texttt{lm(formula, data, ...)}\\
+
 \textbf{Arguments}\\
 \begin{table}[H]
   \scriptsize
@@ -83,7 +84,136 @@ A formula has an implied intercept term. To remove this use either \texttt{y $\s
 
 The functions \texttt{summary} and \texttt{anova} are used to obtain and print a summary and analysis of variance table of the results.\\
 
-\textbf{Example}\\
+\subsection{Simple Linear Regression}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+We want to fit a linear model where the model has the form \texttt{Time $\sim$ Volume}. In R we do this with the following line\\
+\texttt{mod <- lm(formula = Time $\sim$ Volume, data = data)}\\
+
+With the following line we get a summary of the fited model:\\
+\begingroup
+\scriptsize
+\begin{verbatim}
+> summary(mod)
+
+Call:
+lm(formula = Time ~ Volume, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max
+-7.5811 -1.8739 -0.3493  2.1807 10.6342
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)    3.321      1.371   2.422   0.0237 *
+Volume         2.176      0.124  17.546 8.22e-15 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 4.181 on 23 degrees of freedom
+Multiple R-squared:  0.9305,	Adjusted R-squared:  0.9275
+F-statistic: 307.8 on 1 and 23 DF,  p-value: 8.22e-15
+\end{verbatim}
+\endgroup
+\vspace{\baselineskip}
+
+\subsection{Confidence Interval on Slope}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+\begingroup
+\scriptsize
+\begin{verbatim}
+# 95% confidence interval on slope (lm)
+> confint(mod, level=0.95)
+                2.5 %   97.5 %
+(Intercept) 0.4844979 6.157062
+Volume      1.9195920 2.432741
+\end{verbatim}
+\endgroup
+\vspace{\baselineskip}
+
+\subsection{Confidence Interval on the Response}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+We construct 95\% confidence intervals on the response with the following line:
+\begingroup
+\scriptsize
+\begin{verbatim}
+> Time.Conf <- predict(mod, newdata=data.new, interval="confidence",
+                      level=0.95)
+> head(Time.Conf)
+        fit       lwr       upr
+1 -18.44089 -23.55568 -13.32610
+2 -17.35280 -22.34705 -12.35855
+3 -16.26472 -21.13883 -11.39061
+4 -15.17664 -19.93103 -10.42224
+5 -14.08855 -18.72369  -9.45342
+6 -13.00047 -17.51684  -8.48410
+\end{verbatim}
+\endgroup
+Where \texttt{data.new} is an array with equally spaced x-values covering at least the range of the Volume-data.\\
+
+\subsection{Prediction Interval on the Response}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+We construct 95\% prediction intervals with the following lines:
+\begingroup
+\scriptsize
+\begin{verbatim}
+> Time.Pred <- predict(mod, newdata=data.new, interval="prediction",
+                      level=0.95)
+> head(Time.Pred)
+        fit       lwr       upr
+1 -18.44089 -28.48984 -8.391934
+2 -17.35280 -27.34094 -7.364664
+3 -16.26472 -26.19333 -6.336109
+4 -15.17664 -25.04703 -5.306245
+5 -14.08855 -23.90206 -4.275050
+6 -13.00047 -22.75844 -3.242499
+\end{verbatim}
+\endgroup
+
+\subsection{Correlation}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+
+\subsection{Multiple Linear Regression}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+We want to fit a multiple linear regression model where the model has the form \texttt{Vibration.log $\sim$ Distance.log + Charge.log}. In R we do this with the following line:
+\texttt{mod <- lm(Vibration.log $\sim$ Distance.log + Charge.log, data)}
+The summary of that model is the following:
+\begingroup
+\scriptsize
+\begin{verbatim}
+> summary(mod)
+
+Call:
+lm(formula = Vibration.log ~ Distance.log + Charge.log, data = data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max
+-0.43571 -0.11580  0.00227  0.09715  0.36978
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept)    2.8323     0.2229  12.707   <2e-16 ***
+Distance.log  -1.5107     0.1111 -13.592   <2e-16 ***
+Charge.log     0.8083     0.3042   2.658   0.0109 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1529 on 45 degrees of freedom
+Multiple R-squared:  0.8048,	Adjusted R-squared:  0.7962
+F-statistic: 92.79 on 2 and 45 DF,  p-value: < 2.2e-16
+\end{verbatim}
+\endgroup
+
+\subsection{Binary Explanatory Variables}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+\subsection{Factor Variables}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+
+% \begingroup
+%   \scriptsize
+%   \begin{verbatim}
+%
+%   \end{verbatim}
+% \endgroup
 
 % \subsection{}
 % \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}

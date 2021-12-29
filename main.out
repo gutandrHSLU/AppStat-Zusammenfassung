@@ -65,7 +65,11 @@
 \BOOKMARK [2][-]{section*.83}{Second-Order Response Surface with Interactions}{section*.80}% 65
 \BOOKMARK [0][-]{part.4}{IV R}{}% 66
 \BOOKMARK [1][-]{section*.86}{Basics}{part.4}% 67
-\BOOKMARK [2][-]{section*.87}{Utility function for finding sampling plans.}{section*.86}% 68
-\BOOKMARK [2][-]{section*.88}{Fitting Linear Models}{section*.86}% 69
-\BOOKMARK [1][-]{section*.90}{Students t-distribution}{part.4}% 70
-\BOOKMARK [1][-]{section*.93}{Factors for constructing control charts}{part.4}% 71
+\BOOKMARK [1][-]{section*.87}{Utility function for finding sampling plans.}{part.4}% 68
+\BOOKMARK [1][-]{section*.88}{Fitting Linear Models}{part.4}% 69
+\BOOKMARK [2][-]{section*.89}{Fitting a Linear Model}{section*.88}% 70
+\BOOKMARK [2][-]{section*.90}{Confidence Interval on Slope}{section*.88}% 71
+\BOOKMARK [2][-]{section*.91}{Confidence Interval on the Response}{section*.88}% 72
+\BOOKMARK [2][-]{section*.92}{Prediction Interval on the Response}{section*.88}% 73
+\BOOKMARK [1][-]{section*.94}{Students t-distribution}{part.4}% 74
+\BOOKMARK [1][-]{section*.97}{Factors for constructing control charts}{part.4}% 75
