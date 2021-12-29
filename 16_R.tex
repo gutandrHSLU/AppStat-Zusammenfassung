@@ -1,0 +1,94 @@
+% \section{R}
+% \noindent\rule[\linienAbstand]{\linewidth}{\linienDickeDick}
+
+\subsection{Basics}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+\textbf{Normal Distribution Function \texttt{pnorm}}\\
+Probability of $X$ being less than 8.10 with $\texttt{mean = 8.00}$ and $\texttt{sd = 0.05}$
+\begin{equation*}
+  \begin{split}
+    P(X \leq 8.10) &= \texttt{pnorm(q=8.10, mean=8.00, sd=0.05)}\\
+    &= 0.97725
+  \end{split}
+\end{equation*}
+
+\textbf{Quantile Function \texttt{qnorm}}\\
+Value of $x$ for which $P(X \leq x) = 0.97725$.
+\begin{equation*}
+  \texttt{qnorm(p=0.97725, mean=8.00, sd=0.05)} = 8.10
+\end{equation*}
+
+\subsection{Utility function for finding sampling plans.}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+\textbf{Description}\\
+Find the sampling plan with smallest sample size (single sample only) such that specified Producer Risk Point (PRP) and Consumer Risk Point (CRP) are both met.
+
+\textbf{Arguments}\\
+\begin{table}[H]
+  \scriptsize
+  \begin{tabularx}{\linewidth}{lX}
+    \texttt{PRP} &
+    The Producer Risk Point in the form of a two element numeric vector of the form \texttt{c(pd, pa)}. The first element, \texttt{pd}, specifies the quality level at which to evaluate the plan. The second element, \texttt{pa}, indicates the minimum probability of acceptance to be achieved by the plan.\\
+    \texttt{CRP} &
+    The Consumer Risk Point in the form of a two element numeric vector of the form \texttt{c(pd, pa)}. The first element, \texttt{pd}, specifies the quality level at which to evaluate the plan. The second element, \texttt{pa}, indicates the maximum probability of acceptance to be achieved by the plan.\\
+    \texttt{type} &
+    The distribution which the sampling plan is based on. Possible values are \texttt{binomial, hypergeom, poisson and normal}.\\
+    \texttt{N} &
+    The size of the population from which samples are drawn. Only applicable for \texttt{type="hypergeom"}.\\
+    \texttt{s.type} &
+    The type of the standard deviation. A value of known results in a sampling plan based on the population standard deviation, while a value of \texttt{unknown} results in the use of the sample standard deviation.
+  \end{tabularx}
+\end{table}
+
+\textbf{Usage}\\
+\texttt{find.plan(PRP, CRP, type="binomial")}\\
+\texttt{find.plan(PRP, CRP, type="hypergeom", N)}\\
+\texttt{find.plan(PRP, CRP, type="normal", s.type="unknown")}\\
+
+\textbf{Example}\\
+We want to find the smallest sample size $n$ and the acceptence number $c$. The line\\
+\texttt{find.plan(PRP=c(p.alpha, 1-alpha), CRP=c(p.beta, beta), type="hypergeom", N=100)}\\
+yields values for $n$ and $c$.\\
+\texttt{p.alpha} and \texttt{p.beta} are the probabilities of acceptance and rejection and \texttt{alpha} and \texttt{beta} are the producer and consumer risk.\\
+
+The real producers risk can then be found with\\
+\texttt{1-func.OC(p=p.alpha,N,n=n,c=c)}\\
+and the real consumers risk with\\
+\texttt{func.OC(p=p.beta,N,n=n,c=c)}.\\
+Where \texttt{func.OC} is the function of the operating characteristic (eq. \ref{eq:OC}).
+
+
+\subsection{Fitting Linear Models}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+\textbf{Description}\\
+\texttt{lm} is used to fit linear models. It can be used to carry out regression, single stratum analysis of variance and analysis of covariance (although \texttt{aov} may provide a more convenient interface for these).\\
+
+\textbf{Usage}\\
+\texttt{lm(formula, data, ...)}\\
+\textbf{Arguments}\\
+\begin{table}[H]
+  \scriptsize
+  \begin{tabularx}{\linewidth}{lX}
+    \texttt{formula} & an object of class \texttt{"formula"}: a symbolic description of the model to be fitted. The details of model specification are given under \emph{Details}.\\
+    \texttt{data} & an optional data frame, list or environment containing the variables in the model.
+  \end{tabularx}
+\end{table}
+\textbf{Details}\\
+Models for \texttt{lm} are specified symbolically. A typical model has the form \texttt{response $\sim$ terms} where \texttt{response} is the (numeric) response vector and \texttt{terms} is a series of terms which specifies a linear predictor for \texttt{response}. A terms specification of the form \texttt{first + second} indicates all the terms in \texttt{first} together with all the terms in \texttt{second} with duplicates removed. A specification of the form \texttt{first:second} indicates the set of terms obtained by taking the interactions of all terms in \texttt{first} with all terms in \texttt{second}. The specification \texttt{first*second} indicates the cross of \texttt{first} and \texttt{second}. This is the same as \texttt{first + second + first:second}.\\
+
+A formula has an implied intercept term. To remove this use either \texttt{y $\sim$ x - 1} or \texttt{y $\sim$ 0 + x}.\\
+
+\textbf{Value}\\
+\texttt{lm} returns an object of class \texttt{lm} or for multiple responses of class \texttt{c("mlm", "lm")}.\\
+
+The functions \texttt{summary} and \texttt{anova} are used to obtain and print a summary and analysis of variance table of the results.\\
+
+\textbf{Example}\\
+
+% \subsection{}
+% \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+% \textbf{Description}\\
+% \textbf{Usage}\\
+% \textbf{Arguments}\\
+% \textbf{Details}\\
+% \textbf{Example}\\

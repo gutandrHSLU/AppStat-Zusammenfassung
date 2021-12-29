@@ -14,17 +14,17 @@ We have a lot of N parts (known). The number of defective parts m (unknown) with
 \end{equation}
 
 \textbf{Acceptance sampling plan} consitst of:\\
- - Sample size n,\\
- - the number of defective parts x in the sample, where $0 \leq x < n$,\\
- - the acceptance number c, where $0 \leq c < n$ and\\
+ - Sample size $n$,\\
+ - the number of defective parts $x$ in the sample, where $0 \leq x < n$,\\
+ - the acceptance number $c$, where $0 \leq c < n$ and\\
  - the rule: if $x \leq c$, then the lot is accepted, if $x > c$, then the lot is rejected.\\
 
 \textbf{Hypothesis test}\\
 The rule above can also be formulated as a hypothesis test:
 \begin{equation}
   \begin{split}
-    H_0:& x \leq c,\text{ i.e. the lot is not rejected.}\\
-    H_1:& x > c,\text{ i.e. the lot is rejected.}\\
+    H_0:\; & x \leq c,\text{ i.e. the lot is not rejected.}\\
+    H_1:\; & x > c,\text{ i.e. the lot is rejected.}\\
   \end{split}
 \end{equation}
 
@@ -49,12 +49,13 @@ In an agreement between a producer and a consumer the following parameter must d
 
 \subsection{Operating Characteristic}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
-The operating characteristic, short OC, is the probability of accepting a lot as a function of the percent defective p.\\
-The number of defective units X is a hypergeometric random variable. There are N parts in total, among which m defective and N - m are good parts. So a sample of size n is drawn at once. The probability that among these n parts are at most c parts defective is given by
+The operating characteristic, short OC, is the probability of accepting a lot as a function of the percent defective $p$.\\
+The number of defective units $X$ is a hypergeometric random variable. There are $N$ parts in total, among which $m$ defective and $N - m$ are good parts. So a sample of size $n$ is drawn at once. The probability that among these $n$ parts are at most $c$ parts defective is given by
 \begin{equation}
   OC(p) = P(X \leq c)= \sum^c_{k=0} P(X = k) = \sum^c_{k=0} \frac{\binom{pN}{k}\binom{N-pN}{n-k}}{\binom{N}{n}}
+  \label{eq:OC}
 \end{equation}
-For a given lot size N, the parameters n and c of the acceptance sampling plan determine the form of the OC curve.\\
+For a given lot size $N$, the parameters $n$ and $c$ of the acceptance sampling plan determine the form of the OC curve.\\
 
 \textbf{Ideal OC Curve}\\
 If all parts of a lot get checked we get an ideal acceptance sampling plan:
@@ -80,13 +81,13 @@ If all parts of a lot get checked we get an ideal acceptance sampling plan:
 
 \subsection{Parameters of an Acceptance Sampling Plan}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
-n and c are to be chosen such that:\\
-- n is as small as possible,\\
+$n$ and $c$ are to be chosen such that:\\
+- $n$ is as small as possible,\\
 - the producer risk is at most equal to $\alpha$, i.e. $OC(p_{\alpha}) \leq 1 - \alpha$, and\\
 - the consumer risk is at most equal to $\beta$, i.e. $OC(p_{\beta}) \geq \beta$\\
 
 The pair $(p_{\alpha}, 1-\alpha)$ is called producer risk point and the pair $(p_{\beta}, \beta)$ is called consumer risk point.\\
-n and c are calculated by brute force. The resulting OC curve is not a perfect fit since only integer values can be choosen.\\
+$n$ and $c$ are calculated by brute force. The resulting OC curve is not a perfect fit since only integer values can be choosen.\\
 
 \textbf{Real OC Curve}
 \begin{figure}[H]

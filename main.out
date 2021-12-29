@@ -63,5 +63,9 @@
 \BOOKMARK [1][-]{section*.80}{Response Surface Methodology}{part.3}% 63
 \BOOKMARK [2][-]{section*.81}{Response Surface}{section*.80}% 64
 \BOOKMARK [2][-]{section*.83}{Second-Order Response Surface with Interactions}{section*.80}% 65
-\BOOKMARK [1][-]{section*.87}{Students t-distribution}{part.3}% 66
-\BOOKMARK [1][-]{section*.90}{Factors for constructing control charts}{part.3}% 67
+\BOOKMARK [0][-]{part.4}{IV R}{}% 66
+\BOOKMARK [1][-]{section*.86}{Basics}{part.4}% 67
+\BOOKMARK [2][-]{section*.87}{Utility function for finding sampling plans.}{section*.86}% 68
+\BOOKMARK [2][-]{section*.88}{Fitting Linear Models}{section*.86}% 69
+\BOOKMARK [1][-]{section*.90}{Students t-distribution}{part.4}% 70
+\BOOKMARK [1][-]{section*.93}{Factors for constructing control charts}{part.4}% 71
