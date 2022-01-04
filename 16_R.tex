@@ -205,8 +205,51 @@ F-statistic: 92.79 on 2 and 45 DF,  p-value: < 2.2e-16
 
 \subsection{Binary Explanatory Variables}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
-\subsection{Factor Variables}
+
+
+\subsection{Analysis of Variance}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+
+\begingroup
+  \scriptsize
+  \begin{verbatim}
+
+  \end{verbatim}
+\endgroup
+
+
+\textbf{Description}\\
+Fit an analysis of variance model by a call to lm for each stratum.\\
+
+\textbf{Usage}\\
+\texttt{aov(formula, data, ...)}\\
+
+\textbf{Arguments}\\
+\begin{table}[H]
+  \scriptsize
+  \begin{tabularx}{\linewidth}{lX}
+    \texttt{formula} & A formula specifying the model. (Analogus to the \texttt{lm} function).\\
+    \texttt{data} & A data frame in which the variables specified in the formula will be found.
+  \end{tabularx}
+\end{table}
+
+\textbf{Example}\\
+\begingroup
+\scriptsize
+\begin{verbatim}
+# analysis of variance table for two factors (aov)
+> mod <- aov(Strength ~ Method + Batch, data)
+> summary(mod)
+Df Sum Sq Mean Sq F value Pr(>F)
+Method 2 23.23 11.614 8.695 0.002278 **
+Batch 9 86.79 9.644 7.219 0.000202 ***
+Residuals 18 24.04 1.336
+---
+Signif. codes: 0 ’***’ 0.001 ’**’ 0.01 ’*’ 0.05 ’.’ 0.1 ’ ’ 1
+\end{verbatim}
+\endgroup
+A low P-value means that the effect of, say the \texttt{Batch}-effect, is significant.\\
+For the result to be valid, the following must be fulfilled: The errors must be independent and normally distributed with expected value $0$ and constant variance $\sigma^2$. Furthermore, the two factors must overlap additively. With the interaction plot (\texttt{interaction.plot()}) it can be checked graphically whether the factor effects overlap additively. If they overlap additively, the lines in the interaction plot must be parallel except for random deviations.
 
 % \begingroup
 %   \scriptsize

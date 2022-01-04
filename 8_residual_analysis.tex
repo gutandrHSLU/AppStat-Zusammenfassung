@@ -54,8 +54,15 @@ The coefficient of determination is a global measure for the goodness of fit and
 \subsection{Diagnostic Tools}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 What follows is a description of three graphical diagnostic tools to check model assumptions 1, 2, 3 and 5. The aim is to be sure that there are no dangerous discrepancies from the assumptions in the data. All three tools are based on the residuals which are representations of the unknown errors.\\
+In an exercise on the topic of residuals analysis, the following four questions must be answered in order to obtain the full score:
+\begin{itemize}
+  \item Which model assumption is being checked?
+  \item What should the plot look like if the assumption was true?
+  \item What do I actually see?
+  \item What is the conclusion?
+\end{itemize}
 
-\textbf{Tukey-Anscombe Plot}\\
+\textbf{Tukey-Anscombe Plot (Residuals vs Fitted)}\\
 The idea of this plot is to plot residuals $e_i$ versus fitted values $\hat{y}_i$.
 With the Tukey-Anscombe Plot we can check whether the second model assumption holds true.\\
 Residuals in any interval of the Tukey-Anscombe plot should vary randomly around the horizontal line at zero.
@@ -117,8 +124,6 @@ If the data is from a normal distribution, the points in the q-q plot scatter ar
   \end{tabular}
 \end{table}
 
-Todo: Understand left and right-skewed plots
-
 \subsection{Treatment of Model Violations}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 
@@ -130,6 +135,14 @@ This model violation can be changed by a transformation of the response variable
   \begin{equation}
     z \mapsto \textup{log}(z)
   \end{equation}
+  Logarithmic rules
+  \begin{align*}
+    \text{log}(xy) &= \text{log}(x) + \text{log}(y) &
+    \text{log}\left(\frac{x}{y}\right) &= \text{log}(x) - \text{log}(y) \\
+    \text{log}\left(x^y\right) &= y\;\text{log}(x) &
+    \text{log}\left(\frac{1}{x}\right) &= - \text{log}(x)
+  \end{align*}
+
   \item \textbf{Square-root} for continuous and discrete positive variables:
   \begin{equation}
     z \mapsto \sqrt{z}

@@ -65,11 +65,15 @@
 \BOOKMARK [2][-]{section*.83}{Second-Order Response Surface with Interactions}{section*.80}% 65
 \BOOKMARK [0][-]{part.4}{IV R}{}% 66
 \BOOKMARK [1][-]{section*.86}{Basics}{part.4}% 67
-\BOOKMARK [1][-]{section*.87}{Utility function for finding sampling plans.}{part.4}% 68
-\BOOKMARK [1][-]{section*.88}{Fitting Linear Models}{part.4}% 69
-\BOOKMARK [2][-]{section*.89}{Fitting a Linear Model}{section*.88}% 70
+\BOOKMARK [1][-]{section*.87}{Utility function for finding sampling plans}{part.4}% 68
+\BOOKMARK [1][-]{section*.88}{Multiple Regression}{part.4}% 69
+\BOOKMARK [2][-]{section*.89}{Simple Linear Regression}{section*.88}% 70
 \BOOKMARK [2][-]{section*.90}{Confidence Interval on Slope}{section*.88}% 71
 \BOOKMARK [2][-]{section*.91}{Confidence Interval on the Response}{section*.88}% 72
 \BOOKMARK [2][-]{section*.92}{Prediction Interval on the Response}{section*.88}% 73
-\BOOKMARK [1][-]{section*.94}{Students t-distribution}{part.4}% 74
-\BOOKMARK [1][-]{section*.97}{Factors for constructing control charts}{part.4}% 75
+\BOOKMARK [2][-]{section*.93}{Correlation}{section*.88}% 74
+\BOOKMARK [2][-]{section*.94}{Multiple Linear Regression}{section*.88}% 75
+\BOOKMARK [2][-]{section*.95}{Binary Explanatory Variables}{section*.88}% 76
+\BOOKMARK [2][-]{section*.96}{Analysis of Variance}{section*.88}% 77
+\BOOKMARK [1][-]{section*.98}{Students t-distribution}{part.4}% 78
+\BOOKMARK [1][-]{section*.101}{Factors for constructing control charts}{part.4}% 79
