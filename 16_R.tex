@@ -58,7 +58,7 @@ and the real consumers risk with\\
 Where \texttt{func.OC} is the function of the operating characteristic (eq. \ref{eq:OC}).
 
 
-\section{Multiple Regression}
+\section{Linear Regression}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 \textbf{Description}\\
 \texttt{lm} is used to fit linear models. It can be used to carry out regression, single stratum analysis of variance and analysis of covariance (although \texttt{aov} may provide a more convenient interface for these).\\
@@ -93,25 +93,25 @@ With the following line we get a summary of the fited model:\\
 \begingroup
 \scriptsize
 \begin{verbatim}
-> summary(mod)
+  > summary(mod)
 
-Call:
-lm(formula = Time ~ Volume, data = data)
+  Call:
+  lm(formula = Time ~ Volume, data = data)
 
-Residuals:
-    Min      1Q  Median      3Q     Max
--7.5811 -1.8739 -0.3493  2.1807 10.6342
+  Residuals:
+      Min      1Q  Median      3Q     Max
+  -7.5811 -1.8739 -0.3493  2.1807 10.6342
 
-Coefficients:
-            Estimate Std. Error t value Pr(>|t|)
-(Intercept)    3.321      1.371   2.422   0.0237 *
-Volume         2.176      0.124  17.546 8.22e-15 ***
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+  Coefficients:
+              Estimate Std. Error t value Pr(>|t|)
+  (Intercept)    3.321      1.371   2.422   0.0237 *
+  Volume         2.176      0.124  17.546 8.22e-15 ***
+  ---
+  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 4.181 on 23 degrees of freedom
-Multiple R-squared:  0.9305,	Adjusted R-squared:  0.9275
-F-statistic: 307.8 on 1 and 23 DF,  p-value: 8.22e-15
+  Residual standard error: 4.181 on 23 degrees of freedom
+  Multiple R-squared:  0.9305,	Adjusted R-squared:  0.9275
+  F-statistic: 307.8 on 1 and 23 DF,  p-value: 8.22e-15
 \end{verbatim}
 \endgroup
 \vspace{\baselineskip}
@@ -121,11 +121,11 @@ F-statistic: 307.8 on 1 and 23 DF,  p-value: 8.22e-15
 \begingroup
 \scriptsize
 \begin{verbatim}
-# 95% confidence interval on slope (lm)
-> confint(mod, level=0.95)
-                2.5 %   97.5 %
-(Intercept) 0.4844979 6.157062
-Volume      1.9195920 2.432741
+  # 95% confidence interval on slope (lm)
+  > confint(mod, level=0.95)
+                  2.5 %   97.5 %
+  (Intercept) 0.4844979 6.157062
+  Volume      1.9195920 2.432741
 \end{verbatim}
 \endgroup
 \vspace{\baselineskip}
@@ -136,16 +136,17 @@ We construct 95\% confidence intervals on the response with the following line:
 \begingroup
 \scriptsize
 \begin{verbatim}
-> Time.Conf <- predict(mod, newdata=data.new, interval="confidence",
-                      level=0.95)
-> head(Time.Conf)
-        fit       lwr       upr
-1 -18.44089 -23.55568 -13.32610
-2 -17.35280 -22.34705 -12.35855
-3 -16.26472 -21.13883 -11.39061
-4 -15.17664 -19.93103 -10.42224
-5 -14.08855 -18.72369  -9.45342
-6 -13.00047 -17.51684  -8.48410
+  > Time.Conf <- predict(mod, newdata=data.new, interval="confidence",
+                        level=0.95)
+  > head(Time.Conf)
+          fit       lwr       upr
+  1 -18.44089 -23.55568 -13.32610
+  2 -17.35280 -22.34705 -12.35855
+  3 -16.26472 -21.13883 -11.39061
+  4 -15.17664 -19.93103 -10.42224
+  5 -14.08855 -18.72369  -9.45342
+  6 -13.00047 -17.51684  -8.48410
+
 \end{verbatim}
 \endgroup
 Where \texttt{data.new} is an array with equally spaced x-values covering at least the range of the Volume-data.\\
@@ -156,16 +157,17 @@ We construct 95\% prediction intervals with the following lines:
 \begingroup
 \scriptsize
 \begin{verbatim}
-> Time.Pred <- predict(mod, newdata=data.new, interval="prediction",
-                      level=0.95)
-> head(Time.Pred)
-        fit       lwr       upr
-1 -18.44089 -28.48984 -8.391934
-2 -17.35280 -27.34094 -7.364664
-3 -16.26472 -26.19333 -6.336109
-4 -15.17664 -25.04703 -5.306245
-5 -14.08855 -23.90206 -4.275050
-6 -13.00047 -22.75844 -3.242499
+  > Time.Pred <- predict(mod, newdata=data.new, interval="prediction",
+                        level=0.95)
+  > head(Time.Pred)
+          fit       lwr       upr
+  1 -18.44089 -28.48984 -8.391934
+  2 -17.35280 -27.34094 -7.364664
+  3 -16.26472 -26.19333 -6.336109
+  4 -15.17664 -25.04703 -5.306245
+  5 -14.08855 -23.90206 -4.275050
+  6 -13.00047 -22.75844 -3.242499
+
 \end{verbatim}
 \endgroup
 
@@ -174,42 +176,190 @@ We construct 95\% prediction intervals with the following lines:
 
 \subsection{Multiple Linear Regression}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
-We want to fit a multiple linear regression model where the model has the form \texttt{Vibration.log $\sim$ Distance.log + Charge.log}. In R we do this with the following line:
-\texttt{mod <- lm(Vibration.log $\sim$ Distance.log + Charge.log, data)}
+We want to fit a multiple linear regression model where the model has the form \texttt{Vibration.log $\sim$ Distance.log + Charge.log}. In R we do this with the following line:\\
+\texttt{mod <- lm(Vibration.log $\sim$ Distance.log + Charge.log, data)}\\
 The summary of that model is the following:
 \begingroup
 \scriptsize
 \begin{verbatim}
-> summary(mod)
+  > summary(mod)
 
-Call:
-lm(formula = Vibration.log ~ Distance.log + Charge.log, data = data)
+  Call:
+  lm(formula = Vibration.log ~ Distance.log + Charge.log, data = data)
 
-Residuals:
-     Min       1Q   Median       3Q      Max
--0.43571 -0.11580  0.00227  0.09715  0.36978
+  Residuals:
+       Min       1Q   Median       3Q      Max
+  -0.43571 -0.11580  0.00227  0.09715  0.36978
 
-Coefficients:
-             Estimate Std. Error t value Pr(>|t|)
-(Intercept)    2.8323     0.2229  12.707   <2e-16 ***
-Distance.log  -1.5107     0.1111 -13.592   <2e-16 ***
-Charge.log     0.8083     0.3042   2.658   0.0109 *
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+  Coefficients:
+               Estimate Std. Error t value Pr(>|t|)
+  (Intercept)    2.8323     0.2229  12.707   <2e-16 ***
+  Distance.log  -1.5107     0.1111 -13.592   <2e-16 ***
+  Charge.log     0.8083     0.3042   2.658   0.0109 *
+  ---
+  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 0.1529 on 45 degrees of freedom
-Multiple R-squared:  0.8048,	Adjusted R-squared:  0.7962
-F-statistic: 92.79 on 2 and 45 DF,  p-value: < 2.2e-16
 \end{verbatim}
 \endgroup
 
-\subsection{Binary Explanatory Variables}
+\subsection{Factor Variables}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+If we want to use factor variables in a linear regression model we have do define them as such. The following lines tell R to use the position as a factor variable
+\begingroup
+\scriptsize
+\begin{verbatim}
+  # define Position as a factor
+  > data$Position.fac <- as.factor(data$Position)
+\end{verbatim}
+\endgroup
 
+The summary of the model is the following
+\begingroup
+\scriptsize
+\begin{verbatim}
+  > #   estimation of the parameters
+  > mod.fac <- lm(Vibration.log ~ Distance.log + Charge.log
+                  + Position.fac, data)
+  > summary(mod.fac)
+
+  Call:
+  lm(formula = Vibration.log ~ Distance.log + Charge.log + Position.fac,
+      data = data)
+
+  Residuals:
+       Min       1Q   Median       3Q      Max
+  -0.36732 -0.09607  0.01385  0.08883  0.28017
+
+  Coefficients:
+                Estimate Std. Error t value Pr(>|t|)
+  (Intercept)    2.51044    0.28215   8.898 3.25e-11 ***
+  Distance.log  -1.33779    0.14073  -9.506 4.97e-12 ***
+  Charge.log     0.69179    0.29666   2.332   0.0246 *
+  Position.fac2  0.16430    0.07494   2.192   0.0340 *
+  Position.fac3  0.02170    0.06366   0.341   0.7349
+  Position.fac4  0.11080    0.07477   1.482   0.1459
+  ---
+  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+\end{verbatim}
+\endgroup
+
+We need to understand how to interpret the estimated coefficients of the factor levels:
+For every position we get a different estimated model. These four models have the slope $\hat{\beta}_1 = -1.33779$ (coefficient of \texttt{Distance.log}) and the slope $\hat{\beta}_2 = 0.69179$ (coefficient of \texttt{Charge.log}) in common.
+But they all have different intercepts. The model at the first position has the intercept $\hat{\beta}_0 = 2.51044$ (reference model due to our constraint), the model at the second position has the intercept $\hat{\beta}_0 + \hat{\beta}_{3,2} = 2.51044 + 0.16430 = 2.67474$, the model at the third position has the intercept $\hat{\beta}_0 + \hat{\beta}_{3,3} = 2.51044 + 0.02170 = 2.53214$ and the model at the forth position has the intercept $\hat{\beta}_0 + \hat{\beta}_{3,4} = 2.51044 + 0.11080 = 2.62124$.\\
+
+The $t$-statistic and the $P$-value of the factor levels have little meaning. With our constraint $\beta_{3,1} = 0$ they simply show if the difference between the corresponding positions and the first (reference) position is significant.
+
+
+\subsection{F-test to compare two models}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+We come back to the explosion example and want to ask the question whether the factor \texttt{Position.fac} has a significant influence on the vibrations.\\
+
+\textbf{ANOVA for linear model fits}\\
+\begingroup
+\scriptsize
+\begin{verbatim}
+  > anova(mod.fac, mod)
+  Analysis of Variance Table
+
+  Model 1: Vibration.log ~ Distance.log + Charge.log + Position.fac
+  Model 2: Vibration.log ~ Distance.log + Charge.log
+    Res.Df     RSS Df Sum of Sq      F  Pr(>F)
+  1     42 0.90467
+  2     45 1.05217 -3   -0.1475 2.2827 0.09297 .
+  ---
+  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+\end{verbatim}
+\endgroup
+In the R-output we find $F = 2.2827$ with a $P$-value of $0.09297$. Therefore the influence of the factor \texttt{Position.fac} is not significant on the $5\%$ level.\\
+
+\textbf{F-test with \texttt{drop1} command}\\
+An other, more powerful, R-command to perform an $F$-test to compare two models is \texttt{drop1}, which drops all possible single terms to a model, fits those models and computes a table of the changes in fit.\\
+
+\begingroup
+\scriptsize
+\begin{verbatim}
+  > drop1(mod.fac, test="F")
+  Single term deletions
+
+  Model:
+  Vibration.log ~ Distance.log + Charge.log + Position.fac
+               Df Sum of Sq     RSS     AIC F value    Pr(>F)
+  <none>                    0.90467 -178.63
+  Distance.log  1   1.94659 2.85125 -125.53 90.3722 4.973e-12 ***
+  Charge.log    1   0.11713 1.02180 -174.78  5.4379   0.02457 *
+  Position.fac  3   0.14750 1.05217 -177.38  2.2827   0.09297 .
+  ---
+  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+\end{verbatim}
+\endgroup
+In the last column we find the $P$-values for the variables \texttt{Distance.log} and \texttt{Charge.log}. These two variables are significant on the $5\%$ level. We find also the $P$-value of $0.09297$ for the factor \texttt{Position.fac}. Therefore its influence is not significant on the $5\%$ level.\\
+
+
+\subsection{Model Selection}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+In R we can carry out variable selection based on Akaike information criterion. First we fit the trivial model with only an intercept as the start of the search algorithm. \texttt{> mod.small <- lm(C.log ~ 1, data)}\\
+Any other model would also work.\\
+We use the R-function \texttt{step()} which chooses a model by AIC in a stepwise algorithm. With the argument \texttt{scope} we specify the smallest and the largest model between which the most suitable model should be found. In addition we specify the direction of our search algorithm.\\
+
+\begingroup
+  \scriptsize
+  \begin{verbatim}
+  > mod.both <- step(mod.small, scope=list(upper= ~ D + T1 + T2
+  +                   + S.log + PR + NE + CT + BW + N.sqrt + PT,
+  +                   lower= ~ 1),
+  +                   direction="both")
+
+  \end{verbatim}
+\endgroup
+According to the stepwise variable selection in both directions based on the AIC criterion the following model results.\\
+
+\begingroup
+  \scriptsize
+  \begin{verbatim}
+  summary(mod.both)
+  Call:
+  lm(formula = C.log ~ PT + S.log + D + NE + CT + N.sqrt, data = data)
+  Residuals:
+       Min       1Q   Median       3Q      Max
+  -0.14982 -0.03014  0.01074  0.03817  0.14014
+  Coefficients:
+              Estimate Std. Error t value Pr(>|t|)
+  (Intercept) -5.82981    1.48707  -3.920 0.000608 ***
+  PT          -0.10441    0.05038  -2.072 0.048700 *
+  S.log        0.72559    0.12218   5.939 3.37e-06 ***
+  D            0.09341    0.02053   4.551 0.000119 ***
+  NE           0.10449    0.03263   3.202 0.003694 **
+  CT           0.06523    0.02708   2.409 0.023707 *
+  N.sqrt      -0.03046    0.01646  -1.850 0.076133 .
+  ---
+  Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+\end{verbatim}
+\endgroup
+
+
+\subsection{Collinearity}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+We calculate the variance inflation factor for all explanatory variables used in an optimal model.\\
+
+\begingroup
+  \scriptsize
+  \begin{verbatim}
+  # fit optimal model
+  > mod.opt <- lm(C.log ~ PT + S.log + D + NE + CT + N.sqrt, data)
+  #   variance inflation factor
+  > vif(mod.opt)
+        PT    S.log        D       NE       CT   N.sqrt
+  2.497443 1.089288 2.716501 1.289015 1.142437 2.248181
+  \end{verbatim}
+\endgroup
+All variance inflation factors are smaller than 5. Therefore there is no problem with collinearity in the optimal model\\
 
 \subsection{Analysis of Variance}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
-
 \begingroup
   \scriptsize
   \begin{verbatim}
@@ -237,15 +387,16 @@ Fit an analysis of variance model by a call to lm for each stratum.\\
 \begingroup
 \scriptsize
 \begin{verbatim}
-# analysis of variance table for two factors (aov)
-> mod <- aov(Strength ~ Method + Batch, data)
-> summary(mod)
-Df Sum Sq Mean Sq F value Pr(>F)
-Method 2 23.23 11.614 8.695 0.002278 **
-Batch 9 86.79 9.644 7.219 0.000202 ***
-Residuals 18 24.04 1.336
----
-Signif. codes: 0 ’***’ 0.001 ’**’ 0.01 ’*’ 0.05 ’.’ 0.1 ’ ’ 1
+  # analysis of variance table for two factors (aov)
+  > mod <- aov(Strength ~ Method + Batch, data)
+  > summary(mod)
+  Df Sum Sq Mean Sq F value Pr(>F)
+  Method 2 23.23 11.614 8.695 0.002278 **
+  Batch 9 86.79 9.644 7.219 0.000202 ***
+  Residuals 18 24.04 1.336
+  ---
+  Signif. codes: 0 ’***’ 0.001 ’**’ 0.01 ’*’ 0.05 ’.’ 0.1 ’ ’ 1
+
 \end{verbatim}
 \endgroup
 A low P-value means that the effect of, say the \texttt{Batch}-effect, is significant.\\

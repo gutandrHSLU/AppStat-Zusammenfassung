@@ -1,13 +1,49 @@
 \section{Variable Selection and Modeling}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDickeDick}
 
-\subsection{Model Selection Methods}
-\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 In practice, regression is used in many situations. The approach depends on the previous knowledge and subject-specific questions.\\
 \begin{itemize}
   \item Ideally, the relationships between the response $y$ and the explanatory variables $x_1, ..., x_m$  is clear in advance. The functional relationships are often based on physical, chemical or other engineering or scientific theory. We call these \textbf{mechanistic models}. In this case we are most often interested in good estimates of the parameters, confidence and prediction intervals.
   \item  In the other case, the study serves to investigate relationships between the response variable x and the explanatory variables. We do not know if and in what form the explanatory variables influence the response. The functional relationships are unknown and so we have to find \textbf{empirical models}.
   \item Sometimes the approach is in between: If we are only interested in the influence of a single explanatory variable, but take into account the effects of other explanatory variables, or if a lot of previous studies and theoretical considerations is known and additional knowledge should be gained.
+\end{itemize}
+
+\subsection{Model Selection Methods}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+We will proceed the approach with model selection methods which are based on statistical measures of goodness of fit.
+In the following we will define three statistical measures of model accuracy which also take the model complexity into consideration.
+\begin{itemize}
+  \item Adjusted R-squared
+  \item Akaike information criterion $(AIC)$
+  \item Mallow’s $C_p$ statistic is
+\end{itemize}
+With these model selection criteria, three different variable selection methods can be formulated:
+
+\begin{itemize}
+  \item Forward selection
+  \begin{enumerate}
+    \item In the first step choose the trivial model $y = \beta_0 + \varepsilon$ with an intercept only. Use \texttt{formula = y $\sim$ 1} in R.
+    \item In the following steps, the explanatory variable that leads to the largest improvement of the selected model selection criteria is added in the model.
+    \item The procedure is stopped as soon as no improvement is possible by adding another explanatory variable.
+  \end{enumerate}
+
+  \item Backward elimination
+  \begin{enumerate}
+    \item In the first step choose the full model
+    \begin{equation}
+      y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots + \beta_m x_m + \varepsilon
+    \end{equation}
+    with all possible explanatory variables. Use \texttt{formula = y $\sim$ .} in R.
+    \item In the following steps, the explanatory variable that leads to the largest improvement of the selected model selection criteria is removed from the model.
+    \item The procedure is stopped as soon as no improvement is possible by removing another explanatory variable.
+  \end{enumerate}
+
+  \item \emph{Both} is a combination of forward selection and backward elimination.
+  \begin{enumerate}
+    \item In the first step choose any model.
+    \item The following steps will examine whether eliminating or adding an explanatory variable improves the selected model selection criteria. The action that leads to  the largest improvement is carried out.
+    \item The procedure is stopped as soon as no improvement is possible.
+  \end{enumerate}
 \end{itemize}
 
 
