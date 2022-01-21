@@ -2,14 +2,12 @@
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDickeDick}
 
 \textbf{Classical Shewhart control charts}\\
- - Decision to interfere with the manufacturing process is based on the result of the current sample.\\
- - No consideration of the development of the manufacturing process in the past (except with western electric rules).\\
+Using a classic Shewhart control chart, the decision to interfere with the production process is based only on the results of the current sample.
+The development of the manufacturing process in the past is not considered in the decision. On the other hand, control charts developed in recent years are also based on random samples taken in the past.
+These charts are called control charts with memory.
+Because these charts use more information about the process, they can detect a disturbance faster than the classical charts.\\
 
-\textbf{Modern control charts}\\
- - have a memory.
-
-\textbf{Idea}\\
-Linear combination of mean values $\bar{x}_j$ of samples from the past
+Control charts with memory are based on a linear combination of the mean values of some or all random samples taken up to the time with index $i$, i.e.
 \begin{equation}
  y_i = \alpha_i + \sum_{j=1}^i \beta_j \bar{x}_j,
 \end{equation}

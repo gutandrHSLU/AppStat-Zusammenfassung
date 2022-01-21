@@ -12,7 +12,6 @@ Probability of $X$ being less than 8.10 with $\texttt{mean = 8.00}$ and $\texttt
   P(X \leq 8.10) = \texttt{pnorm(q=8.10, mean=8.00, sd=0.05)} = 0.97725
 \end{equation*}
 
-
 \textbf{Quantile Function \texttt{qnorm}}\\
 Value of $x$ for which $P(X \leq x) = 0.97725$.
 \begin{equation*}
@@ -33,6 +32,22 @@ What is the probability of throwing a maximum of three times head?
 \begin{equation*}
   P(X \leq 3) = \texttt{pbinom(q=3, size=5, prob=0.53)} = 0.7727541
 \end{equation*}
+
+\subsection{Geometric Distribution}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+For each throw the probability to hit a basketball in the opponent’s basket is $p = 0.3$. The ball is thrown on the basket until it strucks for the first time.
+\textbf{Density Function \texttt{dgeom}}\\
+What is the probability of throwing exactly two times?
+\begin{equation*}
+  P(X=2) = \texttt{dgeom(x=2-1, prob=0.3)} = 0.21
+\end{equation*}
+
+\textbf{Distribution Function \texttt{pgeom}}\\
+What is the probability of at most three throws?
+\begin{equation*}
+  P(X \leq 3) = \texttt{pgeom(q=3-1, prob=0.3)} = 0.657
+\end{equation*}
+Note that \texttt{x} and \texttt{q} in the functions \texttt{dgeom} and \texttt{pgeom} are the number of failed attempts until the first success.
 
 
 \section{Utility function for finding sampling plans}

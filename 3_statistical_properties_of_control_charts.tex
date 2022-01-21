@@ -75,7 +75,7 @@ The power of a hypothesis test is the probability $1-\beta$ that the test correc
 \end{equation}
 
 \textbf{Power function}\\
-Probability to reject the null hypothesis $H_0$ if $\mu_1$ is true.\\
+Probability to reject the null hypothesis $H_0$ if $H_1$ is true.\\
 \begin{equation}
   \delta = \frac{\mu_1 - \mu_0}{\sigma},
 \end{equation}
@@ -87,12 +87,19 @@ In statistical process control the power function is denoted by
 \end{equation}
 It is a measure for the probability of an intervention in the process.\\
 
- \textbf{Undisturbed Process}\\
- For an undisturbed process, i.e. $\mu = \mu_0$, we have
- \begin{equation}
-   g(\mu_1) = \tilde{g} (0) = \alpha.
-   \label{eq:3.3.a}
- \end{equation}
+In the following figure four power function curves for different sample sizes $n=2,\; n=5,\; n=10$ and $n=20$ are plotted.
+For a given $\delta$ (deviation of the actual value of the process to the target value measured in units of $\sigma$) we can read off the plot the probability of a type $\textup{II}$ error, i.e. an omitted alarm.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{Pics/3.3.2.png}
+\end{figure}
+
+\textbf{Undisturbed Process}\\
+For an undisturbed process, i.e. $\mu = \mu_0$, we have
+\begin{equation}
+  g(\mu_1) = \tilde{g} (0) = \alpha.
+  \label{eq:3.3.a}
+\end{equation}
 
 \textbf{Disturbed Process}\\
 For a disturbed process we have
@@ -121,7 +128,7 @@ If we have an undisturbed process with $\mu_1 = \mu_0$, i.e. with $\delta = 0$, 
 \end{equation}
 
 \textbf{Disturbed Process}\\
-To determine the average run length of a disturbed process with $\mu = \mu_1$, i.e. $\sigma = \frac{\mu_1 - \mu_0}{\sigma}$ we use the power function $\tilde{g}(\delta)$ from equation \ref{eq:3.3.d}.
+To determine the average run length of a disturbed process with $\mu = \mu_1$, i.e. $\delta = \frac{\mu_1 - \mu_0}{\sigma}$ we use the power function $\tilde{g}(\delta)$ from equation \ref{eq:3.3.d}.
 
 \subsection{Process Capability}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
