@@ -18,7 +18,7 @@
 \BOOKMARK [2][-]{section*.27}{CUSUM - Cumulative Sum Control Chart}{section*.26}% 18
 \BOOKMARK [2][-]{section*.29}{EWMA - Exponentially Weighted Moving Average}{section*.26}% 19
 \BOOKMARK [1][-]{section*.31}{Acceptance Sampling}{part.1}% 20
-\BOOKMARK [2][-]{section*.32}{Plans for Attributes}{section*.31}% 21
+\BOOKMARK [2][-]{section*.32}{Acceptance Sampling Plans for Attributes}{section*.31}% 21
 \BOOKMARK [2][-]{section*.33}{Operating Characteristic}{section*.31}% 22
 \BOOKMARK [2][-]{section*.37}{Parameters of an Acceptance Sampling Plan}{section*.31}% 23
 \BOOKMARK [2][-]{section*.39}{Acceptance Sampling Plans for Variables}{section*.31}% 24
@@ -68,18 +68,19 @@
 \BOOKMARK [2][-]{section*.88}{Normal Distribution}{section*.87}% 68
 \BOOKMARK [2][-]{section*.89}{Binomial Distribution}{section*.87}% 69
 \BOOKMARK [2][-]{section*.90}{Geometric Distribution}{section*.87}% 70
-\BOOKMARK [1][-]{section*.91}{Utility function for finding sampling plans}{part.4}% 71
-\BOOKMARK [1][-]{section*.92}{Linear Regression}{part.4}% 72
-\BOOKMARK [2][-]{section*.93}{Simple Linear Regression}{section*.92}% 73
-\BOOKMARK [2][-]{section*.94}{Confidence Interval on the Slope}{section*.92}% 74
-\BOOKMARK [2][-]{section*.95}{Confidence Interval on the Response}{section*.92}% 75
-\BOOKMARK [2][-]{section*.96}{Prediction Interval on the Response}{section*.92}% 76
-\BOOKMARK [2][-]{section*.97}{Correlation}{section*.92}% 77
-\BOOKMARK [2][-]{section*.98}{Multiple Linear Regression}{section*.92}% 78
-\BOOKMARK [2][-]{section*.99}{Factor Variables}{section*.92}% 79
-\BOOKMARK [2][-]{section*.100}{F-test to compare two models}{section*.92}% 80
-\BOOKMARK [2][-]{section*.101}{Model Selection}{section*.92}% 81
-\BOOKMARK [2][-]{section*.102}{Collinearity}{section*.92}% 82
-\BOOKMARK [2][-]{section*.103}{Analysis of Variance}{section*.92}% 83
-\BOOKMARK [1][-]{section*.105}{Students t-distribution}{part.4}% 84
-\BOOKMARK [1][-]{section*.108}{Factors for constructing control charts}{part.4}% 85
+\BOOKMARK [2][-]{section*.91}{Hypergeometric Distribution}{section*.87}% 71
+\BOOKMARK [1][-]{section*.92}{Utility function for finding sampling plans}{part.4}% 72
+\BOOKMARK [1][-]{section*.93}{Linear Regression}{part.4}% 73
+\BOOKMARK [2][-]{section*.94}{Simple Linear Regression}{section*.93}% 74
+\BOOKMARK [2][-]{section*.95}{Confidence Interval on the Slope}{section*.93}% 75
+\BOOKMARK [2][-]{section*.96}{Confidence Interval on the Response}{section*.93}% 76
+\BOOKMARK [2][-]{section*.97}{Prediction Interval on the Response}{section*.93}% 77
+\BOOKMARK [2][-]{section*.98}{Correlation}{section*.93}% 78
+\BOOKMARK [2][-]{section*.99}{Multiple Linear Regression}{section*.93}% 79
+\BOOKMARK [2][-]{section*.100}{Factor Variables}{section*.93}% 80
+\BOOKMARK [2][-]{section*.101}{F-test to compare two models}{section*.93}% 81
+\BOOKMARK [2][-]{section*.102}{Model Selection}{section*.93}% 82
+\BOOKMARK [2][-]{section*.103}{Collinearity}{section*.93}% 83
+\BOOKMARK [2][-]{section*.104}{Analysis of Variance}{section*.93}% 84
+\BOOKMARK [1][-]{section*.106}{Students t-distribution}{part.4}% 85
+\BOOKMARK [1][-]{section*.109}{Factors for constructing control charts}{part.4}% 86

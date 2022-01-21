@@ -1,11 +1,12 @@
 \section{Acceptance Sampling}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDickeDick}
 Acceptance control is based on acceptance sampling plans, which contain instructions based on which the acceptance or return of a lot is decided.\\
-We should remember that the actual point of acceptance control is not to value quality, but to decide whether or not delivery will likely pass quality control.
+We should remember that the actual point of acceptance control is not to value quality, but to decide whether or not delivery will likely pass quality control.\\
 
-\textbf{Idea:} Draw random samples from a lot and make a decision on the quality of the lot based on this information.
+\textbf{Idea}\\
+Draw random samples from a lot and make a decision on the quality of the lot based on this information.
 
-\subsection{Plans for Attributes}
+\subsection{Acceptance Sampling Plans for Attributes}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 \textbf{Percent defective}\\
 We have a lot of N parts (known). The number of defective parts m (unknown) with $0 \leq m \leq N$ is observed. Thus, the percent defective is:
@@ -13,11 +14,13 @@ We have a lot of N parts (known). The number of defective parts m (unknown) with
   p = \frac{m}{N}
 \end{equation}
 
-\textbf{Acceptance sampling plan} consitst of:\\
- - Sample size $n$,\\
- - the number of defective parts $x$ in the sample, where $0 \leq x < n$,\\
- - the acceptance number $c$, where $0 \leq c < n$ and\\
- - the rule: if $x \leq c$, then the lot is accepted, if $x > c$, then the lot is rejected.\\
+\textbf{Acceptance sampling plan} consitst of:
+\begin{itemize}
+  \item Sample size $n$,
+  \item the number of defective parts $x$ in the sample, where $0 \leq x < n$,
+  \item the acceptance number $c$, where $0 \leq c < n$ and
+  \item the rule: if $x \leq c$, then the lot is accepted, if $x > c$, then the lot is rejected.
+\end{itemize}
 
 \textbf{Hypothesis test}\\
 The rule above can also be formulated as a hypothesis test:
@@ -41,16 +44,18 @@ Probability for this to happen (false positive): $\beta$. (Consumer's risk)\\
 The consumer wants to avoid type II error, i.e. does not want to accept bad lots.\\
 
 
-In an agreement between a producer and a consumer the following parameter must de defined:\\
-- $\alpha$: The producer's acceptable probability of falsly rejecting a good lot,\\
-- $\beta$: The consumer's acceptable probability of falsly accepting a bad lot,\\
-- $p_{\alpha}$ the producer's minimal percentage defective needed for a lot to be returned (The producer does not want to take back lots with $p < p_{\alpha}$.),\\
-- $p_{\beta}$ the consumer's maximal percentage defective needed for a lot to be accepted (The consumer wants to reject lots with $p_{\beta} < p$ whenever possible).
+In an agreement between a producer and a consumer the following parameter must de defined:
+\begin{itemize}
+  \item $\alpha$: The producer's acceptable probability of falsly rejecting a good lot,
+  \item $\beta$: The consumer's acceptable probability of falsly accepting a bad lot,
+  \item $p_{\alpha}$ the producer's minimal percentage defective needed for a lot to be returned (The producer does not want to take back lots with $p < p_{\alpha}$.),
+  \item $p_{\beta}$ the consumer's maximal percentage defective needed for a lot to be accepted (The consumer wants to reject lots with $p_{\beta} < p$ whenever possible).
+\end{itemize}
 
 \subsection{Operating Characteristic}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 The operating characteristic, short OC, is the probability of accepting a lot as a function of the percent defective $p$.\\
-The number of defective units $X$ is a hypergeometric random variable. There are $N$ parts in total, among which $m$ defective and $N - m$ are good parts. So a sample of size $n$ is drawn at once. The probability that among these $n$ parts are at most $c$ parts defective is given by
+The number of defective units $X$ is a hypergeometric random variable. There are $N$ parts in total, among which $m$ defective and $N - m$ are good parts. A sample of size $n$ is drawn at once. The probability that among these $n$ parts are at most $c$ parts defective is given by
 \begin{equation}
   OC(p) = P(X \leq c)= \sum^c_{k=0} P(X = k) = \sum^c_{k=0} \frac{\binom{pN}{k}\binom{N-pN}{n-k}}{\binom{N}{n}}
   \label{eq:OC}
@@ -68,7 +73,6 @@ If all parts of a lot get checked we get an ideal acceptance sampling plan:
 \textbf{OC Curves - Examples}
 \begin{figure}[H]
   \centering
-
   \includegraphics[width=0.8\linewidth]{Pics/5.1.2.png}
   \caption{OC curve with fixed n and increasing c}
 \end{figure}
@@ -81,10 +85,12 @@ If all parts of a lot get checked we get an ideal acceptance sampling plan:
 
 \subsection{Parameters of an Acceptance Sampling Plan}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
-$n$ and $c$ are to be chosen such that:\\
-- $n$ is as small as possible,\\
-- the producer risk is at most equal to $\alpha$, i.e. $OC(p_{\alpha}) \leq 1 - \alpha$, and\\
-- the consumer risk is at most equal to $\beta$, i.e. $OC(p_{\beta}) \geq \beta$\\
+$n$ and $c$ are to be chosen such that:
+\begin{itemize}
+  \item $n$ is as small as possible,
+  \item the producer risk is at most equal to $\alpha$, i.e. $OC(p_{\alpha}) \leq 1 - \alpha$, and
+  \item the consumer risk is at most equal to $\beta$, i.e. $OC(p_{\beta}) \geq \beta$
+\end{itemize}
 
 The pair $(p_{\alpha}, 1-\alpha)$ is called producer risk point and the pair $(p_{\beta}, \beta)$ is called consumer risk point.\\
 $n$ and $c$ are calculated by brute force. The resulting OC curve is not a perfect fit since only integer values can be choosen.\\
@@ -101,7 +107,9 @@ $n$ and $c$ are calculated by brute force. The resulting OC curve is not a perfe
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 It is always possible to reduce an acceptance sampling plan for variables to an acceptance sampling plan for attributes by saying:\\
 
-- If $LSL \leq x \leq USL$, then the part is fit for use.\\
-- If $x < LSL \text{ or } USL < x$, then the part is rejected\\
+\begin{itemize}
+  \item If $LSL \leq x \leq USL$, then the part is fit for use.
+  \item If $x < LSL \text{ or } USL < x$, then the part is rejected
+\end{itemize}
 
 By counting the number of rejected parts, we again have an acceptance sampling plan for attributes.

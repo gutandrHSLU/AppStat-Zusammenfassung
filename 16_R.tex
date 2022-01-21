@@ -35,7 +35,7 @@ What is the probability of throwing a maximum of three times head?
 
 \subsection{Geometric Distribution}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
-For each throw the probability to hit a basketball in the opponent’s basket is $p = 0.3$. The ball is thrown on the basket until it strucks for the first time.
+For each throw the probability to hit a basketball in the opponent’s basket is $p = 0.3$. The ball is thrown on the basket until it strucks for the first time.\\
 \textbf{Density Function \texttt{dgeom}}\\
 What is the probability of throwing exactly two times?
 \begin{equation*}
@@ -48,6 +48,21 @@ What is the probability of at most three throws?
   P(X \leq 3) = \texttt{pgeom(q=3-1, prob=0.3)} = 0.657
 \end{equation*}
 Note that \texttt{x} and \texttt{q} in the functions \texttt{dgeom} and \texttt{pgeom} are the number of failed attempts until the first success.
+
+\subsection{Hypergeometric Distribution}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+Four out of ten lots win.\\
+\textbf{Density Function \texttt{dhyper}}\\
+What is the probability that out of five randomly selected lots there will be exactly two winning lots.
+\begin{equation*}
+  P(X=2) = \texttt{dhyper(x=2, m=4, n=10-4, k=5)} = 0.4761905
+\end{equation*}
+
+\textbf{Distribution Function \texttt{phyper}}\\
+What is the probability that out of five randomly selected lots there will be a maximum of three winning lots.
+\begin{equation*}
+  P(X \leq 3) = \texttt{phyper(q=3, m=4, n=10-4, k=5)} = 0.9761905
+\end{equation*}
 
 
 \section{Utility function for finding sampling plans}

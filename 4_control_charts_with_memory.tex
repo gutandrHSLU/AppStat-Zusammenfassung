@@ -16,6 +16,7 @@ Depending on how the weights are chosen, we get another type of control chart.
 
 \subsection{CUSUM - Cumulative Sum Control Chart}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+\textbf{Idea}\\
 The CUSUM chart plots the cumulative sums of deviations of measurement values from the target value.\\
 
 \textbf{Recursive procedure}\\
@@ -36,12 +37,14 @@ If a shift of $\Delta$ is to be detected then set
 The constant $K$ is called reference value.\\
 
 If the process is under controll the expected values of the statistic are both 0.\\
-If the process is not under control, then the statistic sums up the deviations. If the sum of de deviations ($C^+$ and $C^-$) exceed the decision intercal $H$, then we should stop the process and look for the cause.\\
+If the process is not under control, then the statistic sums up the deviations. If the sum of de deviations ($C^+$ and $C^-$) exceed the decision interval $H$, then we should stop the process and look for the cause.\\
 
 Rule of thumb for choosing the constants $K$ and $H$:
-Let $\hat{\sigma}$ be an estimate for the process standard deviation.
-- reference value = $K \frac{\hat{\sigma}}{2}$
-- decision interval $H = 5\hat{\sigma}$
+Let $\hat{\sigma}$ be an estimate for the process standard deviation.\\
+\begin{itemize}
+  \item reference value = $K \frac{\hat{\sigma}}{2}$
+  \item decision interval $H = 5\hat{\sigma}$
+\end{itemize}
 
 \begin{figure}[H]
   \centering
@@ -54,8 +57,7 @@ Let $\hat{\sigma}$ be an estimate for the process standard deviation.
 \subsection{EWMA - Exponentially Weighted Moving Average}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 \textbf{Idea}\\
- - Monitoring means.\\
- - Wheights $\beta_j$ decay exponentially.\\
+Monitor the mean and weight its influence on the statistic with the exponentially decaying factor $\beta_j$.\\
 
 \textbf{Smoothing parameter $\lambda$}\\
 Lambda lays between 0 and 1. The smoothing parameter $\lambda$ determines the influence of the previous sample mean $\bar{x}_j$ on the statistic. The smaller $\lambda$, the more values $\bar{x}_j$ are used for the decision. For $\lambda = 1$ only one sample is used and we get the well-known Shewhart $\bar{x}$ chart.\\
