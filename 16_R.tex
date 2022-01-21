@@ -3,20 +3,37 @@
 
 \section{Basics}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+
+\subsection{Normal Distribution}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 \textbf{Normal Distribution Function \texttt{pnorm}}\\
 Probability of $X$ being less than 8.10 with $\texttt{mean = 8.00}$ and $\texttt{sd = 0.05}$
 \begin{equation*}
-  \begin{split}
-    P(X \leq 8.10) &= \texttt{pnorm(q=8.10, mean=8.00, sd=0.05)}\\
-    &= 0.97725
-  \end{split}
+  P(X \leq 8.10) = \texttt{pnorm(q=8.10, mean=8.00, sd=0.05)} = 0.97725
 \end{equation*}
+
 
 \textbf{Quantile Function \texttt{qnorm}}\\
 Value of $x$ for which $P(X \leq x) = 0.97725$.
 \begin{equation*}
   \texttt{qnorm(p=0.97725, mean=8.00, sd=0.05)} = 8.10
 \end{equation*}
+
+\subsection{Binomial Distribution}
+\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
+An experiment consists of five independent coin throws with an asymmetrical coin. For every roll, head is likely to top with the probability 0.53.\\
+\textbf{Density Function \texttt{dbinom}}\\
+What is the probability of throwing exactly two times head?
+\begin{equation*}
+  P(X=2) = \texttt{dbinom(x=2, size=5, prob=0.53)} = 0.2916388
+\end{equation*}
+
+\textbf{Distribution Function \texttt{pbinom}}\\
+What is the probability of throwing a maximum of three times head?
+\begin{equation*}
+  P(X \leq 3) = \texttt{pbinom(q=3, size=5, prob=0.53)} = 0.7727541
+\end{equation*}
+
 
 \section{Utility function for finding sampling plans}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
@@ -116,7 +133,7 @@ With the following line we get a summary of the fited model:\\
 \endgroup
 \vspace{\baselineskip}
 
-\subsection{Confidence Interval on Slope}
+\subsection{Confidence Interval on the Slope}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 \begingroup
 \scriptsize
