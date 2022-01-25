@@ -1,6 +1,8 @@
 \section{Residual Analysis}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDickeDick}
-
+Residual analysis is based on some graphical methods and also some formal statistical tests.
+These methods can give indications that a model does not exactly describe the data.
+With these indications it is sometimes possible to find the reason.
 
 \subsection{Introduction}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
@@ -23,11 +25,10 @@ If the errors are normally distributed, so are the residuals of a least-squares 
 \begin{equation}
   \tilde{e}_i = \frac{e_i}{\sqrt{1 - \left(\frac{1}{n} + \frac{(x_i - \bar{x})^2}{S_{xx}}\right)}} \;\;\;\text{for all}\;\;\; i \in {1,...,n}
 \end{equation}
-
+The scaling depends on $(x_i - \bar{x})^2$, i.e. the further the observation is away from the center of gravity, the smaller the scaling factor.
 
 \textbf{Coefficient of Determination}\\
 The coefficient of determination is a measure of the linear relationship between the response variable and the fit.\\
-
 In simple linear regression with only one explanatory variable the coefficient of determination is defined by
 \begin{equation}
   R^2 = \frac{SS_{\textup{fit}}}{S_{yy}}
@@ -54,11 +55,11 @@ The coefficient of determination is a global measure for the goodness of fit and
 \subsection{Diagnostic Tools}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 What follows is a description of three graphical diagnostic tools to check model assumptions 1, 2, 3 and 5. The aim is to be sure that there are no dangerous discrepancies from the assumptions in the data. All three tools are based on the residuals which are representations of the unknown errors.\\
-In an exercise on the topic of residuals analysis, the following four questions must be answered in order to obtain the full score:
+In an exam question on the topic of residuals analysis, the following four questions must be answered in order to obtain the full score:
 \begin{itemize}
   \item Which model assumption is being checked?
   \item What should the plot look like if the assumption was true?
-  \item What do I actually see?
+  \item What is observed?
   \item What is the conclusion?
 \end{itemize}
 
@@ -81,11 +82,19 @@ Model assumption number two states that the errors should have mean zero. To che
 Tukey-Anscombe plot. We are still left with the question: Is such a curved curve due to chance possible? An informal method to find answers is based on bootstrap simulations\\
 
 \textbf{Bootstrap Simulation}\\
-What follows is a briev explanation of the bootstrap simulation:\\
-- Calculate the best linear model with $\textup{Var} = \hat{\sigma}^2$ and calculate the smooth curve of the residuals.\\
-- Simulate new observations based off the fitted model.
-- Calculate the smooth residuals of the simulated obervation and add it to the diagram.\\
-- Repeat 19 times. (1 + 19 observations)
+What follows is a brief explanation of the bootstrap simulation:\\
+\begin{itemize}
+  \item Calculate the best linear model with $\textup{Var} = \hat{\sigma}^2$ and calculate the smooth curve of the residuals.
+  \item Simulate new observations $y^*_i$ which correspond to the fitted model. Draw $n$ random numbers $e^*_i$ from a standard normal distribution and create the simulated observations.
+  % \begin{equation}
+  %   y^*_i = \hat{y}_i + \hat{\sigma} e_i^*
+  % \end{equation}
+  % where $\hat{y}_i$ is the $i$th fitted value and $\hat{\sigma}$ the estimated error sum of squares.
+  \item Fit the same model to the simulated data consisting of the original explanatory variable $x$ and the simulated response variable $y^*$.
+  Calculate the smoothed residuals of the Tukey-Anscombe plot and add it to the diagram.
+  \item Repeat 19 times. (1 + 19 observations)
+\end{itemize}
+
 \begin{table}[H]
   \setlength{\tabcolsep}{0.2em}
   \scriptsize
@@ -135,7 +144,7 @@ This model violation can be changed by a transformation of the response variable
   \begin{equation}
     z \mapsto \textup{log}(z)
   \end{equation}
-  Logarithmic rules
+  Logarithmic rules:
   \begin{align*}
     \text{log}(xy) &= \text{log}(x) + \text{log}(y) &
     \text{log}\left(\frac{x}{y}\right) &= \text{log}(x) - \text{log}(y) \\

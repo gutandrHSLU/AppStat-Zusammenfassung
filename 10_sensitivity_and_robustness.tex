@@ -74,6 +74,17 @@ we want to find the vector of least-squares estimators $\beta$, which minimise
   (\mathbf{y}-\mathbf{X}\mathbf{\beta})^t \mathbf{W}(\mathbf{y}-\mathbf{X}\mathbf{\beta})
 \end{equation}
 
+which simplifies to the so-called weighted least-squares normal equations
+\begin{equation}
+  \mathbf{X}^t\mathbf{Wy} = \mathbf{X}^t\mathbf{WX}\hat{\pmb{\beta}}
+\end{equation}
+
+The solution of the normal equations is the least-squares estimator
+\begin{equation}
+  \hat{\pmb{\beta}} = (\mathbf{X}^t\mathbf{WX})^{-1} \mathbf{X}^t\mathbf{Wy}
+\end{equation}
+
+
 \subsection{Robust Methods}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 The goal of robust statistics is to find parameter estimates as if the outliers did not exist\\

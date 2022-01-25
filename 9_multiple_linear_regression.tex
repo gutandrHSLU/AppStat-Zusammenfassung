@@ -125,11 +125,13 @@ The coefficient of determination is a measure of the linear relationship between
 
 \subsection{Diversity of Modelling Possibilities}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
-In the model of multiple regression, no assumptions are made about the explanatory variables. In all our examples, they were always continuous variables, but that is not necessary.\\
+In the model of multiple regression, no assumptions are made about the explanatory variables. In all our examples, they were always continuous variables, but that is not necessary.Therefore, they do not have to be of a particular data type, let alone follow a particular
+distribution, because they are not considered as random variables. Nothing is assumed about
+their dependence on each other.\\
 Explanatory variables can also be strongly (linearly) correlated. It is however difficult to interpret the results of the regression analysis and should be avoided.\\
 
 \textbf{Polynomial Regression}\\
-If we want to use a polynomial of degree two to describe a relationship, then the model has the following form
+The polynomial function is an important function for formulating curved relationships. If we want to use a polynomial of degree two to describe a relationship, then the model has the following form
 \begin{equation}
   y = \beta_0 + \beta_1x + \beta_2 x^2 + \varepsilon
 \end{equation}
@@ -159,8 +161,8 @@ It is important to realise that also such transformations change the form of the
 In all our examples, the explanatory variables have been continuous so far. This is not necessary.\\
 If the binary variable $x_b$ is the only variable in the model $y = \beta_0 + \beta_1 x_b + \varepsilon$ then
 \begin{align*}
-  y =& \beta_0 + \varepsilon           & \;&\textup{if}\; & x_b =& 0\\
-  y =& \beta_0 + \beta_1 + \varepsilon & \;&\textup{if}\; & x_b =& 1
+  y =& \beta_0 + \varepsilon           & \textup{if}& & x_b =& 0\\
+  y =& \beta_0 + \beta_1 + \varepsilon & \textup{if}& & x_b =& 1
 \end{align*}
 
 This regression model is equivalent to the model of two independent random samples of which we are interested in the difference of their means. This is the unpaired Student’s t test.\\
