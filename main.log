@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.16)  1 FEB 2022 10:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.16)  1 FEB 2022 14:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1127,16 +1127,15 @@ Overfull \hbox (3.99895pt too wide) in paragraph at lines 129--134
 [][] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--171
+[9 <./Pics/8.2.1.png> <./Pics/8.2.2.png> <./Pics/8.2.5.png> <./Pics/8.2.6.png> <./Pics/8.2.7.png> <./Pics/8.2.8.png> <./Pics/8.2.10.png> <./Pics/8.2.11.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 177--179
 
  []
 
-[9 <./Pics/8.2.1.png> <./Pics/8.2.2.png> <./Pics/8.2.5.png> <./Pics/8.2.6.png> <./Pics/8.2.7.png> <./Pics/8.2.8.png> <./Pics/8.2.10.png> <./Pics/8.2.11.png>]
 <Pics/8.4.1.png, id=609, 1061.76675pt x 691.383pt>
 File: Pics/8.4.1.png Graphic file (type png)
 <use Pics/8.4.1.png>
-Package pdftex.def Info: Pics/8.4.1.png  used on input line 181.
+Package pdftex.def Info: Pics/8.4.1.png  used on input line 189.
 (pdftex.def)             Requested size: 265.3012pt x 172.75038pt.
 ) (./9_multiple_linear_regression.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--4
@@ -1229,12 +1228,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--38
 
  []
 
-<Pics/10.2.3.png, id=653, 714.87074pt x 648.62325pt>
+<Pics/10.2.3.png, id=654, 714.87074pt x 648.62325pt>
 File: Pics/10.2.3.png Graphic file (type png)
 <use Pics/10.2.3.png>
 Package pdftex.def Info: Pics/10.2.3.png  used on input line 60.
 (pdftex.def)             Requested size: 128.66545pt x 116.73724pt.
-<Pics/10.2.4.png, id=654, 722.7pt x 649.2255pt>
+<Pics/10.2.4.png, id=655, 722.7pt x 649.2255pt>
 File: Pics/10.2.4.png Graphic file (type png)
 <use Pics/10.2.4.png>
 Package pdftex.def Info: Pics/10.2.4.png  used on input line 60.
@@ -1254,12 +1253,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--98
 
  []
 
-<Pics/10.4.1.png, id=655, 582.37575pt x 163.812pt>
+<Pics/10.4.1.png, id=656, 582.37575pt x 163.812pt>
 File: Pics/10.4.1.png Graphic file (type png)
 <use Pics/10.4.1.png>
 Package pdftex.def Info: Pics/10.4.1.png  used on input line 107.
 (pdftex.def)             Requested size: 238.76944pt x 67.16084pt.
-<Pics/10.4.2.png, id=656, 579.3645pt x 163.20975pt>
+<Pics/10.4.2.png, id=657, 579.3645pt x 163.20975pt>
 File: Pics/10.4.2.png Graphic file (type png)
 <use Pics/10.4.2.png>
 Package pdftex.def Info: Pics/10.4.2.png  used on input line 112.
@@ -1269,7 +1268,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--121
 
  []
 
-<Pics/10.4.5.png, id=657, 540.8205pt x 154.176pt>
+<Pics/10.4.5.png, id=658, 540.8205pt x 154.176pt>
 File: Pics/10.4.5.png Graphic file (type png)
 <use Pics/10.4.5.png>
 Package pdftex.def Info: Pics/10.4.5.png  used on input line 125.
@@ -1340,87 +1339,82 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--48
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
 []|\T1/cmr/m/n/8 Source of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
 []|\T1/cmr/m/n/8 Mean
  []
 
 
-Overfull \hbox (5.85434pt too wide) in paragraph at lines 117--117
+Overfull \hbox (5.85434pt too wide) in paragraph at lines 118--118
 \T1/cmr/m/n/8 Squares| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
 []|\T1/cmr/m/n/8 Test
  []
 
 
-Overfull \hbox (9.50526pt too wide) in paragraph at lines 118--119
+Overfull \hbox (9.50526pt too wide) in paragraph at lines 119--120
 []|$[][]\OML/cmm/m/it/8 =[][]$| 
  []
 
 
-Overfull \hbox (9.80734pt too wide) in paragraph at lines 119--120
+Overfull \hbox (9.80734pt too wide) in paragraph at lines 120--121
 []|$[][]\OML/cmm/m/it/8 =[][]$| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--158
+Underfull \hbox (badness 10000) in paragraph at lines 157--159
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 182--182
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
 []|\T1/cmr/m/n/8 Source of
  []
 
 
-Overfull \hbox (3.00932pt too wide) in paragraph at lines 182--182
+Overfull \hbox (3.00932pt too wide) in paragraph at lines 183--183
 \T1/cmr/m/n/8 Squares| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--182
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
 []|\T1/cmr/m/n/8 Mean
  []
 
 
-Overfull \hbox (5.85434pt too wide) in paragraph at lines 182--182
+Overfull \hbox (5.85434pt too wide) in paragraph at lines 183--183
 \T1/cmr/m/n/8 Squares| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--182
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
 []|\T1/cmr/m/n/8 Test
  []
 
 
-Overfull \hbox (9.50526pt too wide) in paragraph at lines 183--184
+Overfull \hbox (9.50526pt too wide) in paragraph at lines 184--185
 []|$[][]\OML/cmm/m/it/8 =[][]$| 
  []
 
 
-Overfull \hbox (9.80734pt too wide) in paragraph at lines 184--185
+Overfull \hbox (9.80734pt too wide) in paragraph at lines 185--186
 []|$[][]\OML/cmm/m/it/8 =[][]$| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--185
-[]|\T1/cmr/m/n/8 Interaction
- []
-
-
-Overfull \hbox (7.71083pt too wide) in paragraph at lines 185--186
+Overfull \hbox (7.71083pt too wide) in paragraph at lines 186--187
 []|$[][]\OML/cmm/m/it/8 =[][]$| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--220
+Underfull \hbox (badness 10000) in paragraph at lines 218--221
 
  []
 
@@ -1453,12 +1447,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--88
  []
 
 [16]
-<Pics/14.1.2.png, id=755, 495.0495pt x 448.67625pt>
+<Pics/14.1.2.png, id=756, 495.0495pt x 448.67625pt>
 File: Pics/14.1.2.png Graphic file (type png)
 <use Pics/14.1.2.png>
 Package pdftex.def Info: Pics/14.1.2.png  used on input line 100.
 (pdftex.def)             Requested size: 128.66545pt x 116.61198pt.
-<Pics/14.1.3.png, id=756, 464.937pt x 457.71pt>
+<Pics/14.1.3.png, id=757, 464.937pt x 457.71pt>
 File: Pics/14.1.3.png Graphic file (type png)
 <use Pics/14.1.3.png>
 Package pdftex.def Info: Pics/14.1.3.png  used on input line 100.
@@ -1491,7 +1485,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--31
 
  []
 
-<Pics/15.1.2.png, id=757, 578.16pt x 519.74174pt>
+<Pics/15.1.2.png, id=758, 578.16pt x 519.74174pt>
 File: Pics/15.1.2.png Graphic file (type png)
 <use Pics/15.1.2.png>
 Package pdftex.def Info: Pics/15.1.2.png  used on input line 71.
@@ -1521,7 +1515,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--115
 
  []
 
-<Pics/15.2.1.png, id=776, 598.03426pt x 540.8205pt>
+<Pics/15.2.1.png, id=777, 598.03426pt x 540.8205pt>
 File: Pics/15.2.1.png Graphic file (type png)
 <use Pics/15.2.1.png>
 Package pdftex.def Info: Pics/15.2.1.png  used on input line 144.
@@ -1537,7 +1531,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--175
  []
 
 [18 <./Pics/15.1.2.png> <./Pics/15.2.1.png>]
-<Pics/15.2.3.png, id=793, 659.46375pt x 599.23875pt>
+<Pics/15.2.3.png, id=794, 659.46375pt x 599.23875pt>
 File: Pics/15.2.3.png Graphic file (type png)
 <use Pics/15.2.3.png>
 Package pdftex.def Info: Pics/15.2.3.png  used on input line 185.
@@ -1696,18 +1690,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 433--436
  []
 
 ) (./91_paypal.tex
-<Pics/qrcode.png, id=811, 602.25pt x 662.475pt>
+<Pics/qrcode.png, id=812, 602.25pt x 662.475pt>
 File: Pics/qrcode.png Graphic file (type png)
 <use Pics/qrcode.png>
 Package pdftex.def Info: Pics/qrcode.png  used on input line 7.
 (pdftex.def)             Requested size: 132.65059pt x 145.9168pt.
 ) [21] [22 <./Pics/qrcode.png>] (./90_tables.tex
-<Pics/T.2.img.png, id=822, 749.80125pt x 345.54094pt>
+<Pics/T.2.img.png, id=823, 749.80125pt x 345.54094pt>
 File: Pics/T.2.img.png Graphic file (type png)
 <use Pics/T.2.img.png>
 Package pdftex.def Info: Pics/T.2.img.png  used on input line 5.
 (pdftex.def)             Requested size: 185.71002pt x 85.57832pt.
-<Pics/T.2.png, id=823, 554.07pt x 845.40843pt>
+<Pics/T.2.png, id=824, 554.07pt x 845.40843pt>
 File: Pics/T.2.png Graphic file (type png)
 <use Pics/T.2.png>
 Package pdftex.def Info: Pics/T.2.png  used on input line 10.
@@ -1721,17 +1715,17 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 15.
 
-<Pics/T.3.img.png, id=824, 664.28175pt x 314.3745pt>
+<Pics/T.3.img.png, id=825, 664.28175pt x 314.3745pt>
 File: Pics/T.3.img.png Graphic file (type png)
 <use Pics/T.3.img.png>
 Package pdftex.def Info: Pics/T.3.img.png  used on input line 19.
 (pdftex.def)             Requested size: 185.71002pt x 87.88994pt.
-<Pics/T.3.png, id=825, 461.92575pt x 720.291pt>
+<Pics/T.3.png, id=826, 461.92575pt x 720.291pt>
 File: Pics/T.3.png Graphic file (type png)
 <use Pics/T.3.png>
 Package pdftex.def Info: Pics/T.3.png  used on input line 24.
 (pdftex.def)             Requested size: 265.3012pt x 413.70248pt.
-<Pics/T.15.png, id=826, 723.9045pt x 543.2295pt>
+<Pics/T.15.png, id=827, 723.9045pt x 543.2295pt>
 File: Pics/T.15.png Graphic file (type png)
 <use Pics/T.15.png>
 Package pdftex.def Info: Pics/T.15.png  used on input line 32.
@@ -1747,8 +1741,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 53.
  ) 
 Here is how much of TeX's memory you used:
- 14409 strings out of 480876
- 253626 string characters out of 5911487
+ 14410 strings out of 480876
+ 253640 string characters out of 5911487
  708976 words of memory out of 5000000
  29300 multiletter control sequences out of 15000+600000
  560981 words of font info for 96 fonts, out of 8000000 for 9000
@@ -1757,10 +1751,10 @@ Here is how much of TeX's memory you used:
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0
 700.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on main.pdf (24 pages, 3339647 bytes).
+Output written on main.pdf (24 pages, 3340521 bytes).
 PDF statistics:
- 1031 PDF objects out of 1200 (max. 8388607)
- 874 compressed objects within 9 object streams
- 369 named destinations out of 1000 (max. 500000)
+ 1032 PDF objects out of 1200 (max. 8388607)
+ 875 compressed objects within 9 object streams
+ 370 named destinations out of 1000 (max. 500000)
  930 words of extra memory for PDF output out of 10000 (max. 10000000)
 

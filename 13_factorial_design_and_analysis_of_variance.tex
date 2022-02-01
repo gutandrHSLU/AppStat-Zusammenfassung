@@ -67,7 +67,8 @@ The test statistic of the analysis of variance test can also be written as
 \begin{equation}
   F = \frac{\textup{MS}_G}{\textup{MS}_E}
 \end{equation}
-Under the null hypothesis the $F$-statistic follows an $F$-distribution with $(\textup{df}_G, \textup{df}_E) = (g - 1, n - g)$ degrees of freedom. Critical values of the $F$-distribution can be found in tables.
+Under the null hypothesis the $F$-statistic follows an $F$-distribution with $(\textup{df}_G, \textup{df}_E) = (g - 1, n - g)$ degrees of freedom.\\
+If a significant test result has been found, the immediate question is whether each group is different from each other, or if only some of the possible differences are really detectable
 
 \subsection{Two Factor Analysis of Variance}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
@@ -178,7 +179,7 @@ As a basis for statistical tests we set up a variance analysis table for two fac
 \begin{table}[H]
   \footnotesize
   \centering
-  \begin{tabular}{ m{1.6cm} | m{0.9cm} l m{0.8cm} m{1.2cm}}
+  \begin{tabular}{ m{1.65cm} | m{0.9cm} l m{0.8cm} m{1.2cm}}
       Source of Variation  & Sum of Squares &  Degrees of Freedom & Mean Squares & Test Statistic \\ \hline
       Factor A      & $\textup{SS}_A$ & $\textup{df}_A = a-1$        & $\textup{MS}_A$ & $\textup{MS}_A / {MS}_E$\\
       Factor B      & $\textup{SS}_B$ & $\textup{df}_B = b-1$        & $\textup{MS}_B$ & $\textup{MS}_B / {MS}_E$\\

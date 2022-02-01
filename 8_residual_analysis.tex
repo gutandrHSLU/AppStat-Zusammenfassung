@@ -151,6 +151,14 @@ This model violation can be changed by a transformation of the response variable
     \text{log}\left(x^y\right) &= y\;\text{log}(x) &
     \text{log}\left(\frac{1}{x}\right) &= - \text{log}(x)
   \end{align*}
+  Example of log-transformation:
+  \begin{equation}
+    \begin{split}
+      \textup{log}(A) &= \beta_0 + \beta_1 \textup{log}(B) + \beta_2 \textup{log}(C) + E \rightarrow \\
+      A &= e^{\beta_0} \cdot B^{\beta_1} \cdot C^{\beta_2} \cdot Error
+    \end{split}
+  \end{equation}
+  Where \emph{Error} is multiplicatively lognormally distributed.
 
   \item \textbf{Square-root} for continuous and discrete positive variables:
   \begin{equation}
