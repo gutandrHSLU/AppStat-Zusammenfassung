@@ -70,7 +70,7 @@ What is the probability that out of five randomly selected lots there will be a 
 \textbf{Description}\\
 Find the sampling plan with smallest sample size (single sample only) such that specified Producer Risk Point (PRP) and Consumer Risk Point (CRP) are both met.
 
-\textbf{Arguments}\\
+\textbf{Arguments} \vspace{-0.5cm}
 \begin{table}[H]
   \scriptsize
   \begin{tabularx}{\linewidth}{lX}
@@ -113,7 +113,7 @@ Where \texttt{func.OC} is the function of the operating characteristic (eq. \ref
 \textbf{Usage}\\
 \texttt{lm(formula, data, ...)}\\
 
-\textbf{Arguments}\\
+\textbf{Arguments}\vspace{-0.5cm}
 \begin{table}[H]
   \scriptsize
   \begin{tabularx}{\linewidth}{lX}
@@ -153,12 +153,7 @@ With the following line we get a summary of the fited model:\\
               Estimate Std. Error t value Pr(>|t|)
   (Intercept)    3.321      1.371   2.422   0.0237 *
   Volume         2.176      0.124  17.546 8.22e-15 ***
-  ---
-  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-  Residual standard error: 4.181 on 23 degrees of freedom
-  Multiple R-squared:  0.9305,	Adjusted R-squared:  0.9275
-  F-statistic: 307.8 on 1 and 23 DF,  p-value: 8.22e-15
 \end{verbatim}
 \endgroup
 \vspace{\baselineskip}
@@ -192,7 +187,6 @@ We construct 95\% confidence intervals on the response with the following line:
   3 -16.26472 -21.13883 -11.39061
   4 -15.17664 -19.93103 -10.42224
   5 -14.08855 -18.72369  -9.45342
-  6 -13.00047 -17.51684  -8.48410
 
 \end{verbatim}
 \endgroup
@@ -218,9 +212,6 @@ We construct 95\% prediction intervals with the following lines:
 \end{verbatim}
 \endgroup
 
-\subsection{Correlation}
-\noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
-
 \subsection{Multiple Linear Regression}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
 We want to fit a multiple linear regression model where the model has the form \texttt{Vibration.log $\sim$ Distance.log + Charge.log}. In R we do this with the following line:\\
@@ -230,7 +221,6 @@ The summary of that model is the following:
 \scriptsize
 \begin{verbatim}
   > summary(mod)
-
   Call:
   lm(formula = Vibration.log ~ Distance.log + Charge.log, data = data)
 
@@ -243,8 +233,6 @@ The summary of that model is the following:
   (Intercept)    2.8323     0.2229  12.707   <2e-16 ***
   Distance.log  -1.5107     0.1111 -13.592   <2e-16 ***
   Charge.log     0.8083     0.3042   2.658   0.0109 *
-  ---
-  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 \end{verbatim}
 \endgroup
@@ -268,7 +256,6 @@ The summary of the model is the following
   > mod.fac <- lm(Vibration.log ~ Distance.log + Charge.log
                   + Position.fac, data)
   > summary(mod.fac)
-
   Call:
   lm(formula = Vibration.log ~ Distance.log + Charge.log + Position.fac,
       data = data)
@@ -285,8 +272,6 @@ The summary of the model is the following
   Position.fac2  0.16430    0.07494   2.192   0.0340 *
   Position.fac3  0.02170    0.06366   0.341   0.7349
   Position.fac4  0.11080    0.07477   1.482   0.1459
-  ---
-  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 \end{verbatim}
 \endgroup
@@ -314,8 +299,6 @@ We come back to the explosion example and want to ask the question whether the f
     Res.Df     RSS Df Sum of Sq      F  Pr(>F)
   1     42 0.90467
   2     45 1.05217 -3   -0.1475 2.2827 0.09297 .
-  ---
-  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 \end{verbatim}
 \endgroup
@@ -337,8 +320,6 @@ An other, more powerful, R-command to perform an $F$-test to compare two models 
   Distance.log  1   1.94659 2.85125 -125.53 90.3722 4.973e-12 ***
   Charge.log    1   0.11713 1.02180 -174.78  5.4379   0.02457 *
   Position.fac  3   0.14750 1.05217 -177.38  2.2827   0.09297 .
-  ---
-  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 \end{verbatim}
 \endgroup
@@ -381,8 +362,6 @@ According to the stepwise variable selection in both directions based on the AIC
   NE           0.10449    0.03263   3.202 0.003694 **
   CT           0.06523    0.02708   2.409 0.023707 *
   N.sqrt      -0.03046    0.01646  -1.850 0.076133 .
-  ---
-  Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 \end{verbatim}
 \endgroup
@@ -407,21 +386,13 @@ All variance inflation factors are smaller than 5. Therefore there is no problem
 
 \subsection{Analysis of Variance}
 \noindent\rule[\linienAbstand]{\linewidth}{\linienDicke}
-\begingroup
-  \scriptsize
-  \begin{verbatim}
-
-  \end{verbatim}
-\endgroup
-
-
 \textbf{Description}\\
-Fit an analysis of variance model by a call to lm for each stratum.\\
+Fits an analysis of variance model by a call to lm for each stratum.\\
 
 \textbf{Usage}\\
 \texttt{aov(formula, data, ...)}\\
 
-\textbf{Arguments}\\
+\textbf{Arguments}\vspace{-0.5cm}
 \begin{table}[H]
   \scriptsize
   \begin{tabularx}{\linewidth}{lX}
@@ -441,14 +412,13 @@ Fit an analysis of variance model by a call to lm for each stratum.\\
   Method 2 23.23 11.614 8.695 0.002278 **
   Batch 9 86.79 9.644 7.219 0.000202 ***
   Residuals 18 24.04 1.336
-  ---
-  Signif. codes: 0 ’***’ 0.001 ’**’ 0.01 ’*’ 0.05 ’.’ 0.1 ’ ’ 1
 
 \end{verbatim}
 \endgroup
 A low P-value means that the effect of, say the \texttt{Batch}-effect, is significant.\\
 For the result to be valid, the following must be fulfilled: The errors must be independent and normally distributed with expected value $0$ and constant variance $\sigma^2$. Furthermore, the two factors must overlap additively. With the interaction plot (\texttt{interaction.plot()}) it can be checked graphically whether the factor effects overlap additively. If they overlap additively, the lines in the interaction plot must be parallel except for random deviations.
-
+\vfill\null
+\columnbreak
 % \begingroup
 %   \scriptsize
 %   \begin{verbatim}
