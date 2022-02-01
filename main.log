@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.16)  27 JAN 2022 08:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.16)  1 FEB 2022 10:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -652,29 +652,34 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
  (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./1_introduction.tex
-Underfull \hbox (badness 10000) in paragraph at lines 12--14
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--43
+Underfull \hbox (badness 10000) in paragraph at lines 13--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--44
 
  []
 
 <Pics/1.2.2.png, id=357, 419.76825pt x 366.168pt>
 File: Pics/1.2.2.png Graphic file (type png)
 <use Pics/1.2.2.png>
-Package pdftex.def Info: Pics/1.2.2.png  used on input line 49.
+Package pdftex.def Info: Pics/1.2.2.png  used on input line 50.
 (pdftex.def)             Requested size: 106.11885pt x 92.56424pt.
 <Pics/1.2.3.png, id=359, 608.2725pt x 258.9675pt>
 File: Pics/1.2.3.png Graphic file (type png)
 <use Pics/1.2.3.png>
-Package pdftex.def Info: Pics/1.2.3.png  used on input line 57.
+Package pdftex.def Info: Pics/1.2.3.png  used on input line 58.
 (pdftex.def)             Requested size: 159.18233pt x 67.76857pt.
 <Pics/1.2.4.png, id=360, 442.65375pt x 409.53pt>
 File: Pics/1.2.4.png Graphic file (type png)
 <use Pics/1.2.4.png>
-Package pdftex.def Info: Pics/1.2.4.png  used on input line 65.
+Package pdftex.def Info: Pics/1.2.4.png  used on input line 66.
 (pdftex.def)             Requested size: 106.11885pt x 98.17671pt.
 ) (./2_control_charts.tex
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
@@ -771,22 +776,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 227--228
  []
 
 ) (./3_statistical_properties_of_control_charts.tex
-<Pics/3.1.1.png, id=432, 443.40656pt x 264.99pt>
+<Pics/3.1.1.png, id=433, 443.40656pt x 264.99pt>
 File: Pics/3.1.1.png Graphic file (type png)
 <use Pics/3.1.1.png>
 Package pdftex.def Info: Pics/3.1.1.png  used on input line 21.
 (pdftex.def)             Requested size: 128.66545pt x 76.89365pt.
-<Pics/3.1.2.png, id=433, 630.10406pt x 376.40625pt>
+<Pics/3.1.2.png, id=434, 630.10406pt x 376.40625pt>
 File: Pics/3.1.2.png Graphic file (type png)
 <use Pics/3.1.2.png>
 Package pdftex.def Info: Pics/3.1.2.png  used on input line 21.
 (pdftex.def)             Requested size: 128.66545pt x 76.85936pt.
-<Pics/3.1.3.png, id=434, 633.86812pt x 371.88937pt>
+<Pics/3.1.3.png, id=435, 633.86812pt x 371.88937pt>
 File: Pics/3.1.3.png Graphic file (type png)
 <use Pics/3.1.3.png>
 Package pdftex.def Info: Pics/3.1.3.png  used on input line 24.
 (pdftex.def)             Requested size: 128.66545pt x 75.4831pt.
-<Pics/3.1.4.png, id=435, 635.37375pt x 375.65344pt>
+<Pics/3.1.4.png, id=436, 635.37375pt x 375.65344pt>
 File: Pics/3.1.4.png Graphic file (type png)
 <use Pics/3.1.4.png>
 Package pdftex.def Info: Pics/3.1.4.png  used on input line 24.
@@ -806,12 +811,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--47
 
  []
 
-<Pics/3.2.1.png, id=436, 661.72218pt x 396.7322pt>
+<Pics/3.2.1.png, id=437, 661.72218pt x 396.7322pt>
 File: Pics/3.2.1.png Graphic file (type png)
 <use Pics/3.2.1.png>
 Package pdftex.def Info: Pics/3.2.1.png  used on input line 53.
 (pdftex.def)             Requested size: 128.66545pt x 77.13545pt.
-<Pics/3.2.2.png, id=437, 663.98062pt x 392.21532pt>
+<Pics/3.2.2.png, id=438, 663.98062pt x 392.21532pt>
 File: Pics/3.2.2.png Graphic file (type png)
 <use Pics/3.2.2.png>
 Package pdftex.def Info: Pics/3.2.2.png  used on input line 53.
@@ -826,12 +831,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--57
 
  []
 
-<Pics/3.2.3.png, id=438, 648.17157pt x 389.20406pt>
+<Pics/3.2.3.png, id=439, 648.17157pt x 389.20406pt>
 File: Pics/3.2.3.png Graphic file (type png)
 <use Pics/3.2.3.png>
 Package pdftex.def Info: Pics/3.2.3.png  used on input line 64.
 (pdftex.def)             Requested size: 128.66545pt x 77.25743pt.
-<Pics/3.2.4.png, id=439, 656.4525pt x 394.47375pt>
+<Pics/3.2.4.png, id=440, 656.4525pt x 394.47375pt>
 File: Pics/3.2.4.png Graphic file (type png)
 <use Pics/3.2.4.png>
 Package pdftex.def Info: Pics/3.2.4.png  used on input line 64.
@@ -1253,12 +1258,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--98
 File: Pics/10.4.1.png Graphic file (type png)
 <use Pics/10.4.1.png>
 Package pdftex.def Info: Pics/10.4.1.png  used on input line 107.
-(pdftex.def)             Requested size: 265.3012pt x 74.62704pt.
+(pdftex.def)             Requested size: 238.76944pt x 67.16084pt.
 <Pics/10.4.2.png, id=656, 579.3645pt x 163.20975pt>
 File: Pics/10.4.2.png Graphic file (type png)
 <use Pics/10.4.2.png>
 Package pdftex.def Info: Pics/10.4.2.png  used on input line 112.
-(pdftex.def)             Requested size: 265.3012pt x 74.7387pt.
+(pdftex.def)             Requested size: 238.76944pt x 67.26257pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 118--121
 
@@ -1268,13 +1273,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--121
 File: Pics/10.4.5.png Graphic file (type png)
 <use Pics/10.4.5.png>
 Package pdftex.def Info: Pics/10.4.5.png  used on input line 125.
-(pdftex.def)             Requested size: 265.3012pt x 75.63158pt.
+(pdftex.def)             Requested size: 238.76944pt x 68.06818pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 122--127
 
  []
 
-) (./11_variable_selection_and_modeling.tex [12 <./Pics/10.2.3.png> <./Pics/10.2.4.png> <./Pics/10.4.1.png> <./Pics/10.4.2.png>]
+) (./11_variable_selection_and_modeling.tex [12 <./Pics/10.2.3.png> <./Pics/10.2.4.png> <./Pics/10.4.1.png> <./Pics/10.4.2.png> <./Pics/10.4.5.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
@@ -1284,12 +1289,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--57
 
  []
 
-[13 <./Pics/10.4.5.png>]) (./12_design_of_experiments.tex
+) (./12_design_of_experiments.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
  []
 
-
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
@@ -1615,7 +1620,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 199--200
 
  []
 
-[20]
+
 Overfull \hbox (2.38289pt too wide) in paragraph at lines 291--291
 []  \T1/cmtt/m/n/7 lm(formula = Vibration.log ~ Distance.log + Charge.log + Position.fac,[] 
  []
@@ -1625,7 +1630,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 294--297
 
  []
 
-
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 302--304
 
  []
@@ -1690,13 +1695,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 433--436
 
  []
 
-[21]) (./91_paypal.tex
-<Pics/qrcode.png, id=815, 602.25pt x 662.475pt>
+) (./91_paypal.tex
+<Pics/qrcode.png, id=811, 602.25pt x 662.475pt>
 File: Pics/qrcode.png Graphic file (type png)
 <use Pics/qrcode.png>
 Package pdftex.def Info: Pics/qrcode.png  used on input line 7.
 (pdftex.def)             Requested size: 132.65059pt x 145.9168pt.
-) [22 <./Pics/qrcode.png>] (./90_tables.tex
+) [21] [22 <./Pics/qrcode.png>] (./90_tables.tex
 <Pics/T.2.img.png, id=822, 749.80125pt x 345.54094pt>
 File: Pics/T.2.img.png Graphic file (type png)
 <use Pics/T.2.img.png>
@@ -1748,11 +1753,11 @@ Here is how much of TeX's memory you used:
  29300 multiletter control sequences out of 15000+600000
  560981 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,19n,48p,980b,1070s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,19n,48p,980b,990s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0
 700.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on main.pdf (24 pages, 3338995 bytes).
+Output written on main.pdf (24 pages, 3339647 bytes).
 PDF statistics:
  1031 PDF objects out of 1200 (max. 8388607)
  874 compressed objects within 9 object streams
